@@ -1,0 +1,36 @@
+[1;31m
+Start test 1[0m
+	[0;34m
+4[0m[0;34m  .   ____          _            __ _ _
+5[0m[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+6[0m[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+7[0m[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+6[0m[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+5[0m[0;34m =========|_|==============|___/=/_/_/_/
+7[0m[0;34m :: Spring Boot ::                (v2.5.6)
+[0m[0;34m
+©[0m[0;34m2024-02-29 12:48:13.574  INFO 12328 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 12328 (started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+±[0m[0;34m2024-02-29 12:48:13.579  INFO 12328 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+¨[0m[0;34m2024-02-29 12:48:14.431  INFO 12328 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∆[0m[0;34m2024-02-29 12:48:14.523  INFO 12328 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+ù[0m[0;34m2024-02-29 12:48:15.370  INFO 12328 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+ä[0m[0;34m2024-02-29 12:48:15.384  INFO 12328 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+†[0m[0;34m2024-02-29 12:48:15.384  INFO 12328 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+£[0m[0;34m2024-02-29 12:48:15.520  INFO 12328 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+∞[0m[0;34m2024-02-29 12:48:15.521  INFO 12328 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1870 ms
+ã[0m[0;34m2024-02-29 12:48:15.751  INFO 12328 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+ê[0m[0;34m2024-02-29 12:48:15.967  INFO 12328 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+™[0m[0;34m2024-02-29 12:48:16.060  INFO 12328 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+£[0m[0;34m2024-02-29 12:48:16.144  INFO 12328 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+©[0m[0;34m2024-02-29 12:48:16.369  INFO 12328 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+™[0m[0;34m2024-02-29 12:48:16.577  INFO 12328 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+‰[0m[0;34m2024-02-29 12:48:17.472  INFO 12328 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+¥[0m[0;34m2024-02-29 12:48:17.484  INFO 12328 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+®[0m[0;34m2024-02-29 12:48:18.657  WARN 12328 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+¨[0m[0;34m2024-02-29 12:48:19.395  INFO 12328 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+æ[0m[0;34m2024-02-29 12:48:19.411  INFO 12328 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 6.293 seconds (JVM running for 7.45)
+:[0m[0;34mEnter instruction for drone medication API...
+[0m[0;34m1. Drones
+[0m[0;34m2. Medications
+[0m[0;34m3. UserAccounts
+[0m[0;34m4. Exit

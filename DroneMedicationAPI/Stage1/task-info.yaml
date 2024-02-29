@@ -1,0 +1,36 @@
+type: edu
+files:
+  - name: src/DroneMed/DroneMedicationAPIApplication.java
+    visible: true
+  - name: resources/application.yaml
+    visible: true
+  - name: resources/application.properties
+    visible: true
+  - name: build.gradle
+    visible: true
+  - name: test/DroneMedicationTest.java
+    visible: false
+  - name: src/DroneMed/models/Drone.java
+    visible: true
+  - name: src/DroneMed/models/Medication.java
+    visible: true
+  - name: src/DroneMed/models/UserAccount.java
+    visible: true
+  - name: src/DroneMed/repository/DroneRepository.java
+    visible: true
+  - name: src/DroneMed/repository/MedicationRepository.java
+    visible: true
+  - name: src/DroneMed/repository/UserRepository.java
+    visible: true
+  - name: src/DroneMed/service/MedicationService.java
+    visible: true
+  - name: src/DroneMed/service/UserService.java
+    visible: true
+  - name: src/DroneMed/service/DroneService.java
+    visible: true
+  - name: src/DroneMed/service/impl/MedicationServiceImpl.java
+    visible: true
+  - name: src/DroneMed/service/impl/DroneServiceImpl.java
+    visible: true
+  - name: src/DroneMed/service/impl/UserServiceImpl.java
+    visible: true
