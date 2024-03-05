@@ -5,6 +5,8 @@ package DroneMed.service.impl;
 import DroneMed.models.Drone;
 import DroneMed.repository.DroneRepository;
 import DroneMed.service.DroneService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -23,6 +25,8 @@ public class DroneServiceImpl implements DroneService {
      *
      * @param droneRepository - Repository to manage drone operations.
      */
+
+    @Autowired
     public DroneServiceImpl(DroneRepository droneRepository)
     {
         this.droneRepository = droneRepository;

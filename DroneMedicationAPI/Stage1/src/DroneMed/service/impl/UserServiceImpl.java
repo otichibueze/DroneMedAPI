@@ -4,6 +4,8 @@ package DroneMed.service.impl;
 import DroneMed.models.UserAccount;
 import DroneMed.repository.UserRepository;
 import DroneMed.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -23,6 +25,7 @@ public class UserServiceImpl implements UserService {
      *
      * @param userRepository - Repository to manage user operations.
      */
+    @Autowired
     public UserServiceImpl(UserRepository userRepository) {
 
         this.userRepository = userRepository;

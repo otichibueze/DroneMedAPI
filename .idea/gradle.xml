@@ -14,6 +14,10 @@
             <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage1/build/classes/java" />
             <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage1/build/generated/sources/annotationProcessor/java" />
             <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage1/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage2" />
+            <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage2/build/classes/java" />
+            <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage2/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/DroneMedicationAPI/Stage2/build/generated/sources/headers/java" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

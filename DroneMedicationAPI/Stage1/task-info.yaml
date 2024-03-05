@@ -2,13 +2,9 @@ type: edu
 files:
   - name: src/DroneMed/DroneMedicationAPIApplication.java
     visible: true
-  - name: resources/application.yaml
-    visible: true
-  - name: resources/application.properties
-    visible: true
   - name: build.gradle
     visible: true
-  - name: test/DroneMedicationTest.java
+  - name: test/DroneMedicationAPIApplicationTest.java
     visible: false
   - name: src/DroneMed/models/Drone.java
     visible: true
@@ -33,4 +29,8 @@ files:
   - name: src/DroneMed/service/impl/DroneServiceImpl.java
     visible: true
   - name: src/DroneMed/service/impl/UserServiceImpl.java
+    visible: true
+  - name: src/DroneMed/config/MyConfiguration.java
+    visible: true
+  - name: src/resources/application.properties
     visible: true

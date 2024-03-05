@@ -5,6 +5,8 @@ package DroneMed.service.impl;
 import DroneMed.models.Medication;
 import DroneMed.repository.MedicationRepository;
 import DroneMed.service.MedicationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -14,7 +16,7 @@ import java.util.Optional;
 import java.util.regex.Pattern;
 
 @Service
-public class MedicationServiceImpl implements MedicationService {
+public class MedicationServiceImpl implements MedicationService  {
 
     // Regular expression for validating the name
     private static final Pattern NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9_-]+$");
@@ -31,6 +33,7 @@ public class MedicationServiceImpl implements MedicationService {
      *
      * @param medicationRepository - Repository to manage medication operations.
      */
+    @Autowired
     public MedicationServiceImpl(MedicationRepository medicationRepository) {
         this.medicationRepository = medicationRepository;
     }

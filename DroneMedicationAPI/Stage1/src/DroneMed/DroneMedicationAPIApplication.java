@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 import java.util.List;
@@ -18,16 +19,13 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.Stack;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackageClasses = {DroneService.class, MedicationService.class, UserService.class})
 public class DroneMedicationAPIApplication implements CommandLineRunner {
 
-    @Autowired
     private final DroneService droneService;
 
-    @Autowired
     private final MedicationService medicationService;
 
-    @Autowired
     private final UserService userService;
 
     @Autowired
@@ -115,28 +113,28 @@ public class DroneMedicationAPIApplication implements CommandLineRunner {
             2. Medications
             3. UserAccounts
             4. Exit""",
-                        """
+            """
             1. View Drones
             2. Create Drone
             3. Update Drone
             4. Delete Drone
             5. Get Drone
             6. Back""",
-                        """
+            """
             1. View Medications
             2. Create Medication
             3. Update Medication
             4. Delete Medication
             5. Get Medication
             6. Back""",
-                        """
+            """
             1. View UserAccounts
             2. Create UserAccount
             3. Update UserAccount
             4. Delete UserAccount
             5. Get UserAccount
             6. Back"""
-                };
+    };
 
     Action currentAction;
 
@@ -306,7 +304,7 @@ public class DroneMedicationAPIApplication implements CommandLineRunner {
                     }
                     else   DroneProcessor(lastResponse, "");
                 }
-               else if(currentAction == Action.MEDICATIONS) {
+                else if(currentAction == Action.MEDICATIONS) {
                     if(lastResponse == 2 || lastResponse == 3) {
                         MedicationProcessor(2, "");
                     }
@@ -324,10 +322,10 @@ public class DroneMedicationAPIApplication implements CommandLineRunner {
                     DroneProcessor(lastResponse, info);
                 }
                 else if(currentAction == Action.MEDICATIONS) {
-                        MedicationProcessor(lastResponse, info);
+                    MedicationProcessor(lastResponse, info);
                 }
                 else if(currentAction == Action.USERACCOUNTS) {
-                        UserAccountProcessor(lastResponse, info);
+                    UserAccountProcessor(lastResponse, info);
                 }
             }
             else {
@@ -426,23 +424,23 @@ public class DroneMedicationAPIApplication implements CommandLineRunner {
                         String response = droneService.deleteDrone(values[0]);
                         System.out.println("Delete Drones" + "\n" + "1. Back" + "\n" + "2. Delete more Drones");
                         System.out.println(response);
-                       // if(!response.endsWith("not found.")) {
+                        // if(!response.endsWith("not found.")) {
                         currentMode = Mode.DETAILS;
                         //}
 
 
                     }
                     else if( value == 5) {
-                            Optional<Drone> drone = droneService.getDrone(values[0]);
-                            System.out.println("Get Drone" + "\n" + "1. Back" + "\n" + "2. Get more Drones");
-                            if(drone.isPresent()) {
-                                System.out.println(drone.get().toString());
-                            }
-                            else System.out.println("Drone with ID " + values[0] + " not found");
-                            currentMode = Mode.DETAILS;
+                        Optional<Drone> drone = droneService.getDrone(values[0]);
+                        System.out.println("Get Drone" + "\n" + "1. Back" + "\n" + "2. Get more Drones");
+                        if(drone.isPresent()) {
+                            System.out.println(drone.get().toString());
+                        }
+                        else System.out.println("Drone with ID " + values[0] + " not found");
+                        currentMode = Mode.DETAILS;
                     }
                 }
-               else if(currentAction == Action.MEDICATIONS) {
+                else if(currentAction == Action.MEDICATIONS) {
                     if( value == 4) {
 
                         String response = medicationService.deleteMedication(values[0]);
@@ -683,66 +681,6 @@ public class DroneMedicationAPIApplication implements CommandLineRunner {
             System.out.println("Enter drone the ID that you want to retrieve");
         }
     }
-
-
-
-    /**
-    @Bean
-    public CommandLineRunner commandLineRunner() {
-        return args -> {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter instruction for drone medication API...");
-            int response = 0;
-            lastResponse = response;
-            currentAction = Action.DEFAULT;
-            currentMode = Mode.DEFAULT;
-            availableOptions = 4;
-            System.out.println(options[response]);
-
-            while (running) {
-
-                //We expect int response
-                if (currentMode == Mode.DEFAULT) {
-                    try {
-                        response = scanner.nextInt();
-                        if(currentAction == Action.DEFAULT && (response < BASE_OPTION || response > availableOptions)) {
-                            System.out.println("Invalid response, Please enter a valid response");
-                            response = lastResponse; //reset response to default;
-                        }
-                        else if(currentAction != Action.DEFAULT && (response < BASE_OPTION || response > availableOptions)) {
-                            System.out.println("Invalid response, Please enter a valid response");
-                            response = lastResponse; //reset response to default;
-                        }
-                        else response = processResponse(response, "");
-                    }
-                    catch (Exception e) {
-                        System.out.println("Invalid response, Please enter a valid response");
-                        scanner.nextLine(); //this is to consume the invalid response
-                    }
-
-                }
-                else {
-                    //We expect string response
-                    String info = scanner.nextLine();
-
-
-                    if(processOptionsB(info)) {
-                        response = processResponse(lastResponse, info);
-                    }
-                }
-
-                if(currentMode == Mode.DEFAULT) {
-                        System.out.println(options[response]);
-                        }
-                        }
-
-                        scanner.close();
-
-        };
-    }
-    **/
-
-
 
 
     private boolean processOptionsB(String info) {

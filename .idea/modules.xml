@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage1/DroneMedAPI.DroneMedicationAPI-Stage1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage1/DroneMedAPI.DroneMedicationAPI-Stage1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage1/DroneMedAPI.DroneMedicationAPI-Stage1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage1/DroneMedAPI.DroneMedicationAPI-Stage1.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage2/DroneMedAPI.DroneMedicationAPI-Stage2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage2/DroneMedAPI.DroneMedicationAPI-Stage2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage2/DroneMedAPI.DroneMedicationAPI-Stage2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/DroneMedicationAPI/Stage2/DroneMedAPI.DroneMedicationAPI-Stage2.test.iml" />
     </modules>
   </component>
 </project>

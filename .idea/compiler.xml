@@ -8,9 +8,21 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
         </processorPath>
         <module name="DroneMedAPI.DroneMedicationAPI-Stage1.test" />
+        <module name="DroneMedAPI.DroneMedicationAPI-Stage2.main" />
         <module name="DroneMedAPI.DroneMedicationAPI-Stage1.main" />
+        <module name="DroneMedAPI.DroneMedicationAPI-Stage2.test" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-reports-tests" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-reports-tests.main" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-reports-tests.test" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-test-results" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-test-results.main" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-test-results.test" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-tmp" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-tmp.main" target="17" />
+      <module name="DroneMedAPI.DroneMedicationAPI-Stage1-build-tmp.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
