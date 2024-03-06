@@ -28,8 +28,6 @@ files:
     visible: true
   - name: src/DroneMed/service/impl/UserServiceImpl.java
     visible: true
-  - name: src/DroneMed/config/MyConfiguration.java
-    visible: true
   - name: test/DroneMedicationAPIApplicationTest.java
     visible: false
   - name: src/DroneMed/controller/DroneController.java

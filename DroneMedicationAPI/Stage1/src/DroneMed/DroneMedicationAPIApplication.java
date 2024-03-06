@@ -10,16 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
-
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Stack;
 
-@SpringBootApplication(scanBasePackageClasses = {DroneService.class, MedicationService.class, UserService.class})
+@SpringBootApplication
 public class DroneMedicationAPIApplication implements CommandLineRunner {
 
     private final DroneService droneService;

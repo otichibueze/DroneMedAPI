@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hyperskill.hstest.dynamic.DynamicTest;
 import org.hyperskill.hstest.dynamic.input.DynamicTesting;
+import org.hyperskill.hstest.exception.outcomes.UnexpectedError;
 import org.hyperskill.hstest.mocks.web.response.HttpResponse;
 import org.hyperskill.hstest.stage.SpringTest;
 import org.hyperskill.hstest.testcase.CheckResult;
@@ -14,21 +15,24 @@ import javax.persistence.Id;
 
 public class DroneMedicationAPIApplicationTest extends SpringTest {
 
-  public DroneMedicationAPIApplicationTest () {
-    super(DroneMedicationAPIApplication.class, 28852, "../droneMed_db_mv.db");
-  }
 
   double latitude = 4.8156; //Random gps used as drone base coordinates
   double longitude = 7.0498; //Random gps used as drone base coordinates
   String coordinatesString = String.format("%.6fN %.6fE", latitude, longitude);
 
-  private  final Drone drone1 = new Drone("0001", 100, 0, 10000, Drone.State.IDLE, Drone.Model.LIGHTWEIGHT, coordinatesString);
+  private  final Drone drone1 = new Drone("S001", 100, 0, 10000, Drone.State.IDLE, Drone.Model.LIGHTWEIGHT, coordinatesString);
   private  final String drone1Correct = drone1.toJson();
 
   //Drone APi
   private final String createDrone = "/api/drones/create_drone";
+  private final String deleteDrone = "/api/drones/delete_drone/";
   String msg = "Drone with serial number 0001 created successfully.";
   int createSuccessCode = 201;
+  int okSuccessCode = 200;
+
+  public DroneMedicationAPIApplicationTest () {
+    super(DroneMedicationAPIApplication.class, 28852, "../droneMed_db_mv.db");
+  }
 
   CheckResult testCreateApi(String api, String body,String message, int status) {
     HttpResponse response = post(api, body).send();
@@ -39,15 +43,50 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
               "status code " + status + ", responded: " + response.getStatusCode() + "\n\n" +
               "Response body:\n" + body);
     }
-    
+
+
+    return CheckResult.correct();
+  }
+
+  CheckResult testDeleteApi(String api, String message, int status) {
+
+    HttpResponse  response = delete(api).send();
+
+
+    if (response.getStatusCode() != status) {
+      return CheckResult.wrong("DELETE " + api + " should respond with " +
+              "status code " + status + ", responded: " + response.getStatusCode() + "\n\n" +
+              "Response message:\n" + message);
+    }
+
+
+      /*
+    expect(response.getContent()).asJson().check(
+            isObject()
+                    .value("message", message)
+                    .value("httpStatus", "OK").anyOtherValues()
+    );
+    */
+
+
 
     return CheckResult.correct();
   }
 
   @DynamicTest
-  DynamicTesting[] dt = new DynamicTesting[]{
-          () -> testCreateApi(createDrone,drone1Correct, msg,createSuccessCode )
+  public DynamicTesting[] dt = new DynamicTesting[]{
+          () -> testCreateApi(createDrone,drone1Correct, msg,createSuccessCode ),
+          () -> testDeleteApi(deleteDrone + "S001",msg,okSuccessCode)
   };
+
+  private CheckResult reloadServer() {
+    try {
+      reloadSpring();
+    } catch (Exception ex) {
+      throw new UnexpectedError(ex.getMessage());
+    }
+    return CheckResult.correct();
+  }
 
 }
 

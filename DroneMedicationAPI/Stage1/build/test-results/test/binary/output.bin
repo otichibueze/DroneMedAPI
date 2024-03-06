@@ -1,0 +1,46 @@
+[1;31m
+Start test 1[0m
+
+)  .   ____          _            __ _ _
+* /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
++( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+, \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
++  '  |____| .__|_| |_|_| |_\__, | / / / /
+* =========|_|==============|___/=/_/_/_/
+, :: Spring Boot ::                (v2.5.6)
+
+ý2024-03-06 11:47:31.781  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 12644 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+•2024-03-06 11:47:31.818 DEBUG 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+¦2024-03-06 11:47:31.834  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+¡2024-03-06 11:47:33.422  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+¼2024-03-06 11:47:33.691  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
+Ÿ2024-03-06 11:47:34.586  INFO 12644 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+˜2024-03-06 11:47:34.687  INFO 12644 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+ž2024-03-06 11:47:34.925  INFO 12644 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+€2024-03-06 11:47:35.108  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+…2024-03-06 11:47:35.389  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Ÿ2024-03-06 11:47:35.427  INFO 12644 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ù2024-03-06 11:47:36.829  INFO 12644 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2024-03-06 11:47:36.865  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ð2024-03-06 11:47:36.880  WARN 12644 --- [nAPIApplication] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+¥2024-03-06 11:47:36.912  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Š2024-03-06 11:47:36.927  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+ˆ2024-03-06 11:47:36.989  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+g2024-03-06 11:47:37.012  INFO 12644 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+
+rError starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+g2024-03-06 11:47:37.055 ERROR 12644 --- [nAPIApplication] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+—Parameter 0 of constructor in DroneMed.DroneMedicationAPIApplication required a bean of type 'DroneMed.service.DroneService' that could not be found.
+
+
+	Action:
+
+YConsider defining a bean of type 'DroneMed.service.DroneService' in your configuration.
+
