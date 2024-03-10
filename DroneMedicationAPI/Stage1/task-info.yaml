@@ -14,8 +14,6 @@ files:
     visible: true
   - name: src/DroneMed/models/UserAccount.java
     visible: true
-  - name: src/DroneMed/config/MyConfiguration.java
-    visible: true
   - name: src/DroneMed/repository/DroneRepository.java
     visible: true
   - name: src/DroneMed/repository/MedicationRepository.java
@@ -33,4 +31,6 @@ files:
   - name: src/DroneMed/service/DroneService.java
     visible: true
   - name: src/DroneMed/service/MedicationService.java
+    visible: true
+  - name: src/DroneMed/Runner.java
     visible: true

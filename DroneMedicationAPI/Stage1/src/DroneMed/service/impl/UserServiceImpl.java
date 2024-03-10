@@ -1,6 +1,7 @@
 package DroneMed.service.impl;
 
 
+import DroneMed.models.Drone;
 import DroneMed.models.UserAccount;
 import DroneMed.repository.UserRepository;
 import DroneMed.service.UserService;
@@ -39,7 +40,7 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(user);
 
-        return "User " + user.getName() + " created successfully" ;
+        return "User with phone number " + user.getPhoneNumber() + " created successfully." ;
     }
 
     /**
@@ -68,12 +69,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public String updateUser(UserAccount user) {
 
-        UserAccount existingUser = userRepository.findById(user.getPhoneNumber())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        if(userRepository.existsById(user.getPhoneNumber())) {
+            UserAccount existingUser = userRepository.findById(user.getPhoneNumber()).get();
+            userRepository.save(user);
 
-        userRepository.save(user);
-
-        return "User updated successfully";
+            return "User with phone number " + user.getPhoneNumber() + " updated successfully.";
+        }
+        else {
+            return ("User with phone number " + user.getPhoneNumber() + " not found.");
+        }
     }
 
     /**
@@ -87,9 +91,9 @@ public class UserServiceImpl implements UserService {
 
         if(userRepository.existsById(phoneNumber)) {
             userRepository.deleteById(phoneNumber);
-            return  "Delete user Successfully";
+            return  "User with phone number " + phoneNumber + " deleted Successfully.";
         } else {
-            throw new RuntimeException("User with phone number " + phoneNumber + " not found.");
+            return ("User with phone number " + phoneNumber + " not found.");
         }
     }
 
@@ -102,7 +106,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<UserAccount> getUser(String phoneNumber) {
         return userRepository.findById(phoneNumber);
-        //orElseThrow( () -> new RuntimeException("User with phone number " + phoneNumber + " not found"));
     }
 
     /**
@@ -113,6 +116,5 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserAccount> getAllUsers() {
         return userRepository.findAll();
-        //we can use pageable here
     }
 }

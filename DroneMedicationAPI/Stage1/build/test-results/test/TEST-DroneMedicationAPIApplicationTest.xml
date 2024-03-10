@@ -1,123 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DroneMedicationAPIApplicationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-03-06T10:47:30" hostname="DESKTOP-S3OS6DJ" time="6.259">
+<testsuite name="DroneMedicationAPIApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-10T16:06:12" hostname="DESKTOP-S3OS6DJ" time="10.557">
   <properties/>
-  <testcase name="start" classname="DroneMedicationAPIApplicationTest" time="6.259">
-    <failure message="java.lang.AssertionError: Exception in test #1&#10;&#10;org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}&#10;&#9;at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)&#10;&#9;at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)&#10;&#9;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)&#10;&#9;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)&#10;&#9;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)&#10;&#9;at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)&#10;&#9;at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)&#10;&#9;at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)&#10;&#9;at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)&#10;&#9;at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)&#10;&#9;at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)&#10;&#9;at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)&#10;&#9;at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)&#10;&#9;at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)&#10;&#9;at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)&#10;&#9;at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)&#10;&#9;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)&#10;&#9;at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)&#10;&#9;at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:39)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;.   ____          _            __ _ _&#10; /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \&#10;( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \&#10; \\/  ___)| |_)| | | | | || (_| |  ) ) ) )&#10;  '  |____| .__|_| |_|_| |_\__, | / / / /&#10; =========|_|==============|___/=/_/_/_/&#10; :: Spring Boot ::                (v2.5.6)&#10;&#10;2024-03-06 11:47:31.781  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 12644 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)&#10;2024-03-06 11:47:31.818 DEBUG 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12&#10;2024-03-06 11:47:31.834  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default&#10;2024-03-06 11:47:33.422  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.&#10;2024-03-06 11:47:33.691  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.&#10;2024-03-06 11:47:34.586  INFO 12644 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]&#10;2024-03-06 11:47:34.687  INFO 12644 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final&#10;2024-03-06 11:47:34.925  INFO 12644 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}&#10;2024-03-06 11:47:35.108  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...&#10;2024-03-06 11:47:35.389  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.&#10;2024-03-06 11:47:35.427  INFO 12644 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect&#10;2024-03-06 11:47:36.829  INFO 12644 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]&#10;2024-03-06 11:47:36.865  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'&#10;2024-03-06 11:47:36.880  WARN 12644 --- [nAPIApplication] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}&#10;2024-03-06 11:47:36.912  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'&#10;2024-03-06 11:47:36.927  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...&#10;2024-03-06 11:47:36.989  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.&#10;2024-03-06 11:47:37.012  INFO 12644 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : &#10;&#10;Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.&#10;2024-03-06 11:47:37.055 ERROR 12644 --- [nAPIApplication] o.s.b.d.LoggingFailureAnalysisReporter   : &#10;&#10;***************************&#10;APPLICATION FAILED TO START&#10;***************************&#10;&#10;Description:&#10;&#10;Parameter 0 of constructor in DroneMed.DroneMedicationAPIApplication required a bean of type 'DroneMed.service.DroneService' that could not be found.&#10;&#10;&#10;Action:&#10;&#10;Consider defining a bean of type 'DroneMed.service.DroneService' in your configuration." type="java.lang.AssertionError">java.lang.AssertionError: Exception in test #1
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
-	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:39)
-
-Please find below the output of your program during this failed test.
-
----
-
-.   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v2.5.6)
-
-2024-03-06 11:47:31.781  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 12644 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
-2024-03-06 11:47:31.818 DEBUG 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
-2024-03-06 11:47:31.834  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-2024-03-06 11:47:33.422  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-06 11:47:33.691  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
-2024-03-06 11:47:34.586  INFO 12644 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-06 11:47:34.687  INFO 12644 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2024-03-06 11:47:34.925  INFO 12644 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-03-06 11:47:35.108  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-06 11:47:35.389  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-06 11:47:35.427  INFO 12644 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-03-06 11:47:36.829  INFO 12644 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-03-06 11:47:36.865  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-06 11:47:36.880  WARN 12644 --- [nAPIApplication] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2024-03-06 11:47:36.912  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-06 11:47:36.927  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-06 11:47:36.989  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-06 11:47:37.012  INFO 12644 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-06 11:47:37.055 ERROR 12644 --- [nAPIApplication] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in DroneMed.DroneMedicationAPIApplication required a bean of type 'DroneMed.service.DroneService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'DroneMed.service.DroneService' in your configuration.
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
+  <testcase name="start" classname="DroneMedicationAPIApplicationTest" time="10.557"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -129,40 +13,928 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2024-03-06 11:47:31.781  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 12644 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
-2024-03-06 11:47:31.818 DEBUG 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
-2024-03-06 11:47:31.834  INFO 12644 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-2024-03-06 11:47:33.422  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-06 11:47:33.691  INFO 12644 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
-2024-03-06 11:47:34.586  INFO 12644 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-06 11:47:34.687  INFO 12644 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2024-03-06 11:47:34.925  INFO 12644 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-03-06 11:47:35.108  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-06 11:47:35.389  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-06 11:47:35.427  INFO 12644 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-03-06 11:47:36.829  INFO 12644 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-03-06 11:47:36.865  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-06 11:47:36.880  WARN 12644 --- [nAPIApplication] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneMedicationAPIApplication': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'DroneMed.service.DroneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2024-03-06 11:47:36.912  INFO 12644 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-06 11:47:36.927  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-06 11:47:36.989  INFO 12644 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-06 11:47:37.012  INFO 12644 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+2024-03-10 17:06:13.823  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 19348 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-10 17:06:13.872 DEBUG 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-10 17:06:13.887  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-10 17:06:15.206  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-10 17:06:15.314  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2024-03-10 17:06:15.895  INFO 19348 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-10 17:06:15.990  INFO 19348 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-10 17:06:16.213  INFO 19348 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-10 17:06:16.359  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-10 17:06:16.589  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-10 17:06:16.621  INFO 19348 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-10 17:06:17.505  INFO 19348 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-10 17:06:17.528  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:18.878  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 5.73 seconds (JVM running for 6.914)
+Enter instruction for drone medication API...
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 7
+Invalid response, Please enter a valid response.
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 1
+View drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+> abcd
+Invalid response, Please enter a valid response.
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> andfnf
+Invalid response, Please enter a valid response.
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 2
+Create drones
+1. Back
+Enter new drone information....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates
+> S001,100,0,1000,IDLE,LIGHTWEIGHT,4.815600°N 7.049800°E
+Create Drones
+1. Back
+2. Create more Drones
+Drone with serial number S001 created successfully.
+> 2
+Create drones
+1. Back
+Enter new drone information....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates
+> S004,100,0,9000,IDLE,LIGHTWEIGHT, 4.815600°N 7.049800°E
+Create Drones
+1. Back
+2. Create more Drones
+Drone with serial number S004 created successfully.
+> 2
+Create drones
+1. Back
+Enter new drone information....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates
+> S005,220,0,15000,IDLE,MIDDLEWEIGHT,4.815600°N 7.049800°E
+Create Drones
+1. Back
+2. Create more Drones
+Drone with serial number S005 created successfully.
+> 2
+Create drones
+1. Back
+Enter new drone information....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates
+> S006,330,0,18000,IDLE,CRUISERWEIGHT,4.815600°N 7.049800°E
+Create Drones
+1. Back
+2. Create more Drones
+Drone with serial number S006 created successfully.
+> 2
+Create drones
+1. Back
+Enter new drone information....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates
+> S002,200,0,15000,IDLE,MIDDLEWEIGHT
+The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.
+> S003,300,0,18000,IDLE,CRUISERWEIGHT,4.815600°N 7.049800°E,200,500
+The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 3
+Update drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 1000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+3. Drone serialnumber: S005 maxWeight: 220 currentWeight: 0 batteryCapacity: 15000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N 7.049800°E
+4. Drone serialnumber: S006 maxWeight: 330 currentWeight: 0 batteryCapacity: 18000 State: IDLE Model: CRUISERWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to update....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates 
+> S001,100,0,700,IDLE,LIGHTWEIGHT,4.815600°N 7.049800°E
+Updated Drone
+1. Back
+2. Update more Drones
+Drone with serial number S001 updated successfully.
+> 2
+Update drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+3. Drone serialnumber: S005 maxWeight: 220 currentWeight: 0 batteryCapacity: 15000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N 7.049800°E
+4. Drone serialnumber: S006 maxWeight: 330 currentWeight: 0 batteryCapacity: 18000 State: IDLE Model: CRUISERWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to update....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates 
+> S011,100,0,700,IDLE,LIGHTWEIGHT,4.815600°N 7.049800°E
+Updated Drone
+1. Back
+2. Update more Drones
+Drone with serial number S011 not found.
+> 2
+Update drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+3. Drone serialnumber: S005 maxWeight: 220 currentWeight: 0 batteryCapacity: 15000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N 7.049800°E
+4. Drone serialnumber: S006 maxWeight: 330 currentWeight: 0 batteryCapacity: 18000 State: IDLE Model: CRUISERWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to update....
+Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates 
+> S002,200,0,15000,IDLE,MIDDLEWEIGHT
+The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 4
+Delete drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+3. Drone serialnumber: S005 maxWeight: 220 currentWeight: 0 batteryCapacity: 15000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N 7.049800°E
+4. Drone serialnumber: S006 maxWeight: 330 currentWeight: 0 batteryCapacity: 18000 State: IDLE Model: CRUISERWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to Delete....
+> S006
+Delete Drones
+1. Back
+2. Delete more Drones
+Drone with serial number S006 deleted Successfully.
+> 2
+Delete drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+3. Drone serialnumber: S005 maxWeight: 220 currentWeight: 0 batteryCapacity: 15000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to Delete....
+> S005
+Delete Drones
+1. Back
+2. Delete more Drones
+Drone with serial number S005 deleted Successfully.
+> 2
+Delete drones
+1. Back
+Drones list
+1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+Enter drone ID to Delete....
+> S016
+Delete Drones
+1. Back
+2. Delete more Drones
+Drone with serial number S016 not found.
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 5
+Get drones
+1. Back
+Enter drone the ID that you want to retrieve.
+> S001
+Get Drone
+1. Back
+2. Get more Drones
+Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+> 2
+Get drones
+1. Back
+Enter drone the ID that you want to retrieve.
+> S004
+Get Drone
+1. Back
+2. Get more Drones
+Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+> 2
+Get drones
+1. Back
+Enter drone the ID that you want to retrieve.
+> S020
+Get Drone
+1. Back
+2. Get more Drones
+Drone with serial number S020 not found.
+> 1
+1. View Drones
+2. Create Drone
+3. Update Drone
+4. Delete Drone
+5. Get Drone
+6. Back
+> 6
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+2024-03-10 17:06:19.689  INFO 19348 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-06 11:47:37.055 ERROR 12644 --- [nAPIApplication] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2024-03-10 17:06:19.725 ERROR 19348 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
+	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:81) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:59) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188) ~[na:na]
+	at java.base/java.io.Reader.read(Reader.java:197) ~[na:na]
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:157) ~[na:na]
+	at java.base/java.util.Scanner.readInput(Scanner.java:882) ~[na:na]
+	at java.base/java.util.Scanner.next(Scanner.java:1592) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212) ~[na:na]
+	at DroneMed.Runner.run(Runner.java:53) ~[main/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.6.jar:2.5.6]
+	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:11) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-Description:
+2024-03-10 17:06:19.857  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:19.865  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-10 17:06:19.884  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[1;31m
+Start test 2?[0m
 
-Parameter 0 of constructor in DroneMed.DroneMedicationAPIApplication required a bean of type 'DroneMed.service.DroneService' that could not be found.
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
 
+2024-03-10 17:06:19.952  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 19348 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-10 17:06:19.971 DEBUG 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-10 17:06:19.978  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-10 17:06:20.320  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-10 17:06:20.357  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2024-03-10 17:06:20.490  INFO 19348 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-10 17:06:20.504  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-10 17:06:20.523  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-10 17:06:20.530  INFO 19348 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-10 17:06:20.623  INFO 19348 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-10 17:06:20.636  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:20.992  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 1.096 seconds (JVM running for 9.027)
+Enter instruction for drone medication API...
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+> 2
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 7
+Invalid response, Please enter a valid response.
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 1
+View medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+> abcd
+Invalid response, Please enter a valid response.
+> 1
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> andfnf
+Invalid response, Please enter a valid response.
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 2
+Create medications
+1. Back
+Enter new medication information....
+medication code, name, weight, imageURL 
+> XYGIY_01,Paracetamol,30,https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+Create medications
+1. Back
+2. Create more medications
+Medication with code XYGIY_01 created successfully.
+> 2
+Create medications
+1. Back
+Enter new medication information....
+medication code, name, weight, imageURL 
+> EM2N5P8,Montelukast,30,https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+Create medications
+1. Back
+2. Create more medications
+Medication with code EM2N5P8 created successfully.
+> 2
+Create medications
+1. Back
+Enter new medication information....
+medication code, name, weight, imageURL 
+> 0378_1800,levothyroxine,45,https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+Create medications
+1. Back
+2. Create more medications
+Medication with code 0378_1800 created successfully.
+> 2
+Create medications
+1. Back
+Enter new medication information....
+medication code, name, weight, imageURL 
+> 0093_5056,atorvastatin,55,https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&pid=ImgDetMain
+Create medications
+1. Back
+2. Create more medications
+Medication with code 0093_5056 created successfully.
+> 2
+Create medications
+1. Back
+Enter new medication information....
+medication code, name, weight, imageURL 
+> ZZGIY_01,Paracetamol,30
+The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.
+> 0591_0405,60,https://www.lupin.com/US/wp-content/uploads/2021/06/lisinopril-tablets-usp-40mg.jpg
+The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.
+> 1
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 3
+Update medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 30 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+3. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+4. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&pid=ImgDetMain
+Enter medication ID to update....
+medication code, name, weight, imageURL 
+> XYGIY_01,Paracetamol,45,https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+Updated medications
+1. Back
+2. Update more medications
+Medication with code XYGIY_01 updated successfully.
+> 2
+Update medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+3. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+4. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&pid=ImgDetMain
+Enter medication ID to update....
+medication code, name, weight, imageURL 
+> XYGIY_11,Paracetamol,30,https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+Updated medications
+1. Back
+2. Update more medications
+Medication with code XYGIY_11 not found.
+> 2
+Update medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+3. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+4. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&pid=ImgDetMain
+Enter medication ID to update....
+medication code, name, weight, imageURL 
+> ZZGIY_01,Paracetamol,30
+The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.
+> 1
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 4
+Delete medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+3. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+4. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&pid=ImgDetMain
+Enter medication ID to Delete...
+> 0093_5056
+Delete medications
+1. Back
+2. Delete more medications
+Medication with code 0093_5056 deleted Successfully.
+> 2
+Delete medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+3. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&pid=ImgRaw&r=0
+Enter medication ID to Delete...
+> 0378_1800
+Delete medications
+1. Back
+2. Delete more medications
+Medication with code 0378_1800 deleted Successfully.
+> 2
+Delete medications
+1. Back
+Medications list
+1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+Enter medication ID to Delete...
+> 0378_1816
+Delete medications
+1. Back
+2. Delete more medications
+Medication with code 0378_1816 not found.
+> 1
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 5
+Get medications
+1. Back
+Enter the medication ID that you want to retrieve.
+> XYGIY_01
+Get medications
+1. Back
+2. Get more medications
+Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
+> 2
+Get medications
+1. Back
+Enter the medication ID that you want to retrieve.
+> EM2N5P8
+Get medications
+1. Back
+2. Get more medications
+Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+> 2
+Get medications
+1. Back
+Enter the medication ID that you want to retrieve.
+> 0591_0000
+Get medications
+1. Back
+2. Get more medications
+Medication with code 0591_0000 not found.
+> 1
+1. View Medications
+2. Create Medication
+3. Update Medication
+4. Delete Medication
+5. Get Medication
+6. Back
+> 6
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+2024-03-10 17:06:21.420  INFO 19348 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
 
-Action:
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-03-10 17:06:21.428 ERROR 19348 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
 
-Consider defining a bean of type 'DroneMed.service.DroneService' in your configuration.
+org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
+	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:81) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:59) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188) ~[na:na]
+	at java.base/java.io.Reader.read(Reader.java:197) ~[na:na]
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:157) ~[na:na]
+	at java.base/java.util.Scanner.readInput(Scanner.java:882) ~[na:na]
+	at java.base/java.util.Scanner.next(Scanner.java:1592) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212) ~[na:na]
+	at DroneMed.Runner.run(Runner.java:53) ~[main/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.6.jar:2.5.6]
+	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:11) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-03-10 17:06:21.573  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:21.580  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-03-10 17:06:21.599  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+?[1;31m
+Start test 3?[0m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.6)
+
+2024-03-10 17:06:21.663  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 19348 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-10 17:06:21.682 DEBUG 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-10 17:06:21.688  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-10 17:06:21.979  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-10 17:06:22.027  INFO 19348 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-03-10 17:06:22.129  INFO 19348 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-10 17:06:22.143  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-03-10 17:06:22.157  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-03-10 17:06:22.165  INFO 19348 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-10 17:06:22.279  INFO 19348 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-10 17:06:22.294  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:22.572  INFO 19348 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 0.96 seconds (JVM running for 10.607)
+Enter instruction for drone medication API...
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+> 3
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 15
+Invalid response, Please enter a valid response.
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 1
+View UserAccounts
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+> abcdkjasdffasfasjkn
+Invalid response, Please enter a valid response.
+> 1
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> analsgaslkdfnf
+Invalid response, Please enter a valid response.
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 2
+Create UserAccount
+1. Back
+Enter new UserAccount information....
+User accountType, name, phoneNumber, address, gps coordinates 
+> ADMIN,Emily Davis,4157890123,789 Cedar Street Sacramento California(CA) 95814,38.58157 -121.49440
+Create userAccounts
+1. Back
+2. Create more userAccounts
+User with phone number 4157890123 created successfully.
+> 2
+Create UserAccount
+1. Back
+Enter new UserAccount information....
+User accountType, name, phoneNumber, address, gps coordinates 
+> GUEST,Michael Martinez,9163456789,101 Walnut Avenue San Diego California(CA) 92101,32.71574 -117.16109
+Create userAccounts
+1. Back
+2. Create more userAccounts
+User with phone number 9163456789 created successfully.
+> 2
+Create UserAccount
+1. Back
+Enter new UserAccount information....
+User accountType, name, phoneNumber, address, gps coordinates 
+> ADMIN,Daniel Taylor,3238765432, 303 Elm Avenue Oakland California(CA) 94601,37.80493 -122.27080
+Create userAccounts
+1. Back
+2. Create more userAccounts
+User with phone number 3238765432 created successfully.
+> 2
+Create UserAccount
+1. Back
+Enter new UserAccount information....
+User accountType, name, phoneNumber, address, gps coordinates 
+> GUEST,Sophia Rodriguez,7149876543, 404 Maple Avenue Fresno California(CA) 93701,36.73929 -119.78429
+Create userAccounts
+1. Back
+2. Create more userAccounts
+User with phone number 7149876543 created successfully.
+> 2
+Create UserAccount
+1. Back
+Enter new UserAccount information....
+User accountType, name, phoneNumber, address, gps coordinates 
+> CUSTOMER,John Smith,5109876543,456 Pine Avenue, Los Angeles, California(CA), 90001,34.05223 -118.24368
+The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.
+> CUSTOMER,Olivia White,6504321876,202 Birch Street San Jose California(CA) 95110, 37.33821 -121.88633
+Create userAccounts
+1. Back
+2. Create more userAccounts
+User with phone number 6504321876 created successfully.
+> 1
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 3
+Update UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Sacramento California(CA) 95814 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+Enter UserAccount ID to update....
+User accountType, name, phoneNumber, address, gps coordinates  
+> ADMIN,Emily Davis,4157890123,789 Cedar Street Oakland California(CA) 77714,38.58157 -121.49440
+Updated userAccounts
+1. Back
+2. Update more userAccounts
+User with phone number 4157890123 updated successfully.
+> 2
+Update UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+Enter UserAccount ID to update....
+User accountType, name, phoneNumber, address, gps coordinates  
+> CUSTOMER,John Smith,5109876543,456 Pine Avenue Los Angeles California(CA) 90001,34.05223 -118.24368
+Updated userAccounts
+1. Back
+2. Update more userAccounts
+User with phone number 5109876543 not found.
+> 2
+Update UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+Enter UserAccount ID to update....
+User accountType, name, phoneNumber, address, gps coordinates  
+> CUSTOMER,John Smith,5109876543,456 Pine Avenue, Los Angeles, California(CA), 90001,34.05223 -118.24368
+The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.
+> 1
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 4
+Delete UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+Enter UserAccount ID to Delete...
+> 7149876543
+Delete userAccounts
+1. Back
+2. Delete more userAccounts
+User with phone number 7149876543 deleted Successfully.
+> 2
+Delete UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+Enter UserAccount ID to Delete...
+> 3238765432
+Delete userAccounts
+1. Back
+2. Delete more userAccounts
+User with phone number 3238765432 deleted Successfully.
+> 2
+Delete UserAccount
+1. Back
+UserAccounts list
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+Enter UserAccount ID to Delete...
+> 3238765400
+Delete userAccounts
+1. Back
+2. Delete more userAccounts
+User with phone number 3238765400 not found.
+> 1
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 5
+Get UserAccount
+1. Back
+Enter the UserAccount ID that you want to retrieve.
+> 4157890123
+Get userAccounts
+1. Back
+2. Get more userAccounts
+UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
+> 2
+Get UserAccount
+1. Back
+Enter the UserAccount ID that you want to retrieve.
+> 6504321876
+Get userAccounts
+1. Back
+2. Get more userAccounts
+UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+> 2
+Get UserAccount
+1. Back
+Enter the UserAccount ID that you want to retrieve.
+> 6504321800
+Get userAccounts
+1. Back
+2. Get more userAccounts
+UserAccount with phone number 6504321800 not found.
+> 1
+1. View UserAccounts
+2. Create UserAccount
+3. Update UserAccount
+4. Delete UserAccount
+5. Get UserAccount
+6. Back
+> 6
+1. Drones
+2. Medications
+3. UserAccounts
+4. Exit
+2024-03-10 17:06:23.016  INFO 19348 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-03-10 17:06:23.030 ERROR 19348 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
+
+org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
+	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:81) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.dynamic.input.InputMock.read(InputMock.java:59) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313) ~[na:na]
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188) ~[na:na]
+	at java.base/java.io.Reader.read(Reader.java:197) ~[na:na]
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:157) ~[na:na]
+	at java.base/java.util.Scanner.readInput(Scanner.java:882) ~[na:na]
+	at java.base/java.util.Scanner.next(Scanner.java:1592) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258) ~[na:na]
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212) ~[na:na]
+	at DroneMed.Runner.run(Runner.java:53) ~[main/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:775) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:345) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.6.jar:2.5.6]
+	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:11) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-03-10 17:06:23.183  INFO 19348 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-10 17:06:23.189  INFO 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-03-10 17:06:23.196  WARN 19348 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Interrupted during closing
+
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1660) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.awaitTermination(ThreadPoolExecutor.java:1464) ~[na:na]
+	at com.zaxxer.hikari.pool.HikariPool.shutdown(HikariPool.java:233) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:351) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.lambda$destroy$1(DisposableBeanAdapter.java:233) ~[spring-beans-5.3.12.jar:5.3.12]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:232) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145) ~[spring-beans-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.12.jar:5.3.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:348) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.6.jar:2.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.6.jar:2.5.6]
+	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:11) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160) ~[hs-test-release-SNAPSHOT.jar:na]
+	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188) ~[hs-test-release-SNAPSHOT.jar:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

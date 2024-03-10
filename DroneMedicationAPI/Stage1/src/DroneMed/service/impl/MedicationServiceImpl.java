@@ -18,12 +18,6 @@ import java.util.regex.Pattern;
 @Service
 public class MedicationServiceImpl implements MedicationService  {
 
-    // Regular expression for validating the name
-    private static final Pattern NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9_-]+$");
-
-    // Regular expression for validating the code
-    private static final Pattern CODE_PATTERN = Pattern.compile("^[A-Z0-9_]+$");
-
 
     // Medication repository to interact with medication data in the database.
     private final MedicationRepository medicationRepository;
@@ -50,7 +44,7 @@ public class MedicationServiceImpl implements MedicationService  {
         //checkMedicationValues(medication);
 
         medicationRepository.save(medication);
-        return "Medication " + medication.getCode() + " created successfully";
+        return "Medication with code " + medication.getCode() + " created successfully.";
     }
 
     /**
@@ -88,10 +82,10 @@ public class MedicationServiceImpl implements MedicationService  {
 
             medicationRepository.save(medication);
 
-            return "Medication with code " + medication.getCode() + " updated successfully";
+            return "Medication with code " + medication.getCode() + " updated successfully.";
         }
         else {
-            return ("Medication not found");
+            return ("Medication with code " + medication.getCode() + " not found.");
         }
     }
 
@@ -106,10 +100,10 @@ public class MedicationServiceImpl implements MedicationService  {
         if(medicationRepository.existsById(code))
         {
             medicationRepository.deleteById(code);
-            return "Medication with code " + code  + " deleted Successfully";
+            return "Medication with code " + code  + " deleted Successfully.";
         }
         else {
-            return "Medication with code " + code + " not found";
+            return "Medication with code " + code + " not found.";
         }
     }
 
@@ -122,7 +116,6 @@ public class MedicationServiceImpl implements MedicationService  {
     @Override
     public Optional<Medication> getMedication(String code) {
         return medicationRepository.findById(code);
-               // .orElseThrow(() -> new RuntimeException("Medication with code " + code + " not found"));
     }
 
     /**
@@ -133,7 +126,6 @@ public class MedicationServiceImpl implements MedicationService  {
     @Override
     public List<Medication> getAllMedication() {
         return medicationRepository.findAll();
-        //we can use pageable here
     }
 
     @Override
@@ -141,16 +133,5 @@ public class MedicationServiceImpl implements MedicationService  {
         return medicationRepository.findByName(name);
     }
 
-    /*
-    private void checkMedicationValues(Medication medication)
-    {
-        if (!NAME_PATTERN.matcher(medication.getName()).matches()) {
-            throw new RuntimeException ("Invalid name");
-        }
 
-        if (!CODE_PATTERN.matcher(medication.getCode()).matches()) {
-            throw new RuntimeException("Invalid code provided");
-        }
-    }
-     */
 }

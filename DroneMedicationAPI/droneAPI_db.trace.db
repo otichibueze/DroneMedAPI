@@ -1,0 +1,150 @@
+2024-03-09 16:35:06 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2813)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3290)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 6 more
+Caused by: java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.sync(FileStore.java:214)
+	at org.h2.mvstore.MVStore.sync(MVStore.java:1953)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:2129)
+	at org.h2.mvstore.MVStore.rewriteChunks(MVStore.java:2026)
+	at org.h2.mvstore.MVStore.doMaintenance(MVStore.java:2844)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2788)
+	... 1 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:472)
+	at org.h2.store.fs.FileNio.force(FilePathNio.java:106)
+	at org.h2.mvstore.FileStore.sync(FileStore.java:212)
+	... 6 more
+2024-03-09 16:35:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: General error: "General error: ""java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]"" [50000-200]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.engine.Database.throwLastBackgroundException(Database.java:2221)
+	at org.h2.engine.Session.close(Session.java:945)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:453)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:143)
+	at com.zaxxer.hikari.pool.HikariPool.lambda$closeConnection$1(HikariPool.java:451)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.message.DbException: General error: "java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2813)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3290)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 6 more
+Caused by: java.lang.IllegalStateException: Could not sync file nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db [1.4.200/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.sync(FileStore.java:214)
+	at org.h2.mvstore.MVStore.sync(MVStore.java:1953)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:2129)
+	at org.h2.mvstore.MVStore.rewriteChunks(MVStore.java:2026)
+	at org.h2.mvstore.MVStore.doMaintenance(MVStore.java:2844)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2788)
+	... 1 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:472)
+	at org.h2.store.fs.FileNio.force(FilePathNio.java:106)
+	at org.h2.mvstore.FileStore.sync(FileStore.java:212)
+	... 6 more
+2024-03-09 21:08:35 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.write(MVStore.java:1113)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:1479)
+	at org.h2.mvstore.MVStore.store(MVStore.java:1334)
+	at org.h2.mvstore.MVStore.store(MVStore.java:1312)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:1303)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:2153)
+	at org.h2.mvstore.MVStore.rewriteChunks(MVStore.java:2026)
+	at org.h2.mvstore.MVStore.doMaintenance(MVStore.java:2844)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2788)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3290)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 15 more
+Caused by: java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:479)
+	at org.h2.mvstore.FileStore.writeFully(FileStore.java:113)
+	at org.h2.mvstore.MVStore.write(MVStore.java:1111)
+	... 9 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.writeInternal(FileChannelImpl.java:883)
+	at java.base/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:861)
+	at org.h2.store.fs.FileNio.write(FilePathNio.java:79)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:475)
+	... 11 more
+2024-03-09 21:08:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: General error: "General error: ""java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]"" [50000-200]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.engine.Database.throwLastBackgroundException(Database.java:2221)
+	at org.h2.engine.Session.close(Session.java:945)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:453)
+	at com.zaxxer.hikari.pool.PoolBase.quietlyCloseConnection(PoolBase.java:143)
+	at com.zaxxer.hikari.pool.HikariPool.lambda$closeConnection$1(HikariPool.java:451)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.message.DbException: General error: "java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.write(MVStore.java:1113)
+	at org.h2.mvstore.MVStore.storeNow(MVStore.java:1479)
+	at org.h2.mvstore.MVStore.store(MVStore.java:1334)
+	at org.h2.mvstore.MVStore.store(MVStore.java:1312)
+	at org.h2.mvstore.MVStore.commit(MVStore.java:1303)
+	at org.h2.mvstore.MVStore.compactRewrite(MVStore.java:2153)
+	at org.h2.mvstore.MVStore.rewriteChunks(MVStore.java:2026)
+	at org.h2.mvstore.MVStore.doMaintenance(MVStore.java:2844)
+	at org.h2.mvstore.MVStore.writeInBackground(MVStore.java:2788)
+	at org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3290)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 15 more
+Caused by: java.lang.IllegalStateException: Writing to nio:C:/Users/user/Desktop/HyperSkill/DroneMedAPI/DroneMedicationAPI/droneAPI_db.mv.db failed; length 4096 at 8192 [1.4.200/2]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:479)
+	at org.h2.mvstore.FileStore.writeFully(FileStore.java:113)
+	at org.h2.mvstore.MVStore.write(MVStore.java:1111)
+	... 9 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:171)
+	at java.base/sun.nio.ch.FileChannelImpl.writeInternal(FileChannelImpl.java:883)
+	at java.base/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:861)
+	at org.h2.store.fs.FileNio.write(FilePathNio.java:79)
+	at org.h2.mvstore.DataUtils.writeFully(DataUtils.java:475)
+	... 11 more
