@@ -36,8 +36,9 @@ public class MedicationController {
 
     @PostMapping("/create_medication")
     public ResponseEntity<?> createMedication(@RequestBody Medication medication) {
+
         String response = medicationService.createMedication(medication);
-        return ResponseHandler.responseBuilder(response, HttpStatus.CREATED);
+        return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
     /**
@@ -49,19 +50,20 @@ public class MedicationController {
     @PostMapping("/create_medications")
     public ResponseEntity<?> createMedications(@RequestBody List<Medication> medications) {
         List<String> responses = medicationService.createMedications(medications);
-        return ResponseHandler.responseBuilder("Medications created successfully.", HttpStatus.CREATED, responses);
+        return ResponseHandler.responseBuilder("Medications created successfully.", HttpStatus.OK, responses);
     }
 
     /**
      * Endpoint to update the details of an existing medication.
      *
-     * @param code - Code of the medication to be updated.
      * @param medication - Medication entity with updated values.
      * @return ResponseEntity with status and updated medication.
      */
-    @PutMapping("/update_medication/{code}")
-    public ResponseEntity<?> updateMedication(@PathVariable String code, @RequestBody Medication medication) {
+    @PutMapping("/update_medication")
+    public ResponseEntity<?> updateMedication(@RequestBody Medication medication) {
         String response = medicationService.updateMedication(medication);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
@@ -74,6 +76,8 @@ public class MedicationController {
     @DeleteMapping("/delete_medication/{code}")
     public ResponseEntity<?> deleteMedication(@PathVariable String code) {
         String response = medicationService.deleteMedication(code);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 

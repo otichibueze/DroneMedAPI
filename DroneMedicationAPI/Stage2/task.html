@@ -17,7 +17,9 @@
 
 <p>Create endpoints to interact with a JSON-based REST API, managing operations such as GET, POST, UPDATE and DELETE for the Drone, Medication, and User entities. Below are some examples for drone, medication and user entities</p>
 
-<p>we&#39;ll also implement a response class. This class will be responsible for ensuring that appropriate response messages are delivered based on the outcome of each operation. For instance, if a new drone is successfully created, the response class will generate a JSON response with an &quot;HTTP Status&quot; of &quot;CREATED&quot; and a &quot;Message&quot; stating, &quot;Drone created successfully.&quot; This response provides feedback to the user, indicating the status of the operation.<br />
+<p>we&#39;ll also implement a response class. This class will be responsible for ensuring that appropriate response messages are delivered based on the outcome of each operation. For instance, if a new drone is successfully created, the response class will generate a JSON response with an &quot;HTTP Status&quot; of &quot;OK&quot; and a &quot;Message&quot; stating, &quot;Drone created successfully.&quot; This response provides feedback to the user, indicating the status of the operation.</p>
+
+<p>To test your API, you may write Spring Boot tests, or use a rest client like&nbsp;<a href="https://www.getpostman.com/product/api-client" rel="noopener noreferrer nofollow" target="_blank">postman</a>&nbsp;or&nbsp;<a href="https://gist.github.com/subfuzion/08c5d85437d5d4f00e58" rel="noopener noreferrer nofollow" target="_blank">the curl tool</a>. GET requests can be tested by accessing the URL in your browser. You can also check your application in the browser using&nbsp;<a href="https://reqbin.com/" rel="noopener noreferrer nofollow" target="_blank">reqbin</a>.&nbsp;<br />
     &nbsp;&nbsp;</p>
 
 <h3>Drone Controller endpoints below</h3>
@@ -45,7 +47,7 @@
 <pre>
 <code class="language-json">{
 
-"serialNumber": "0001",
+"serialNumber": "S001",
 
 "maxWeight": 100,
 
@@ -72,11 +74,22 @@
 <pre>
 <code class="language-json">{
 
-    "message": "Drone with serial number 0001 created successfully.",
+    "message": "Drone with serial number S001 created successfully.",
 
-    "httpStatus": "CREATED"
+    "httpStatus": "OK"
 }
 </code></pre>
+
+<p>Entering an invalid parameter for creating a new drone user would get below response:</p>
+
+<pre>
+<code class="language-json">{
+
+    "httpStatus": "OK",
+
+    "message": "The parameter you entered contains null or invalid parameter, Please enter a valid drone parameter."
+
+}</code></pre>
 
 <p><strong>Example 2</strong>:&nbsp;<em>creating a list of drones with a valid request body</em>:</p>
 
@@ -89,7 +102,7 @@
 
 {
 
- "serialNumber": "0002",
+ "serialNumber": "S002",
 
 "maxWeight": 250,
 
@@ -107,7 +120,7 @@
 
 {
 
- "serialNumber": "0003",
+ "serialNumber": "S003",
 
 "maxWeight": 350,
 
@@ -125,7 +138,7 @@
 
 {
 
- "serialNumber": "0004",
+ "serialNumber": "S004",
 
 "maxWeight": 400,
 
@@ -154,11 +167,11 @@
 
     "data": [
 
-        "Drone with serial number 0002 created successfully.",
+        "Drone with serial number S002 created successfully.",
 
-        "Drone with serial number 0003 created successfully.",
+        "Drone with serial number S003 created successfully.",
 
-        "Drone with serial number 0004 created successfully."
+        "Drone with serial number S004 created successfully."
 
     ],
 
@@ -181,7 +194,7 @@
 <pre>
 <code class="language-json">{
 
-"serialNumber": "0001",
+"serialNumber": "S001",
 
 "maxWeight": 100,
 
@@ -220,14 +233,14 @@
 
     "message": "Drone with serial number S001 not found.",
 
-    "httpStatus": "OK"
+    "httpStatus": "NOT_FOUND"
 }</code></pre>
 
 <p><strong>Example 4. Delete drone with id</strong></p>
 
 <p>The id in the example below is 0001</p>
 
-<p>Request:&nbsp;&nbsp;<code>GET&nbsp;/api/drones/delete_drone/0001</code></p>
+<p>Request:&nbsp;&nbsp;<code>GET&nbsp;/api/drones/delete_drone/S001</code></p>
 
 <p><strong><em>Response body:</em></strong></p>
 
@@ -239,7 +252,7 @@
 <code class="language-json">{
     "httpStatus": "OK",
 
-    "message": "Drone with serial number 0001 deleted Successfully."
+    "message": "Drone with serial number S001 deleted Successfully."
 
 }</code></pre>
 
@@ -250,14 +263,14 @@
 
     "message": "Drone with serial number S001 not found.",
 
-    "httpStatus": "OK"
+    "httpStatus": "NOT_FOUND"
 }</code></pre>
 
 <p><strong>Example 5. Get drone with id</strong></p>
 
 <p>The id in the example below is 0001</p>
 
-<p>Request:&nbsp;&nbsp;<code>GET&nbsp;/api/drones/get_drone/0001</code></p>
+<p>Request:&nbsp;&nbsp;<code>GET&nbsp;/api/drones/get_drone/S001</code></p>
 
 <p><strong><em>Response body:</em></strong></p>
 
@@ -274,7 +287,7 @@
 
     "data": {
 
-        "serialNumber": "0001",
+        "serialNumber": "S001",
 
         "currentWeight": 90,
 
@@ -299,7 +312,7 @@
 
     "httpStatus": "NOT_FOUND",
 
-    "message": "Drone with serial number S0006 not found"
+    "message": "Drone with serial number S0006 not found."
 
 }</code></pre>
 
@@ -322,7 +335,7 @@
 
         {
 
-            "serialNumber": "0001",
+            "serialNumber": "S001",
 
             "currentWeight": 90,
 
@@ -340,7 +353,7 @@
 
         {
 
-            "serialNumber": "0002",
+            "serialNumber": "S002",
 
             "currentWeight": 0,
 
@@ -358,7 +371,7 @@
 
         {
 
-            "serialNumber": "0003",
+            "serialNumber": "S003",
 
             "currentWeight": 0,
 
@@ -376,7 +389,7 @@
 
         {
 
-            "serialNumber": "0004",
+            "serialNumber": "S004",
 
             "currentWeight": 0,
 
@@ -453,11 +466,20 @@
 
     "message": "Medication with code XYGIY_06 created successfully.",
 
-    "httpStatus": "CREATED"
+    "httpStatus": "OK"
 
 }</code></pre>
 
-<p>&nbsp;</p>
+<p>Entering an invalid parameter for creating a new medication user would get below response:</p>
+
+<pre>
+<code>{
+
+    "httpStatus": "OK",
+
+    "message": "The parameter you entered contains null or invalid parameter, please enter a valid medication parameter."
+
+}</code></pre>
 
 <p><strong>Example 8</strong>:<strong>&nbsp;<em>creating a list of medications with a valid request body</em>:</strong></p>
 
@@ -515,7 +537,7 @@
 <pre>
 <code class="language-json">{
     "message": "Medications created successfully.",
-    "httpStatus": "CREATED",
+    "httpStatus": "OK",
     "data": [
         "Medication with code 0363_0007 created successfully.",
         "Medication with code 0591_0405 created successfully.",
@@ -553,7 +575,7 @@
 <pre>
 <code class="language-json">{
 
-    "message": "Medication with code 0363_0007 updated successfully",
+    "message": "Medication with code 0363_0007 updated successfully.",
 
     "httpStatus": "OK"
 
@@ -564,7 +586,7 @@
 <pre>
 <code class="language-json">{
 
-    "httpStatus": "OK",
+    "httpStatus": "NOT_FOUND",
 
     "message": "Medication with code 0363_0009 not found."
 
@@ -596,7 +618,7 @@
 <pre>
 <code class="language-json">{
 
-    "httpStatus": "OK",
+    "httpStatus": "NOT_FOUND",
 
     "message": "Medication with code 0363_0000 not found."
 
@@ -760,9 +782,20 @@
 <pre>
 <code class="language-json">{
 
-    "httpStatus": "CREATED",
+    "httpStatus": "OK",
 
     "message": "User with phone number 4157890123 created successfully."
+
+}</code></pre>
+
+<p>Entering an invalid parameter for creating a new user account user would get below response:</p>
+
+<pre>
+<code>{
+
+    "httpStatus": "OK",
+
+    "message": "The parameter you entered contains null or invalid parameter, Please enter a valid user account parameter."
 
 }</code></pre>
 
@@ -785,7 +818,7 @@
 
     ],
 
-    "httpStatus": "CREATED",
+    "httpStatus": "OK",
 
     "message": "Users created successfully."
 
@@ -836,7 +869,7 @@
 
     "message": "User with phone number 4157890125 not found.",
 
-    "httpStatus": "OK"
+    "httpStatus": "NOT_FOUND"
 
 }</code></pre>
 
@@ -866,7 +899,7 @@
 <pre>
 <code class="language-json">{
 
-    "httpStatus": "OK",
+    "httpStatus": "NOT_FOUND",
 
     "message": "User with phone number 4157890124 not found."
 
@@ -918,7 +951,7 @@
 
 }</code></pre>
 
-<p><strong>Example 18. Get all users</strong></p>
+<p><strong>Example 6. Get all users</strong></p>
 
 <p>Request:&nbsp;&nbsp;<code>GET&nbsp;/api/users/get_all_users</code></p>
 

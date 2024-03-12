@@ -37,6 +37,7 @@ public class Drone {
     @Column(nullable = false)
     private State state;
 
+    @Column(nullable = false)
     private String currentCoordinate;
 
     //This represents the different models of drones

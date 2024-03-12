@@ -127,7 +127,6 @@ public class DroneMedicationAPIApplicationTest  extends StageTest {
     private final String GET_USER_ID3_INVALID = "6504321800";
     private final String GET_USER_RESPONSE3 = "UserAccount with phone number 6504321800 not found.";
 
-
     private final String INVALID_RESPONSE = "Invalid response, Please enter a valid response.";
     private final String INVALID_DRONE_PARAM = "The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.";
     private final String INVALID_MED_PARAM = "The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.";

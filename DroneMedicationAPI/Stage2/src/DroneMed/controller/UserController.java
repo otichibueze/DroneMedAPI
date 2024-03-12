@@ -42,7 +42,9 @@ public class UserController {
     @PostMapping("/create_user")
     public ResponseEntity<?> createUser(@RequestBody UserAccount user) {
         String response = userService.createUser(user);
-        return ResponseHandler.responseBuilder(response, HttpStatus.CREATED);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
+        return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
     /**
@@ -54,7 +56,7 @@ public class UserController {
     @PostMapping("/create_users")
     public ResponseEntity<?> createUsers(@RequestBody List<UserAccount> users) {
         List<String> response = userService.createUsers(users);
-        return ResponseHandler.responseBuilder("Users created successfully.", HttpStatus.CREATED, response);
+        return ResponseHandler.responseBuilder("Users created successfully.", HttpStatus.OK, response);
     }
 
     /**
@@ -66,6 +68,8 @@ public class UserController {
     @PutMapping("/update_user")
     public ResponseEntity<?> updateUser(@RequestBody UserAccount user) {
         String response = userService.updateUser(user);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
@@ -78,6 +82,8 @@ public class UserController {
     @DeleteMapping("/delete_user/{phoneNumber}")
     public ResponseEntity<?> deleteUser(@PathVariable String phoneNumber) {
         String response = userService.deleteUser(phoneNumber);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 

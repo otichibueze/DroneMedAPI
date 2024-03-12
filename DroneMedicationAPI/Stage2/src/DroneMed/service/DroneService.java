@@ -16,8 +16,5 @@ public interface DroneService {
     String deleteDrone(String drone_serial_number);
     Optional<Drone> getDrone(String drone_serial_number);
     List<Drone> getAllDrones();
-    List<Drone> getDronesByState(Drone.State state);
-    List<Drone> getDroneByModel(Drone.Model model);
-    List<Drone> getDroneByCharge(int percentage);
 
 }

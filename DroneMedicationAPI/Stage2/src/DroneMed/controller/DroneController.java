@@ -42,7 +42,7 @@ public class DroneController {
     @PostMapping("/create_drone")
     public ResponseEntity<?> createDrone(@RequestBody Drone drone) {
         String response = droneService.createDrone(drone);
-        return ResponseHandler.responseBuilder(response, HttpStatus.CREATED);
+        return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
     /**
@@ -67,6 +67,8 @@ public class DroneController {
     @PutMapping("/update_drone")
     public ResponseEntity<?> updateDrone(@RequestBody Drone drone) {
         String response = droneService.updateDrone(drone);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 
@@ -80,6 +82,8 @@ public class DroneController {
     @DeleteMapping("/delete_drone/{serialNumber}")
     public ResponseEntity<?> deleteDrone(@PathVariable String serialNumber) {
         String response = droneService.deleteDrone(serialNumber);
+        if(response.contains("not found.")) return ResponseHandler.responseBuilder(response, HttpStatus.NOT_FOUND);
+
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }
 

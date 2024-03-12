@@ -41,6 +41,11 @@ public class MedicationServiceImpl implements MedicationService  {
     @Override
     public String createMedication(Medication medication) {
         //checkMedicationValues(medication);
+        if(medication == null || medication.getCode() == null || medication.getName() == null || medication.getWeight() == 0
+                || medication.getImageURL() == null ) {
+            return "The parameter you entered contains null or invalid parameter, Please enter a valid medication parameter.";
+
+        }
 
         medicationRepository.save(medication);
         return "Medication with code " + medication.getCode() + " created successfully.";

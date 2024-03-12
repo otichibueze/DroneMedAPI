@@ -38,6 +38,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public String createUser(UserAccount user) {
 
+        //checkMedicationValues(medication);
+        if(user == null || user.getPhoneNumber() == null || user.getName() == null || user.getAccount() == null
+                || user.getAddress() == null || user.getGpsCoordinate() == null ) {
+            return "The parameter you entered contains null or invalid parameter, Please enter a valid user account parameter.";
+
+        }
+
+
         userRepository.save(user);
 
         return "User with phone number " + user.getPhoneNumber() + " created successfully." ;

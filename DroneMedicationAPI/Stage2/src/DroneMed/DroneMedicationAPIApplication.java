@@ -8,9 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DroneMedicationAPIApplication  {
 
     public static void main(String[] args)  {
-        SpringApplication.
-
-                run(DroneMedicationAPIApplication.class, args);
+        SpringApplication.run(DroneMedicationAPIApplication.class, args);
     }
 
 }
