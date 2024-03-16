@@ -1,0 +1,511 @@
+<h2>Stage 3: Implementation of a system for dispatching Drones.</h2>
+
+<p>Implementation of a system for dispatching Drones and tracking status.</p>
+
+<h2><strong>Description</strong></h2>
+
+<p>In this stage, our focus is on the dispatch of drones carrying medications to user GPS coordinates. It involves storing crucial dispatch information in the database.</p>
+
+<p>Key considerations when creating a dispatch:</p>
+
+<ol>
+  <li><strong>Drone and User Existence:</strong>&nbsp;Ensure that the drone and user selected for dispatch already exist in the database.</li>
+  <li>
+    <p><strong>Medication List Validity:</strong>&nbsp;Confirm that the medications enlisted for dispatch are already present in the database.</p>
+  </li>
+  <li>
+    <p><strong>Weight Capacity Check:</strong>&nbsp;Verify that the selected drone has the capacity to carry the combined weight of the medications on the list and update the current weight of the drone.</p>
+  </li>
+  <li>
+    <p><strong>Dispatch Information in Medication Table:</strong> Enable the retrieval of dispatch information from the medication table, indicating whether a medication has been dispatched or not. When medication has not been dispatched we use -1 as dispatchID</p>
+  </li>
+  <li>
+    <p><strong>Calculate battery capacity usage as follows: </strong>Each second of drone operation depletes 10mAh from the drone&#39;s battery. Furthermore, after the estimated delivery time elapses, each dispatched drone updates its status. Compute the estimated battery consumption during the dispatch period based on the duration in seconds and minutes. Ensure that the drone has sufficient battery energy for a successful delivery. For instance, if the delivery is scheduled for 3 minutes, the battery consumption would be 10 * 60 * 3 = 1800mAh for delivering medication and an additional 1800mAh for the return trip to base, totaling 3200mAh. If the battery lacks the necessary power for a successful delivery,&nbsp;do not dispatch drone.</p>
+  </li>
+</ol>
+
+<h2>Objectives</h2>
+
+<p>Create specific classes in your Spring Boot application to represent the Drone Dispatch entity. These classes will serve as blueprints for storing and managing important information related to drone dispatch.&nbsp;Implement Spring Data JPA associated classes,&nbsp;to seamlessly interact with your database.</p>
+
+<h3>Dispatch Drone Controller endpoints below</h3>
+
+<p>- <code>POST /api/dispatch/dispatch_drone</code></p>
+
+<p>- <code>POST /api/dispatch/get_dispatch/{dispatchId}</code></p>
+
+<p>- <code>POST /api/dispatch/get_all_dispatch</code></p>
+
+<p>&nbsp;</p>
+
+<p><strong>&nbsp;Example 1</strong>:&nbsp;<em>creating a new drone dispatch with a valid request body</em>:<br />
+  &nbsp;</p>
+
+<p><em>Request:&nbsp;</em><code>POST&nbsp;/api/dispatch/dispatch_drone</code></p>
+
+<p><em>Request body:</em></p>
+
+<pre>
+<code class="language-json">{
+  "drone": {
+    "serialNumber": "S001",
+    "currentWeight": 80,
+    "maxWeight": 100,
+    "batteryCapacity": 10000,
+    "model": "LIGHTWEIGHT",
+    "state": "DELIVERING",
+    "currentCoordinate": "4.815600N 7.049800E"
+  },
+  "user": {
+    "account":"CUSTOMER",
+    "name":"John Smith",
+    "phoneNumber":"5109876543",
+    "address":"456 Pine Avenue Los Angeles California(CA) 90001",
+    "gpsCoordinate":"4.8156_7.0498"
+  },
+  "medications": [
+  {
+    "code":"0591_0405",
+	"name":"Lisinopril",
+	"weight":"40",
+	"imageURL":"https://www.lupin.com/US/wp-content/uploads/2021/06/lisinopril-tablets-usp-40mg.jpg"
+	},
+	{
+    "code":"EM2N5P8",
+	"name":"Montelukast",
+	"weight":"50",
+	"imageURL":"https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&amp;rs=1"
+	}
+  ],
+  "cancelled": false,
+  "estimatedTime": "00:01:30",
+  "timestamp": "2024-01-21T18:02:58.312427"
+}</code></pre>
+
+<p><strong><em>Response body:</em></strong></p>
+
+<p>Response</p>
+
+<p>You will receive a JSON response for a POST request containing a status message and http status. This response indicates that all required parameters have been fulfilled for a successful delivery.</p>
+
+<pre>
+<code class="language-json">{
+
+"httpStatus": "OK",
+
+"message": "Drone dispatched successfully."
+
+}</code></pre>
+
+<p>If the drone value is null</p>
+
+<p>You will receive response below if the total weight of medications to be loaded exceeds the maximum weight capacity of the drone.</p>
+
+<pre>
+<code class="language-json">
+{
+    "httpStatus": "OK",
+    "message": "Drone selected cannot carry medications, You may reduce the number of medications or choose another drone with a larger capacity."
+}</code></pre>
+
+<p>You will receive the following response if the drone&#39;s battery capacity is insufficient for the medication delivery trip.&nbsp;</p>
+
+<pre>
+<code>{
+    "message": "Drone selected does not have enough battery charge to delivery medication.",
+    "httpStatus": "OK"
+}</code></pre>
+
+<p>You will receive the following response if the medication selected does not exist in database.</p>
+
+<pre>
+<code>{
+    "message": "medication with code EM2N5P8 not found.",
+    "httpStatus": "NOT_FOUND"
+}</code></pre>
+
+<p>&nbsp;You will receive the following response if the drone selected does not exist in database.</p>
+
+<pre>
+<code>{
+    "message": "Drone with serial number S099 not found.",
+    "httpStatus": "NOT_FOUND"
+}</code></pre>
+
+<p>&nbsp;You will receive the following response if the user account selected does not exist in database.</p>
+
+<pre>
+<code>{
+    "message": "User with phone number 5109876000 not found.",
+    "httpStatus": "NOT_FOUND"
+}</code></pre>
+
+<p><strong>&nbsp;Example 2</strong>: get<em>&nbsp;a drone dispatch with a valid request body</em>:</p>
+
+<p>The id in the example below is 1</p>
+
+<p>Request: <code>GET/api/dispatch/get_dispatch/1</code></p>
+
+<p><strong><em>Response body:</em></strong></p>
+
+<p>Response</p>
+
+<p>You will receive a JSON response for a GET request containing a status message, http status and data payload.</p>
+
+<pre>
+<code class="language-json">{
+    "data": {
+        "dispatchId": 1,
+        "cancelled": false,
+        "estimatedTime": "00:01:30",
+        "droneID": "S001",
+        "droneStatus": "DELIVERED"
+        "userName": "John Smith",
+        "userPhoneNumber": "5109876543",
+        "medicationCodes": [
+            "0591_0405",
+            "EM2N5P8"
+        ]
+    },
+    "httpStatus": "OK",
+    "message": "Drone Dispatched fetched successfully."
+}</code></pre>
+
+<p>If drone dispatch ID was not found, the request should return below.</p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "Drone Dispatched with id 22 not found.",
+
+    "httpStatus": "NOT_FOUND"
+
+}</code></pre>
+
+<p><strong>&nbsp;Example 3</strong>: get<em>&nbsp;all drones dispatched with a valid request body</em>:&nbsp;</p>
+
+<p>Request:&nbsp;<code>GET&nbsp;/api/dispatch/get_all_dispatch</code></p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "All Drone Dispatched fetched successfully.",
+
+    "httpStatus": "OK",
+
+    "data": [
+        {
+
+            "dispatchId": 1,
+
+            "cancelled": false,
+
+            "estimatedTime": "00:01:30",
+
+            "droneID": "S001",
+
+            "droneStatus": "DELIVERING",
+
+            "userName": "John Smith",
+
+            "userPhoneNumber": "5109876543",
+
+            "medicationCodes": [
+
+                "0591_0405",
+
+                "EM2N5P8"
+
+            ]
+
+        },
+
+        {
+
+            "dispatchId": 2,
+
+            "cancelled": false,
+
+            "estimatedTime": "00:01:30",
+
+            "droneID": "S003",
+
+            "droneStatus": "IDLE",
+
+            "userName": "Olivia White",
+
+            "userPhoneNumber": "6504321876",
+
+            "medicationCodes": [
+
+                "0363_0007",
+
+                "XYGIY_06"
+
+            ]
+
+        }
+
+    ]
+
+}</code></pre>
+
+<h3>Write custom&nbsp;queries to retrieve vital information from database.</h3>
+
+<ol>
+  <li><strong>Current State of Drones:</strong>&nbsp;Write custom queries to retrieve information about the current state of your drones. This involves querying the database to obtain details such as whether a drone is in an IDLE state or actively DELIVERING medications. This information is crucial for real-time monitoring and decision-making.<br />
+    &nbsp;</li>
+  <li>&nbsp;<strong style="font-size:inherit">Drone Models Information:</strong>&nbsp;Write&nbsp;custom queries that fetch information about the models of drones stored in the database. This allows you to gain insights into the variety of drone models at your disposal. Understanding the available drone models is essential for making informed decisions during dispatch operations.</li>
+  <li>
+    <p><strong>Battery Level Information:</strong>&nbsp;Write custom queries to retrieve information about the current battery levels of your drones. Knowing the battery status enables you to select the right drone for dispatch based on its energy capacity. This ensures that you choose a drone with sufficient power to complete the intended medication dispatch without interruptions.</p>
+  </li>
+  <li>
+    <p><strong>Get medication by name:</strong> Write custom queries to retrieve information about available medications by name. This helps user to know if you the medication needed is available in database.</p>
+  </li>
+</ol>
+
+<h3>Custom controller endpoints below.&nbsp;</h3>
+
+<p>-&nbsp;<code>GET&nbsp;/api/drones/get_drones_by_state</code></p>
+
+<p>-&nbsp;<code>GET&nbsp;/api/drones/get_drones_by_model</code></p>
+
+<p>-&nbsp;<code>GET&nbsp;/api/drones/get_drone_by_charge</code></p>
+
+<p>-&nbsp;<code>GET&nbsp;/api/medications/get_by_name</code></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Example 4.</strong> Get drones by state with a valid request body:</p>
+
+<p>The drone state requested below is IDLE</p>
+
+<p>Request:&nbsp;<code>GET&nbsp;/api/drones/get_drones_by_state/IDLE</code></p>
+
+<p><strong>Response body:</strong></p>
+
+<pre>
+<code class="language-json">{
+
+    "data": [
+
+        {
+
+            "serialNumber": "S003",
+
+            "currentWeight": 55,
+
+            "maxWeight": 350,
+
+            "batteryCapacity": 15000,
+
+            "model": "CRUISERWEIGHT",
+
+            "state": "IDLE",
+
+            "currentCoordinate": "4.815600°N 7.049800°E"
+
+        },
+
+        {
+
+            "serialNumber": "S004",
+
+            "currentWeight": 0,
+
+            "maxWeight": 400,
+
+            "batteryCapacity": 20000,
+
+            "model": "HEAVYWEIGHT",
+
+            "state": "IDLE",
+
+            "currentCoordinate": "4.815600°N 7.049800°E"
+
+        }
+
+    ],
+
+    "httpStatus": "OK",
+
+    "message": "Drones fetched by state."
+
+}</code></pre>
+
+<p>If a user looks for a drone state using the search term &quot;RETURNING&quot; and there are no matches, the system should respond with below:</p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "Drones list by state RETURNING empty.",
+
+    "httpStatus": "OK"
+
+}</code></pre>
+
+<p><strong>Example 5.</strong> Get drones by model with a valid request body:</p>
+
+<p>The drone model requested below is MIDDLEWEIGHT.</p>
+
+<p>Request:&nbsp;<code>GET&nbsp;/api/drones/get_drones_by_model/MIDDLEWEIGHT</code></p>
+
+<p><strong>Response body:</strong></p>
+
+<pre>
+<code class="language-json">{
+
+    "data": [
+
+        {
+
+            "serialNumber": "S001",
+
+            "currentWeight": 90,
+
+            "maxWeight": 100,
+
+            "batteryCapacity": 10000,
+
+            "model": "LIGHTWEIGHT",
+
+            "state": "DELIVERING",
+
+            "currentCoordinate": "4.815600N 7.049800E"
+
+        }
+
+    ],
+
+    "httpStatus": "OK",
+
+    "message": "Drones fetched by model"
+
+}</code></pre>
+
+<p>If a user looks for a drone model using the search term &quot;MIDDLEWEIGHT&quot; and there are no matches, the system should respond with below:</p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "Drones list by model MIDDLEWEIGHT empty.",
+
+    "httpStatus": "OK"
+
+}</code></pre>
+
+<p><strong>Example 6.</strong> Get drones by battery charge:</p>
+
+<p>Drones with battery charge greater than 10000AmH&nbsp;</p>
+
+<p>Request:&nbsp;<code>GET&nbsp;/api/drones/get_drones_by_charge/10000</code></p>
+
+<p><strong>Response body:</strong></p>
+
+<pre>
+<code class="language-json">{
+
+    "data": [
+
+        {
+
+            "serialNumber": "S003",
+
+            "currentWeight": 55,
+
+            "maxWeight": 350,
+
+            "batteryCapacity": 15000,
+
+            "model": "CRUISERWEIGHT",
+
+            "state": "IDLE",
+
+            "currentCoordinate": "4.815600°N 7.049800°E"
+
+        },
+
+        {
+
+            "serialNumber": "S004",
+
+            "currentWeight": 0,
+
+            "maxWeight": 400,
+
+            "batteryCapacity": 20000,
+
+            "model": "HEAVYWEIGHT",
+
+            "state": "IDLE",
+
+            "currentCoordinate": "4.815600°N 7.049800°E"
+
+        }
+
+    ],
+
+    "httpStatus": "OK",
+
+    "message": "Drones by charge fetched"
+
+}</code></pre>
+
+<p>If a user looks for a drones with charge greater than &quot;21000&quot; and there are no matches, the system should respond with below:</p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "Drones list by percentage 21000 empty.",
+
+    "httpStatus": "OK"
+
+}</code></pre>
+
+<p><strong>Example 7.</strong> Get medication by name:</p>
+
+<p>Medication name in example below is&nbsp; &quot;omeprazole&quot;</p>
+
+<p>Request:&nbsp;<code>GET&nbsp;/api/medication/get_by_name/omeprazole</code></p>
+
+<p><strong>Response body:</strong></p>
+
+<p><strong>Note:</strong> Medication model has a new field&nbsp;Dispatch ID in this context refers to unique identifier assigned to medication when a drone is dispatched with medication. When medication has not been dispatched the <strong>droneDispatchID</strong>&nbsp;ifeld value is -1.</p>
+
+<pre>
+<code class="language-json">{
+
+    "message": "Medications fetched successfully.",
+
+    "httpStatus": "OK",
+
+    "data": [
+
+        {
+
+            "code": "0363_0007",
+
+            "name": "omeprazole",
+
+            "weight": 25,
+
+            "imageURL": "https://www.drugs.com/images/pills/fio/GMK03970.JPG",
+
+            "droneDispatchID": 3
+
+        }
+
+    ]
+
+}</code></pre>
+
+<p>If a user looks for a medication with name &quot;ampicillin&quot; and there are no matches, the system should respond with below:</p>
+
+<pre>
+<code class="language-json">{
+
+    "httpStatus": "OK",
+
+    "message": "Medication list by name ampicillin empty."
+
+}</code></pre>

@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set JARPATH=%APP_HOME%\lib\DroneMedicationAPI-Stage1.jar
+set JARPATH=
 
 @rem Execute DroneMedicationAPI-Stage1
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %DRONE_MEDICATION_API_STAGE1_OPTS%  -jar "%JARPATH%" %CMD_LINE_ARGS%

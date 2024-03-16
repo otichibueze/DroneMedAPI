@@ -1,0 +1,58 @@
+type: edu
+files:
+  - name: src/DroneMed/DroneMedicationAPIApplication.java
+    visible: true
+  - name: build.gradle
+    visible: true
+  - name: src/DroneMed/models/Drone.java
+    visible: true
+  - name: src/DroneMed/models/Medication.java
+    visible: true
+  - name: src/DroneMed/models/UserAccount.java
+    visible: true
+  - name: src/DroneMed/repository/DroneRepository.java
+    visible: true
+  - name: src/DroneMed/repository/MedicationRepository.java
+    visible: true
+  - name: src/DroneMed/repository/UserRepository.java
+    visible: true
+  - name: src/DroneMed/service/MedicationService.java
+    visible: true
+  - name: src/DroneMed/service/UserService.java
+    visible: true
+  - name: src/DroneMed/service/DroneService.java
+    visible: true
+  - name: src/DroneMed/service/impl/MedicationServiceImpl.java
+    visible: true
+  - name: src/DroneMed/service/impl/DroneServiceImpl.java
+    visible: true
+  - name: src/DroneMed/service/impl/UserServiceImpl.java
+    visible: true
+  - name: src/DroneMed/controller/DroneController.java
+    visible: true
+  - name: src/DroneMed/response/ResponseHandler.java
+    visible: true
+  - name: src/DroneMed/controller/MedicationController.java
+    visible: true
+  - name: src/DroneMed/controller/UserController.java
+    visible: true
+  - name: src/resources/application.properties
+    visible: true
+  - name: test/DroneMedicationAPIApplicationTest.java
+    visible: false
+  - name: src/DroneMed/models/DroneDispatch.java
+    visible: true
+  - name: src/DroneMed/repository/DroneDispatchRepository.java
+    visible: true
+  - name: src/DroneMed/service/DroneDispatchService.java
+    visible: true
+  - name: src/DroneMed/service/impl/DroneDispatchServiceImpl.java
+    visible: true
+  - name: src/DroneMed/controller/DispatchController.java
+    visible: true
+  - name: src/DroneMed/models/MedicationDTO.java
+    visible: true
+  - name: src/DroneMed/models/DroneDispatchDTO.java
+    visible: true
+  - name: src/DroneMed/Utility/MyMapper.java
+    visible: true

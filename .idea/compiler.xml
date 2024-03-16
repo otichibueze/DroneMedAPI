@@ -9,6 +9,7 @@
         </processorPath>
         <module name="DroneMedAPI.DroneMedicationAPI-Stage1.main" />
         <module name="DroneMedAPI.DroneMedicationAPI-Stage2.main" />
+        <module name="DroneMedAPI.DroneMedicationAPI-Stage3.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-JARPATH=$APP_HOME/lib/DroneMedicationAPI-Stage1.jar
+JARPATH="\\\"\\\""
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

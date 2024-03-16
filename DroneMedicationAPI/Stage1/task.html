@@ -8,9 +8,13 @@
   <br />
   Importantly, our emphasis will solely be on building our models and repositories. This streamlines the project, allowing us to concentrate on the core functionality of facilitating communication between various components of the system through standardized Spring boot CLI. By doing so, we aim to optimize efficiency and flexibility, making it easier to integrate the drone delivery system with other applications or platforms in the future.</p>
 
+<p>To run the tests, the&nbsp;<code>application.properties</code>&nbsp;file should contain the following line:&nbsp;<code>spring.datasource.url=jdbc:h2:file:../droneAPI_db</code></p>
+
+<p>Since 2.3.0, Spring Boot hides error messages by default, to pass the tests, you need to add the following line:&nbsp;<code>server.error.include-message=always</code>&nbsp;to the&nbsp;<code>application.properties&nbsp;file</code>.</p>
+
 <h2>Objectives</h2>
 
-<p>In this stage our goal is to establish the fundamental features of the web service. This involves setting up the core structure of the Spring Boot project and generating entity classes to store essential data related to Drone, Medication, and UserAccount.</p>
+<p>In this stage our goal is to establish the fundamental features of the web service. This involves setting up the core structure of the Spring Boot project and generating entity classes to store essential data related to Drone, Medication, and UserAccount.&nbsp;</p>
 
 <p>We&#39;ll leverage Spring Data JPA for seamless data management. For each data model (Drone, Medication, and UserAccount), we&#39;ll establish a dedicated repository using Spring Data JPA to ensure efficient interaction with your preferred database.</p>
 
