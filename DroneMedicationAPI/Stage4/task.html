@@ -1,0 +1,77 @@
+<h2>Stage 4: <strong>Schedule and log essential details about dispatched drone to file</strong>.</h2>
+
+<p>When a drone is dispatched, it is necessary to monitor the delivery process and record crucial details about the drone&#39;s state and battery information to a log file.</p>
+
+<h2><strong>Description</strong></h2>
+
+<p>In this development stage, the goal is to establish a service dedicated to logging all relevant dispatched drone details into a file at intervals determined by the drone delivery schedule. Achieving this requires the use of a scheduling service, which automates the execution of specific tasks at predefined time intervals. The logged information will be in string format, capturing relevant drone details. This string data will then be stored in file, along with a timestamp indicating the time of the logging operation.</p>
+
+<ul>
+  <li>
+    <p><strong>Scheduling Service:</strong>&nbsp;Utilize a scheduling service to automatically execute the logging task at regular intervals, ensuring consistent recording of drone information according to schedule time interval. This is only dispatched drones.</p>
+  </li>
+  <li>
+    <p><strong>Logging:&nbsp;</strong>All information will be stored in a file path from root directory&nbsp;<code>log/dispatchlog.txt</code></p>
+  </li>
+</ul>
+
+<p><strong>Updating Drone Status and battery information:</strong>&nbsp;When the drone is dispatched, its initial state changes from <strong>IDLE to DELIVERING</strong>. This indicates that the drone is actively engaged in delivering medications. Assuming the dispatch time is 3mins after the estimated delivery time elapses which here is 3mins, assume that the medications have been successfully delivered. Therefore, change the drone&#39;s status from <strong>DELIVERING to DELIVERED to RETURING&nbsp;</strong>. It is assumed that the drone will spend the estimated delivery time in this case 3mins to return to base.&nbsp;Following the estimated return time, assume that the drone has safely returned to its base. Change the drone&#39;s status from <strong>RETRUNING to IDLE</strong></p>
+
+<p>While you update your drone status also update your drone battery based on the estimated delivery time. Understand that each second of drone operation consumes 10mAh from the drone&#39;s battery and each dispatched&nbsp;drone updates its status after the estimated delivery time elapses in this case 3mins. Calculate the estimated battery consumption during the dispatch period based on the seconds and minutes involved. Verify that drone has enough battery energy to make a successful delivery. Example if the delivery is planned for 3mins. The battery consumption will be <strong>10 * 60 * 3 = 1800mAh </strong>to delivery medication and another <strong>1800mAH</strong> to return to base. <strong>Total of 3200mAh.</strong> If the battery does not have enough power to make a successful delivery do not dispatch drone.</p>
+
+<h2>Objectives</h2>
+
+<p>Implement scheduling class and use the&nbsp;<code>@EnableScheduling</code>&nbsp;annotation to enable a schedule in your Spring application. Use the,&nbsp;<code>@Scheduled</code> annotation is to specify the interval at which the designated log method is triggered. The objective is to implement a scheduling mechanism that captures and logs each drone&#39;s information as a string, saving this information to file in directory from root <code>log/dispatchlog.txt</code></p>
+
+<h3>Examples</h3>
+
+<p>Dispatching a drone with serial number S004 and estimated delivery time of 3:00mins, will print info below to log file once dispatched.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 16:37:32.4804023 Drone S001 with a battery level of 10000 amps is on a medication delivery.</code></pre>
+
+<p>When drone has delivered medication which is estimated to be after 3:00mins from dispatch, system should print below log file.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 16:40:40.1214914 Drone S001 delivery complete! battery level 8200amps, drone returning to base.</code></pre>
+
+<p>When drone arrives base&nbsp; which is estimated to be after 3:00mins from delivery time, system should print below console.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 16:45:03.6441693 Drone S001 has arrived base, battery level 6400</code></pre>
+
+<p><strong>Multiple drones</strong> can be dispatched, and the log file will be updated based on each drone&#39;s estimated delivery time. Here we dispatch drone with serial number S003 with estimated delivery time of 2mins and then drone with serial number S001 with estimated delivery time of 3mins, system should print below log file.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:00:43.1365461 Drone S003 with a battery level of 8000 amps is on a medication delivery.
+Timestamp 2024-03-18 17:00:50.8692686 Drone S001 with a battery level of 10000 amps is on a medication delivery.</code></pre>
+
+<p>&nbsp;When <strong>drone with serial number S003</strong> has delivered medication which is estimated to be after <strong>2:00mins from dispatch</strong>, system should print below log file.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:02:43.1770327 Drone S003 delivery complete! battery level 6800amps, drone returning to base.</code></pre>
+
+<p>&nbsp;When <strong>drone with serial number S001</strong> has delivered medication which is estimated to be after <strong>3:00mins from dispatch</strong>, system should print below log file.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:03:50.8980316 Drone S001 delivery complete! battery level 8200amps, drone returning to base.</code></pre>
+
+<p>&nbsp;When <strong>drone with serial number S003</strong> arrives base which is estimated to be after <strong>2:00mins from delivery time</strong>, system should print below console.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:04:43.1940268 Drone S003 has arrived base, battery level 5600</code></pre>
+
+<p>&nbsp;When <strong>drone with serial number S001</strong>&nbsp;arrives base which is estimated to be after 3<strong>:00mins from delivery time</strong>, system should print below console.&nbsp;</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:06:50.9141118 Drone S001 has arrived base, battery level 6400</code></pre>
+
+<p>The file named &quot;dispatchlog.txt&quot; should contain the following content once both drones are back at the base station.</p>
+
+<pre>
+<code>Timestamp 2024-03-18 17:00:43.1399654 Drone S003 with a battery level of 8000 amps is on a medication delivery.
+Timestamp 2024-03-18 17:00:50.8692686 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 17:02:43.1781683 Drone S003 delivery complete! battery level 6800amps, drone returning to base.
+Timestamp 2024-03-18 17:03:50.8980316 Drone S001 delivery complete! battery level 8200amps, drone returning to base.
+Timestamp 2024-03-18 17:04:43.1945781 Drone S003 has arrived base, battery level 5600
+Timestamp 2024-03-18 17:06:50.914663 Drone S001 has arrived base, battery level 6400</code></pre>

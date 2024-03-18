@@ -1,0 +1,20 @@
+Timestamp 2024-03-18 17:00:43.1399654 Drone S003 with a battery level of 8000 amps is on a medication delivery.
+Timestamp 2024-03-18 17:00:50.8692686 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 17:02:43.1781683 Drone S003 delivery complete! battery level 6800amps, drone returning to base.
+Timestamp 2024-03-18 17:03:50.8980316 Drone S001 delivery complete! battery level 8200amps, drone returning to base.
+Timestamp 2024-03-18 17:04:43.1945781 Drone S003 has arrived base, battery level 5600
+Timestamp 2024-03-18 17:06:50.914663 Drone S001 has arrived base, battery level 6400
+Timestamp 2024-03-18 17:57:51.0829166 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:26:42.0339192 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:28:12.0522839 Drone S001 delivery complete! battery level 9100amps, drone returning to base.
+Timestamp 2024-03-18 18:30:35.686977 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:32:06.6008128 Drone S001 delivery complete! battery level 9100amps, drone returning to base.
+Timestamp 2024-03-18 18:33:36.6276211 Drone S001 has arrived base, battery level 8200
+Timestamp 2024-03-18 18:34:31.002483 Drone S002 with a battery level of 15000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:42:53.7654587 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:44:09.1471849 Drone S001 with a battery level of 10000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:44:39.1760404 Drone S001 delivery complete! battery level 9700amps, drone returning to base.
+Timestamp 2024-03-18 18:45:09.2092332 Drone S001 has arrived base, battery level 9400
+Timestamp 2024-03-18 18:45:24.0086299 Drone S002 with a battery level of 15000 amps is on a medication delivery.
+Timestamp 2024-03-18 18:48:01.9807087 Drone S002 delivery complete! battery level 14400amps, drone returning to base.
+Timestamp 2024-03-18 18:49:01.9875695 Drone S002 has arrived base, battery level 13800
