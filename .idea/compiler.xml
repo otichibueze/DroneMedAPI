@@ -11,6 +11,7 @@
         <module name="DroneMedAPI.DroneMedicationAPI-Stage4.main" />
         <module name="DroneMedAPI.DroneMedicationAPI-Stage1.main" />
         <module name="DroneMedAPI.DroneMedicationAPI-Stage3.main" />
+        <module name="DroneMedAPI.DroneMedicationAPI-Stage5.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

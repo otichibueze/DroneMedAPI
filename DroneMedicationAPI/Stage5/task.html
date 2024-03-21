@@ -1,0 +1,144 @@
+<h2>Stage 5:&nbsp;Authorization for administrators and users</h2>
+
+<p>To ensure the security of our drone medication API services, access needs to be strictly controlled. Only authorized administrators should be able to manage the service itself, while medication deliveries can only be requested by registered users. By implementing proper access controls, we can guarantee that only authorized individuals can utilize specific functionalities of the web service.</p>
+
+<h2><strong>Description</strong></h2>
+
+<p>To enhance security and control access to your drones, the implementation of an access control system is essential. This system ensures that only authorized individuals have the privilege to create drones. Moreover, clients should have the ability to access their orders and receive feedback on the dispatched drones to their location. To achieve this, a role-based system must be established, comprising roles such as<code> ADMIN, USER</code></p>
+
+<p><strong>Add required dependencies.</strong></p>
+
+<p>Gradle Groovy DSL</p>
+
+<pre>
+<code>dependencies {
+   // ...
+   implementation 'org.springframework.boot:spring-boot-starter-security'
+   // ...
+}</code></pre>
+
+<p>Gradle Kotlin DSL</p>
+
+<pre>
+<code>dependencies {
+    // ...
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    // ...
+}</code></pre>
+
+<p>Maven</p>
+
+<pre>
+<code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+
+<p>To ensure secure access to our Drone Medication API, we leverage Spring Security&#39;s <code>HttpSecurity</code> and <code>SecurityFilterChain</code> objects. These components allow us to configure and enforce access control policies. Additionally, usernames and passwords are stored securely within an H2 database.</p>
+
+<p>This approach guarantees that unauthorized access attempts are met with a pre-defined response. This response includes a specific status code that clearly communicates the authentication failure to the user. Consequently, the system&#39;s overall security and authentication integrity are significantly enhanced.</p>
+
+<h2>Objectives</h2>
+
+<p>Utilizing Spring Boot Security components such as <code>SecurityFilterChain</code>, <code>UserDetails</code>, and <code>UserDetailService</code> to create a role-based access control system. This system will assign each user a specific role, such as ADMIN or USER, based on their responsibilities and privileges within the system.</p>
+
+<p>&nbsp;The user details will be stored in an H2 database rather than in-memory.&nbsp;To safeguard user passwords in our system, we leverage a powerful encryption service like <code>BCryptPasswordEncoder</code>. This service encrypts passwords before storing them in the database. Develop a controller that allows unauthenticated users to register new users.</p>
+
+<ul>
+    <li><strong>Administrator</strong> roles are granted extensive access, allowing them to access everything in the system. This level of control is necessary for system administrators who manage and maintain the overall system.</li>
+    <li>
+        <p><strong>Customers</strong> can access the following endpoints after logging in as users:&nbsp;<br />
+            -&nbsp;<strong>View User Information:</strong>&nbsp;Using the&nbsp;<code>/api/user/get_user/{phone number}</code>&nbsp;endpoint, users can retrieve their saved information stored within the system. This allows them to review&nbsp;their profile details if needed.<br />
+            <br />
+            -&nbsp;<strong>Track Drone Medication Dispatches:</strong>&nbsp;The&nbsp;<code>/api/dispatch/get_dispatch/{dispatchid}</code>&nbsp;endpoint empowers users to track their medication deliveries. By providing the dispatch ID, they can view details of a specific&nbsp; drone medication dispatch, potentially including information like delivery status, estimated arrival time, or associated drone information.<br />
+            <br />
+            <strong>Note </strong>for security reasons, users cannot access any other system information or perform actions that could compromise system security. This ensures a safe and controlled environment for all users and the overall system.</p>
+    </li>
+    <li><strong>Non-authenticated</strong> users limited access. These users can browse available medications for delivery without creating an account. This limited functionality may encourage&nbsp;guests to register for full access.&nbsp;&nbsp;</li>
+</ul>
+
+<h3><strong>Register user controller endpoint below:</strong></h3>
+
+<p>- <code>POST /api/register_user</code></p>
+
+<p><strong>Example 1: </strong>The system allows for the registration of admin users through a valid request body containing the necessary information. The admin role grants users extensive access within the system.</p>
+
+<p><strong>Request:</strong>&nbsp;<code>POST /api/register_user</code></p>
+
+<p><strong>Request body:</strong></p>
+
+<pre>
+<code>{
+
+    "username":"systemAdmin",
+
+    "password":"password1",
+
+    "authority":"ROLE_ADMIN"
+
+}</code></pre>
+
+<p><strong><em>Response body:</em></strong></p>
+
+<p>Response</p>
+
+<p>You will receive a JSON response for a POST request containing a status message and http status.</p>
+
+<pre>
+<code>{
+
+    "message": "New user successfully registered successfully.",
+
+    "httpStatus": "OK"
+
+}</code></pre>
+
+<p><strong>Example 2: ROLE_USER&nbsp;</strong>The system allows users to register for accounts by providing a valid request body containing the necessary information. During registration, a user role can also be assigned. This user role determines the specific endpoints a user can access within the system.&nbsp;These user role accessible resources include below:</p>
+
+<p>Endpoint -&nbsp;<code>GET /api/user/get_user/{phone number}</code></p>
+
+<p>Endpoint -&nbsp;<code>GET /api/dispatch/get_dispatch/{dispatchid}</code></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Request:</strong>&nbsp;<code>POST/api/register_user</code></p>
+
+<p><strong>Request body:</strong></p>
+
+<pre>
+<code>{
+
+    "username":"customer1",
+
+    "password":"password1",
+
+    "authority":"ROLE_USER"
+
+}</code></pre>
+
+<p><strong><em>Response body:</em></strong></p>
+
+<p>Response</p>
+
+<p>You will receive a JSON response for a POST request containing a status message and http status.</p>
+
+<pre>
+<code>{
+
+    "message": "New user successfully registered successfully.",
+
+    "httpStatus": "OK"
+
+}</code></pre>
+
+<p>If the user is <strong>not autorized</strong>, all other endpoints should respond with a <code>&quot;status&quot; </code>code of <strong>403</strong>.</p>
+
+<p><strong>Example 3:&nbsp;Non-authenticated</strong>&nbsp;The system allows visitors (users who haven&#39;t logged in) to access specific information without requiring authentication. These publicly accessible resources include below:</p>
+
+<p>Endpoint - GET&nbsp;<code>/api/medications/get_by_name/{name}</code>&nbsp;</p>
+
+<p>Endpoint - GET&nbsp;<code>/api/medications/get_medication/{code}</code>&nbsp;</p>
+
+<p>Endpoint - GET&nbsp;<code>/api/medications/getAllMedication</code></p>
+
+<p>If the user is <strong>not authenticated</strong>, all other endpoints should respond with a <code>&quot;status&quot; </code>code of <strong>401</strong>.</p>

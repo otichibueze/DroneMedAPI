@@ -9,31 +9,31 @@
 5[0m[0;34m =========|_|==============|___/=/_/_/_/
 7[0m[0;34m :: Spring Boot ::                (v2.5.6)
 [0m[0;34m
-ß[0m[0;34m2024-03-16 07:43:26.050  INFO 1628 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 1628 (started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage3)
-∞[0m[0;34m2024-03-16 07:43:26.055  INFO 1628 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-´[0m[0;34m2024-03-16 07:43:27.353  INFO 1628 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-≈[0m[0;34m2024-03-16 07:43:27.456  INFO 1628 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
-ù[0m[0;34m2024-03-16 07:43:28.220  INFO 1628 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-â[0m[0;34m2024-03-16 07:43:28.234  INFO 1628 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ü[0m[0;34m2024-03-16 07:43:28.235  INFO 1628 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-¢[0m[0;34m2024-03-16 07:43:28.358  INFO 1628 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-Ø[0m[0;34m2024-03-16 07:43:28.359  INFO 1628 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2223 ms
-ä[0m[0;34m2024-03-16 07:43:28.517  INFO 1628 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-è[0m[0;34m2024-03-16 07:43:28.824  INFO 1628 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
- [0m[0;34m2024-03-16 07:43:28.833  INFO 1628 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../droneAPI_db'
-©[0m[0;34m2024-03-16 07:43:29.018  INFO 1628 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-¢[0m[0;34m2024-03-16 07:43:29.089  INFO 1628 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-®[0m[0;34m2024-03-16 07:43:29.287  INFO 1628 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-©[0m[0;34m2024-03-16 07:43:29.450  INFO 1628 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-„[0m[0;34m2024-03-16 07:43:30.436  INFO 1628 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-≥[0m[0;34m2024-03-16 07:43:30.446  INFO 1628 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-ß[0m[0;34m2024-03-16 07:43:31.059  WARN 1628 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-•[0m[0;34m2024-03-16 07:43:31.736  INFO 1628 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-∞[0m[0;34m2024-03-16 07:43:31.783  INFO 1628 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path '/api'
-æ[0m[0;34m2024-03-16 07:43:31.803  INFO 1628 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 6.286 seconds (JVM running for 7.737)
-•[0;34m2024-03-16 07:43:32.230  INFO 1628 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-ò[0m[0;34m2024-03-16 07:43:32.230  INFO 1628 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-ê[0m[0;34m2024-03-16 07:43:32.234  INFO 1628 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+ß[0m[0;34m2024-03-21 01:20:35.621  INFO 6220 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 6220 (started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage3)
+∞[0m[0;34m2024-03-21 01:20:35.627  INFO 6220 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+´[0m[0;34m2024-03-21 01:20:37.630  INFO 6220 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∆[0m[0;34m2024-03-21 01:20:37.757  INFO 6220 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 4 JPA repository interfaces.
+ù[0m[0;34m2024-03-21 01:20:38.844  INFO 6220 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+â[0m[0;34m2024-03-21 01:20:38.869  INFO 6220 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ü[0m[0;34m2024-03-21 01:20:38.870  INFO 6220 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+¢[0m[0;34m2024-03-21 01:20:39.042  INFO 6220 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+Ø[0m[0;34m2024-03-21 01:20:39.043  INFO 6220 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3314 ms
+ä[0m[0;34m2024-03-21 01:20:39.285  INFO 6220 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+è[0m[0;34m2024-03-21 01:20:39.759  INFO 6220 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+ [0m[0;34m2024-03-21 01:20:39.778  INFO 6220 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../droneAPI_db'
+©[0m[0;34m2024-03-21 01:20:40.110  INFO 6220 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+¢[0m[0;34m2024-03-21 01:20:40.289  INFO 6220 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+®[0m[0;34m2024-03-21 01:20:40.626  INFO 6220 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+©[0m[0;34m2024-03-21 01:20:40.877  INFO 6220 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+„[0m[0;34m2024-03-21 01:20:42.265  INFO 6220 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+≥[0m[0;34m2024-03-21 01:20:42.282  INFO 6220 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ß[0m[0;34m2024-03-21 01:20:43.288  WARN 6220 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+•[0m[0;34m2024-03-21 01:20:44.192  INFO 6220 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+∞[0m[0;34m2024-03-21 01:20:44.272  INFO 6220 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path '/api'
+ø[0m[0;34m2024-03-21 01:20:44.298  INFO 6220 --- [    Test worker] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 9.814 seconds (JVM running for 12.135)
+•[0;34m2024-03-21 01:20:44.980  INFO 6220 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+ò[0m[0;34m2024-03-21 01:20:44.980  INFO 6220 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+ê[0m[0;34m2024-03-21 01:20:44.984  INFO 6220 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 [0m[1;31m
 Start test 2[0m
 [1;31m
@@ -56,3 +56,41 @@
 Start test 11[0m
 [1;31m
 Start test 12[0m
+[1;31m
+Start test 13[0m
+[1;31m
+Start test 14[0m
+[1;31m
+Start test 15[0m
+[1;31m
+Start test 16[0m
+[1;31m
+Start test 17[0m
+[1;31m
+Start test 18[0m
+[1;31m
+Start test 19[0m
+[1;31m
+Start test 20[0m
+[1;31m
+Start test 21[0m
+[1;31m
+Start test 22[0m
+[1;31m
+Start test 23[0m
+[1;31m
+Start test 24[0m
+[1;31m
+Start test 25[0m
+[1;31m
+Start test 26[0m
+[1;31m
+Start test 27[0m
+[1;31m
+Start test 28[0m
+[1;31m
+Start test 29[0m
+[1;31m
+Start test 30[0m
+[1;31m
+Start test 31[0m

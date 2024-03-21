@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DroneMedicationAPIApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-11T09:33:49" hostname="DESKTOP-S3OS6DJ" time="21.14">
+<testsuite name="DroneMedicationAPIApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-20T22:45:54" hostname="DESKTOP-S3OS6DJ" time="13.781">
   <properties/>
-  <testcase name="start" classname="DroneMedicationAPIApplicationTest" time="21.14"/>
+  <testcase name="start" classname="DroneMedicationAPIApplicationTest" time="13.781"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,20 +13,20 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2024-03-11 10:33:51.421  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 16300 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
-2024-03-11 10:33:51.480 DEBUG 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
-2024-03-11 10:33:51.506  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-2024-03-11 10:33:53.768  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-11 10:33:53.986  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 3 JPA repository interfaces.
-2024-03-11 10:33:55.342  INFO 16300 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-11 10:33:55.588  INFO 16300 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2024-03-11 10:33:56.063  INFO 16300 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-03-11 10:33:56.431  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-11 10:33:57.054  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-11 10:33:57.129  INFO 16300 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-03-11 10:33:59.426  INFO 16300 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-03-11 10:33:59.505  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:01.987  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 11.99 seconds (JVM running for 14.08)
+2024-03-20 23:45:55.690  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 21828 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-20 23:45:55.723 DEBUG 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-20 23:45:55.737  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-20 23:45:57.212  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20 23:45:57.334  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
+2024-03-20 23:45:58.084  INFO 21828 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20 23:45:58.193  INFO 21828 --- [nAPIApplication] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-20 23:45:58.493  INFO 21828 --- [nAPIApplication] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-20 23:45:58.703  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20 23:45:59.042  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20 23:45:59.091  INFO 21828 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-20 23:46:00.196  INFO 21828 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-20 23:46:00.218  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:02.000  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 7.144 seconds (JVM running for 8.592)
 Enter instruction for drone medication API...
 1. Drones
 2. Medications
@@ -50,9 +50,7 @@ Invalid response, Please enter a valid response.
 > 1
 View drones
 1. Back
-Drones list
-1. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 700 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
-2. Drone serialnumber: S004 maxWeight: 100 currentWeight: 0 batteryCapacity: 9000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600°N 7.049800°E
+The drone list is empty.
 > abcd
 Invalid response, Please enter a valid response.
 > 1
@@ -260,10 +258,10 @@ Drone with serial number S020 not found.
 2. Medications
 3. UserAccounts
 4. Exit
-2024-03-11 10:34:02.880  INFO 16300 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+2024-03-20 23:46:02.983  INFO 21828 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-11 10:34:02.920 ERROR 16300 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
+2024-03-20 23:46:03.029 ERROR 21828 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
 
 org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
 	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
@@ -297,9 +295,9 @@ org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2024-03-11 10:34:03.042  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:03.055  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-11 10:34:03.090  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20 23:46:03.185  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:03.202  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20 23:46:03.257  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ?[1;31m
 Start test 2?[0m
 
@@ -311,18 +309,18 @@ Start test 2?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2024-03-11 10:34:03.160  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 16300 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
-2024-03-11 10:34:03.176 DEBUG 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
-2024-03-11 10:34:03.183  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-2024-03-11 10:34:03.606  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-11 10:34:03.650  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
-2024-03-11 10:34:03.829  INFO 16300 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-11 10:34:03.867  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-03-11 10:34:03.909  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-03-11 10:34:03.932  INFO 16300 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-03-11 10:34:04.201  INFO 16300 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-03-11 10:34:04.262  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:05.221  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 2.12 seconds (JVM running for 17.314)
+2024-03-20 23:46:03.354  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 21828 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-20 23:46:03.381 DEBUG 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-20 23:46:03.390  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-20 23:46:03.902  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20 23:46:03.952  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2024-03-20 23:46:04.128  INFO 21828 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20 23:46:04.218  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-20 23:46:04.292  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-20 23:46:04.312  INFO 21828 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-20 23:46:04.687  INFO 21828 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-20 23:46:04.700  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:05.102  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 1.831 seconds (JVM running for 11.695)
 Enter instruction for drone medication API...
 1. Drones
 2. Medications
@@ -346,9 +344,7 @@ Invalid response, Please enter a valid response.
 > 1
 View medications
 1. Back
-Medications list
-1. Medication code: XYGIY_01 name: Paracetamol Weight: 45 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7
-2. Medication code: EM2N5P8 name: Montelukast Weight: 30 imageURL: https://th.bing.com/th/id/OIP.UKCusqDb2OqO0Yc7YkUZYwHaHa?pid=ImgDet&rs=1
+The medication list is empty.
 > abcd
 Invalid response, Please enter a valid response.
 > 1
@@ -556,10 +552,10 @@ Medication with code 0591_0000 not found.
 2. Medications
 3. UserAccounts
 4. Exit
-2024-03-11 10:34:06.192  INFO 16300 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+2024-03-20 23:46:05.805  INFO 21828 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-11 10:34:06.208 ERROR 16300 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
+2024-03-20 23:46:05.824 ERROR 21828 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
 
 org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
 	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
@@ -593,9 +589,9 @@ org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2024-03-11 10:34:06.380  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:06.394  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-03-11 10:34:06.431  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-03-20 23:46:05.990  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:06.002  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-03-20 23:46:06.024  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
 ?[1;31m
 Start test 3?[0m
 
@@ -607,18 +603,18 @@ Start test 3?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
-2024-03-11 10:34:06.520  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 16300 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
-2024-03-11 10:34:06.557 DEBUG 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
-2024-03-11 10:34:06.565  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
-2024-03-11 10:34:07.206  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-11 10:34:07.296  INFO 16300 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
-2024-03-11 10:34:07.597  INFO 16300 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-11 10:34:07.629  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-03-11 10:34:07.669  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-03-11 10:34:07.691  INFO 16300 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2024-03-11 10:34:07.900  INFO 16300 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-03-11 10:34:07.947  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:08.568  INFO 16300 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 2.123 seconds (JVM running for 20.661)
+2024-03-20 23:46:06.100  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 21828 (C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1\build\classes\java\main started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage1)
+2024-03-20 23:46:06.120 DEBUG 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Running with Spring Boot v2.5.6, Spring v5.3.12
+2024-03-20 23:46:06.127  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-20 23:46:06.545  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20 23:46:06.589  INFO 21828 --- [nAPIApplication] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-03-20 23:46:06.708  INFO 21828 --- [nAPIApplication] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20 23:46:06.731  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-03-20 23:46:06.756  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-03-20 23:46:06.767  INFO 21828 --- [nAPIApplication] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-20 23:46:06.885  INFO 21828 --- [nAPIApplication] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-20 23:46:06.906  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:07.265  INFO 21828 --- [nAPIApplication] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 1.226 seconds (JVM running for 13.857)
 Enter instruction for drone medication API...
 1. Drones
 2. Medications
@@ -642,10 +638,7 @@ Invalid response, Please enter a valid response.
 > 1
 View UserAccounts
 1. Back
-UserAccounts list
-1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
-2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+The UserAccounts list is empty.
 > abcdkjasdffasfasjkn
 Invalid response, Please enter a valid response.
 > 1
@@ -728,9 +721,9 @@ Update UserAccount
 UserAccounts list
 1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Sacramento California(CA) 95814 account: ADMIN
 2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
-5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+3. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+4. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+5. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
 Enter UserAccount ID to update....
 User accountType, name, phoneNumber, address, gps coordinates  
 > ADMIN,Emily Davis,4157890123,789 Cedar Street Oakland California(CA) 77714,38.58157 -121.49440
@@ -744,9 +737,9 @@ Update UserAccount
 UserAccounts list
 1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
 2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
-5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+3. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+4. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+5. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
 Enter UserAccount ID to update....
 User accountType, name, phoneNumber, address, gps coordinates  
 > CUSTOMER,John Smith,5109876543,456 Pine Avenue Los Angeles California(CA) 90001,34.05223 -118.24368
@@ -760,9 +753,9 @@ Update UserAccount
 UserAccounts list
 1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
 2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
-5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+3. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+4. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+5. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
 Enter UserAccount ID to update....
 User accountType, name, phoneNumber, address, gps coordinates  
 > CUSTOMER,John Smith,5109876543,456 Pine Avenue, Los Angeles, California(CA), 90001,34.05223 -118.24368
@@ -780,9 +773,9 @@ Delete UserAccount
 UserAccounts list
 1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
 2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
-5. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+3. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+4. UserAccount name: Sophia Rodriguez phoneNumber: 7149876543 address: 404 Maple Avenue Fresno California(CA) 93701 account: GUEST
+5. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
 Enter UserAccount ID to Delete...
 > 7149876543
 Delete userAccounts
@@ -795,8 +788,8 @@ Delete UserAccount
 UserAccounts list
 1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Oakland California(CA) 77714 account: ADMIN
 2. UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
-3. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+3. UserAccount name: Daniel Taylor phoneNumber: 3238765432 address: 303 Elm Avenue Oakland California(CA) 94601 account: ADMIN
+4. UserAccount name: Olivia White phoneNumber: 6504321876 address: 202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
 Enter UserAccount ID to Delete...
 > 3238765432
 Delete userAccounts
@@ -862,10 +855,10 @@ UserAccount with phone number 6504321800 not found.
 2. Medications
 3. UserAccounts
 4. Exit
-2024-03-11 10:34:09.602  INFO 16300 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
+2024-03-20 23:46:07.907  INFO 21828 --- [nAPIApplication] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-11 10:34:09.622 ERROR 16300 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
+2024-03-20 23:46:07.919 ERROR 21828 --- [nAPIApplication] o.s.boot.SpringApplication               : Application run failed
 
 org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 0.
 	at org.hyperskill.hstest.dynamic.input.DynamicInputHandler.ejectChar(DynamicInputHandler.java:34) ~[hs-test-release-SNAPSHOT.jar:na]
@@ -899,43 +892,9 @@ org.hyperskill.hstest.dynamic.security.ExitException: Tried to exit with status 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2024-03-11 10:34:09.888  INFO 16300 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-11 10:34:09.896  INFO 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-03-11 10:34:09.907  WARN 16300 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Interrupted during closing
-
-java.lang.InterruptedException: null
-	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1660) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.awaitTermination(ThreadPoolExecutor.java:1464) ~[na:na]
-	at com.zaxxer.hikari.pool.HikariPool.shutdown(HikariPool.java:233) ~[HikariCP-4.0.3.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:351) ~[HikariCP-4.0.3.jar:na]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.lambda$destroy$1(DisposableBeanAdapter.java:233) ~[spring-beans-5.3.12.jar:5.3.12]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:232) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145) ~[spring-beans-5.3.12.jar:5.3.12]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.12.jar:5.3.12]
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.12.jar:5.3.12]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.12.jar:5.3.12]
-	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:810) ~[spring-boot-2.5.6.jar:2.5.6]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:348) ~[spring-boot-2.5.6.jar:2.5.6]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.6.jar:2.5.6]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.6.jar:2.5.6]
-	at DroneMed.DroneMedicationAPIApplication.main(DroneMedicationAPIApplication.java:11) ~[main/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.invokeMain(MainMethodExecutor.java:160) ~[hs-test-release-SNAPSHOT.jar:na]
-	at org.hyperskill.hstest.testing.execution.MainMethodExecutor.lambda$launch$1(MainMethodExecutor.java:188) ~[hs-test-release-SNAPSHOT.jar:na]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
+2024-03-20 23:46:08.091  INFO 21828 --- [nAPIApplication] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20 23:46:08.101  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-03-20 23:46:08.181  INFO 21828 --- [nAPIApplication] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

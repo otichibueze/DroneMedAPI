@@ -84,13 +84,13 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
 
   private final String msgDD1log1 = "Drone S001 with a battery level of 10000 amps is on a medication delivery.";
 
-  private final String msgDD1log2 = "Drone S001 delivery complete! battery level 9700amps, drone returning to base.";
+  private final String msgDD1log2 = "Drone S001 delivery complete! battery level 9850amps, drone returning to base.";
 
-  private final String msgDD1log3 = "Drone S001 has arrived base, battery level 9400";
+  private final String msgDD1log3 = "Drone S001 has arrived base, battery level 9700";
 
   private final String msgDD2log1 = "Drone S002 with a battery level of 15000 amps is on a medication delivery.";
-  private final String msgDD2log2 = "Drone S002 delivery complete! battery level 14400amps, drone returning to base.";
-  private final String msgDD2log3 = "Drone S002 has arrived base, battery level 13800";
+  private final String msgDD2log2 = "Drone S002 delivery complete! battery level 14800amps, drone returning to base.";
+  private final String msgDD2log3 = "Drone S002 has arrived base, battery level 14600";
 
 
   //Create API
@@ -115,13 +115,11 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     medicationsB.add(new Medication("M005", "Metformin", 80,"https://th.bing.com/th/id/OIP.t1kStl77O7UxOQq0KhCa8AHaD5?rs=1&pid=ImgDetMain"));
 
 
-    droneDispatch1 = new DroneDispatch(drone1, user1,medicationsA, false,LocalTime.of(0,0,30));
+    droneDispatch1 = new DroneDispatch(drone1, user1,medicationsA, false,LocalTime.of(0,0,15));
     droneDispatch1Correct = droneDispatch1.toJson();
 
-    droneDispatch2 = new DroneDispatch(drone2, user2,medicationsB, false,LocalTime.of(0,1,00));
+    droneDispatch2 = new DroneDispatch(drone2, user2,medicationsB, false,LocalTime.of(0,0,20));
     droneDispatch2Correct = droneDispatch2.toJson();
-
-
 
     return CheckResult.correct();
   }
@@ -144,11 +142,13 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     return CheckResult.correct();
   }
 
+
+
   CheckResult testScheduleLog(String expected, long time) {
 
-
+    Thread currentThread = Thread.currentThread();
     try {
-      Thread.sleep(time);
+      currentThread.sleep(time);
       if(checkFile(expected)) return CheckResult.correct();
     } catch (InterruptedException e) {
       e.printStackTrace();
@@ -171,6 +171,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
       lastUpdate = scanner.nextLine();
     }
 
+    scanner.close();
     //check we have expected string
     if (lastUpdate.trim().toLowerCase().contains(expected.trim().toLowerCase())) {
       return true;
@@ -197,14 +198,14 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
           () -> testSetUps(),
           () -> testCreateApi(dispatchDrone,droneDispatch1Correct, msgDispatchCorrect,okSuccessCode ),
           //after 1min 31 sec
-          () -> testScheduleLog(msgDD1log1,500), //wait half sec for system to write to file
-          () -> testScheduleLog(msgDD1log2,30000), //wait 30sec
-          () -> testScheduleLog(msgDD1log3,30000), //wait 30sec
+          () -> testScheduleLog(msgDD1log1,1000), //wait half sec for system to write to file
+          () -> testScheduleLog(msgDD1log2,15000), //wait 15sec
+          () -> testScheduleLog(msgDD1log3,15000), //wait 15sec
           () -> testCreateApi(dispatchDrone,droneDispatch2Correct, msgDispatchCorrect,okSuccessCode ),
           //after 2mins 1 sec
-          () -> testScheduleLog(msgDD2log1,500), //wait half sec for system to write to file
-          () -> testScheduleLog(msgDD2log2,60000), //wait 1min
-          () -> testScheduleLog(msgDD2log3,60000), //wait 1min
+          () -> testScheduleLog(msgDD2log1,1000), //wait half sec for system to write to file
+          () -> testScheduleLog(msgDD2log2,20000), //wait 20sec
+          () -> testScheduleLog(msgDD2log3,20000), //wait 20sec
 
   };
 
