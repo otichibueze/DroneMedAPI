@@ -97,7 +97,7 @@ public class UserController {
     public ResponseEntity<?> getUser(@PathVariable String phoneNumber) {
         Optional<UserAccount> user = userService.getUser(phoneNumber);
         if(user.isPresent()) return ResponseHandler.responseBuilder("User fetched successfully.", HttpStatus.OK, user);
-        else return ResponseHandler.responseBuilder("User with phone number " + phoneNumber + " not found.", HttpStatus.NOT_FOUND);
+        else return ResponseHandler.responseBuilder("The user with phone number " + phoneNumber + " was not found.", HttpStatus.NOT_FOUND);
 
     }
 
@@ -110,7 +110,7 @@ public class UserController {
     public ResponseEntity<?> getAllUsers() {
         List<UserAccount> users = userService.getAllUsers();
         if(users.size() > 0) return ResponseHandler.responseBuilder("All users fetched successfully.", HttpStatus.OK, users);
-        else return ResponseHandler.responseBuilder("User list empty.", HttpStatus.OK);
+        else return ResponseHandler.responseBuilder("The user list is empty.", HttpStatus.OK);
     }
 
 

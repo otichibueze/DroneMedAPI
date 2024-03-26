@@ -29,46 +29,46 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   //Drone create
   private  final Drone drone1 = new Drone("S001", 100, 0, 10000, Drone.State.IDLE, Drone.Model.LIGHTWEIGHT, coordinatesString);
   private  final String drone1Correct = drone1.toJson();
-  String msgDrone1 = "Drone with serial number S001 created successfully.";
+  String msgDrone1 = "The drone with serial number S001 was created successfully.";
   private  final Drone drone2 = new Drone("S002", 200, 0, 15000, Drone.State.IDLE, Drone.Model.MIDDLEWEIGHT, coordinatesString);
   private  final String drone2Correct = drone2.toJson();
-  String msgDrone2 = "Drone with serial number S002 created successfully.";
+  String msgDrone2 = "The drone with serial number S002 was created successfully.";
   private  final Drone drone3 = new Drone("S012", 200, 0, 15000, Drone.State.IDLE, Drone.Model.MIDDLEWEIGHT, null);
   private  final String drone3Invalid = drone3.toJson();
   private  final Drone drone4 = new Drone("S004", 340, 0, 18000, Drone.State.IDLE, Drone.Model.CRUISERWEIGHT, coordinatesString);
   private  final String drone4Correct = drone4.toJson();
-  String msgDrone4 = "Drone with serial number S004 created successfully.";
+  String msgDrone4 = "The drone with serial number S004 was created successfully.";
 
   private  final Drone drone5 = new Drone("S005", 300, 0, 15000, Drone.State.IDLE, Drone.Model.CRUISERWEIGHT, coordinatesString);
   private  final String drone5Correct = drone5.toJson();
-  String msgDrone5 = "Drone with serial number S005 created successfully.";
+  String msgDrone5 = "The drone with serial number S005 was created successfully.";
 
   private  final Drone drone6 = new Drone("S006", 400, 0, 20000, Drone.State.IDLE, Drone.Model.HEAVYWEIGHT, coordinatesString);
   private  final String drone6Correct = drone6.toJson();
-  String msgDrone6 = "Drone with serial number S006 created successfully.";
+  String msgDrone6 = "The drone with serial number S006 was created successfully.";
 
-  String invalidDroneMsg = "The parameter you entered contains null or invalid parameter, Please enter a valid drone parameter.";
+  String invalidDroneMsg = "The parameter you entered contains a null or invalid parameter, Please enter a valid drone parameter.";
 
   //Drone update
   private  final Drone droneUpdate1 = new Drone("S001", 100, 80, 10000, Drone.State.DELIVERING, Drone.Model.LIGHTWEIGHT, coordinatesString);
   private  final String droneUpdate1Correct = droneUpdate1.toJson();
-  String msgDroneUpdate1 = "Drone with serial number S001 updated successfully.";
+  String msgDroneUpdate1 = "The drone with serial number S001 was updated successfully.";
 
   private  final Drone droneUpdate2 = new Drone("S099", 100, 80, 10000, Drone.State.DELIVERING, Drone.Model.LIGHTWEIGHT, coordinatesString);
   private  final String droneUpdate2Invalid = droneUpdate2.toJson();
-  String msgDroneUpdate2 = "Drone with serial number S099 not found.";
+  String msgDroneUpdate2 = "The drone with serial number S099 was not found.";
 
   private  final Drone droneUpdate4 = new Drone("S004", 340, 170, 14000, Drone.State.IDLE, Drone.Model.CRUISERWEIGHT, coordinatesString);
   private  final String droneUpdate4Correct = droneUpdate4.toJson();
-  String msgDroneUpdate4 = "Drone with serial number S004 updated successfully.";
+  String msgDroneUpdate4 = "The drone with serial number S004 was updated successfully.";
 
   //Drone Delete
   private final String droneDeleteID1 = "S002";
-  private final String msgDeleteDrone1 = "Drone with serial number S002 deleted Successfully.";
+  private final String msgDeleteDrone1 = "The drone with serial number S002 was deleted Successfully.";
   private final String droneDeleteID2Invalid = "S090";
-  private final String msgDeleteDrone2 = "Drone with serial number S090 not found.";
+  private final String msgDeleteDrone2 = "The drone with serial number S090 was not found.";
   private final String droneDeleteID3 = "S005";
-  private final String msgDeleteDrone3 = "Drone with serial number S005 deleted Successfully.";
+  private final String msgDeleteDrone3 = "The drone with serial number S005 was deleted Successfully.";
 
 
   //Drone Get
@@ -76,7 +76,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   private final String msgGetDrone = "Drone fetched successfully.";
   private final Drone droneGet1 = droneUpdate1;
   private final String droneGetID2Invalid = "S091";
-  private final String msgGetDroneGetID2 = "Drone with serial number S091 not found.";
+  private final String msgGetDroneGetID2 = "The drone with serial number S091 was not found.";
   private final String droneGetID3 = "S004";
   private final Drone droneGet3 = droneUpdate4;
   private final String msgGetAllDrones = "All drones fetched successfully.";
@@ -94,49 +94,49 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   //Medication create
   private  final Medication medication1 = new Medication("M001", "Paracetamol", 30, "https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7");
   private  final String medication1Correct = medication1.toJson();
-  String msgMedication1 = "Medication with code M001 created successfully.";
+  String msgMedication1 = "The medication with code M001 was created successfully.";
 
   private  final Medication medication2 = new Medication("M002", "omeprazole", 38, "https://www.drugs.com/images/pills/fio/GMK03970.JPG");
   private  final String medication2Correct = medication2.toJson();
-  String msgMedication2 = "Medication with code M002 created successfully.";
+  String msgMedication2 = "The medication with code M002 was created successfully.";
   private  final Medication medication3 = new Medication("M003", "Lisinopril", 0,null);
   private  final String medication3Invalid = medication3.toJson();
   private  final Medication medication4 = new Medication("M004", "Ibuprofen", 48, "https://th.bing.com/th/id/OIP.Nzkzq0Ic2me02XDdxi2DxQHaE8?rs=1&pid=ImgDetMain");
   private  final String medication4Correct = medication4.toJson();
-  String msgMedication4 = "Medication with code M004 created successfully.";
+  String msgMedication4 = "The medication with code M004 was created successfully.";
 
   private  final Medication medication5 = new Medication("M005", "Metformin", 80,"https://th.bing.com/th/id/OIP.t1kStl77O7UxOQq0KhCa8AHaD5?rs=1&pid=ImgDetMain");
   private  final String medication5Correct = medication5.toJson();
-  String msgMedication5 = "Medication with code M005 created successfully.";
+  String msgMedication5 = "The medication with code M005 was created successfully.";
 
   private  final Medication medication6 = new Medication("M006","Amoxicillin", 65, "https://th.bing.com/th/id/R.86be7f194443ce59c5e21c0e78302e50?rik=5XJ7UyNSYyE6Yw&pid=ImgRaw&r=0");
   private  final String medication6Correct = medication6.toJson();
-  String msgMedication6 = "Medication with code M006 created successfully.";
+  String msgMedication6 = "The medication with code M006 was created successfully.";
 
 
 
-  String invalidMedicationMsg = "The parameter you entered contains null or invalid parameter, Please enter a valid medication parameter.";
+  String invalidMedicationMsg = "The parameter you entered contains a null or invalid parameter, Please enter a valid medication parameter.";
 
   //Medication update
   private  final Medication medicationUpdate1 = new  Medication("M002", "omeprazole", 78, "https://www.drugs.com/images/pills/fio/GMK03970.JPG");
   private  final String medicationUpdate1Correct = medicationUpdate1.toJson();
-  String msgMedicationUpdate1 = "Medication with code M002 updated successfully.";
+  String msgMedicationUpdate1 = "The medication with code M002 was updated successfully.";
 
   private  final Medication medicationUpdate2 = new Medication("M019", "Atorvastatin", 25, "https://www.drugs.com/images/pills/fio/GMK03970.JPG");
   private  final String medicationUpdate2Invalid = medicationUpdate2.toJson();
-  String msgMedicationUpdate2 = "Medication with code M019 not found.";
+  String msgMedicationUpdate2 = "The medication with code M019 was not found.";
 
   private  final Medication medicationUpdate4 = new Medication("M004", "Ibuprofen", 100, "https://th.bing.com/th/id/OIP.Nzkzq0Ic2me02XDdxi2DxQHaE8?rs=1&pid=ImgDetMain");
   private  final String medicationUpdate4Correct = medicationUpdate4.toJson();
-  String msgMedicationUpdate4 = "Medication with code M004 updated successfully.";
+  String msgMedicationUpdate4 = "The medication with code M004 was updated successfully.";
 
   //Medication Delete
   private final String medicationDeleteID1 = "M001";
-  private final String msgDeleteMedication1 = "Medication with code M001 deleted Successfully.";
+  private final String msgDeleteMedication1 = "The medication with code M001 was deleted Successfully.";
   private final String medicationDeleteID2Invalid = "M021";
-  private final String msgDeleteMedication2 = "Medication with code M021 not found.";
+  private final String msgDeleteMedication2 = "The medication with code M021 was not found.";
   private final String medicationDeleteID3 = "M006";
-  private final String msgDeleteMedication3 = "Medication with code M006 deleted Successfully.";
+  private final String msgDeleteMedication3 = "The medication with code M006 was deleted Successfully.";
 
 
   //Medication Get
@@ -144,7 +144,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   private final String msgGetMedication = "Medication fetched successfully.";
   private final Medication medicationGet1 = medicationUpdate1;
   private final String medicationGetID2Invalid = "M041";
-  private final String msgGetMedicationGetID2 = "Medication with code M041 not found.";
+  private final String msgGetMedicationGetID2 = "The medication with code M041 was not found.";
   private final String medicationGetID3 = "M004";
   private final Medication medicationGet3 = medicationUpdate4;
   private final String msgGetAllMedication = "All medications fetched successfully.";
@@ -162,46 +162,46 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   //User create
   private  final UserAccount user1 = new UserAccount(UserAccount.Account.GUEST, "Michael Martinez", "9163456789", "101 Walnut Avenue, San Diego, California(CA), 92101", "32.71574, -117.16109");
   private  final String user1Correct = user1.toJson();
-  String msgUser1 = "User with phone number 9163456789 created successfully.";
+  String msgUser1 = "The user with phone number 9163456789 was created successfully.";
 
   private  final UserAccount user2 = new UserAccount (UserAccount.Account.ADMIN, "Daniel Taylor", "3238765432", "303 Elm Avenue, Oakland, California(CA), 94601", "37.80493, -122.27080");
   private  final String user2Correct = user2.toJson();
-  String msgUser2 = "User with phone number 3238765432 created successfully.";
+  String msgUser2 = "The user with phone number 3238765432 was created successfully.";
   private  final UserAccount user3 = new UserAccount(UserAccount.Account.GUEST, "Sophia Rodriguez", "7149876543", null, null);
   private  final String user3Invalid = user3.toJson();
   private  final UserAccount user4 =new UserAccount(UserAccount.Account.CUSTOMER, "David Garcia", "2098765432", "505 Oak Street, Long Beach, California(CA), 90802", "33.76902, -118.19147");
   private  final String user4Correct = user4.toJson();
-  String msgUser4 = "User with phone number 2098765432 created successfully.";
+  String msgUser4 = "The user with phone number 2098765432 was created successfully.";
 
   private  final UserAccount user5 = new UserAccount(UserAccount.Account.CUSTOMER, "Ava Brown", "9492345678", "606 Pine Avenue, Santa Ana, California(CA), 92701", "33.74557, -117.86783");
   private  final String user5Correct = user5.toJson();
-  String msgUser5 = "User with phone number 9492345678 created successfully.";
+  String msgUser5 = "The user with phone number 9492345678 was created successfully.";
 
   private  final UserAccount user6 = new UserAccount(UserAccount.Account.CUSTOMER, "Ethan Wilson", "8188765432", "707 Cedar Street, Riverside, California(CA), 92501", coordinatesString);
   private  final String user6Correct = user6.toJson();
-  String msgUser6 = "User with phone number 8188765432 created successfully.";
-  String invalidUserMsg = "The parameter you entered contains null or invalid parameter, Please enter a valid user account parameter.";
+  String msgUser6 = "The user with phone number 8188765432 was created successfully.";
+  String invalidUserMsg = "The parameter you entered contains a null or invalid parameter, Please enter a valid user account parameter.";
 
   //User update
   private  final UserAccount userUpdate1 = new UserAccount(UserAccount.Account.GUEST, "Michael Martinez", "9163456789", "202 Birch Street, San Jose, California(CA), 95110", "37.33821, -121.88633");
   private  final String userUpdate1Correct = userUpdate1.toJson();
-  String msgUserUpdate1 = "User with phone number 9163456789 updated successfully.";
+  String msgUserUpdate1 = "The user with phone number 9163456789 was updated successfully.";
 
   private  final UserAccount userUpdate2 = new UserAccount (UserAccount.Account.ADMIN, "Daniel Taylor", "3238765492", "303 Elm Avenue, Oakland, California(CA), 94601", "37.80493, -122.27080");
   private  final String userUpdate2Invalid = userUpdate2.toJson();
-  String msgUserUpdate2 = "User with phone number 3238765492 not found.";
+  String msgUserUpdate2 = "The user with phone number 3238765492 was not found.";
 
   private  final UserAccount userUpdate4 = new UserAccount(UserAccount.Account.CUSTOMER, "David Garcia", "2098765432", "456 Pine Avenue, Los Angeles, California(CA), 90001", "34.05223, -118.24368");
   private  final String userUpdate4Correct = userUpdate4.toJson();
-  String msgUserUpdate4 = "User with phone number 2098765432 updated successfully.";
+  String msgUserUpdate4 = "The user with phone number 2098765432 was updated successfully.";
 
   //User Delete
   private final String userDeleteID1 = "3238765432";
-  private final String msgDeleteUser1 = "User with phone number 3238765432 deleted Successfully.";
+  private final String msgDeleteUser1 = "The user with phone number 3238765432 was deleted Successfully.";
   private final String userDeleteID2Invalid = "7149876555";
-  private final String msgDeleteUser2 = "User with phone number 7149876555 not found.";
+  private final String msgDeleteUser2 = "The user with phone number 7149876555 was not found.";
   private final String userDeleteID3 = "9492345678";
-  private final String msgDeleteUser3 = "User with phone number 9492345678 deleted Successfully.";
+  private final String msgDeleteUser3 = "The user with phone number 9492345678 was deleted Successfully.";
 
 
   //User Get
@@ -209,7 +209,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest{
   private final String msgGetUser = "User fetched successfully.";
   private final UserAccount userGet1 = userUpdate1;
   private final String userGetID2Invalid = "9199456799";
-  private final String msgGetUserGetID2 = "User with phone number 9199456799 not found.";
+  private final String msgGetUserGetID2 = "The user with phone number 9199456799 was not found.";
   private final String userGetID3 = "2098765432";
   private final UserAccount userGet3 = userUpdate4;
   private final String msgGetAllUser = "All users fetched successfully.";

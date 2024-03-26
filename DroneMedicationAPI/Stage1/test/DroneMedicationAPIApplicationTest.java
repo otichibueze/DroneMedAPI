@@ -128,9 +128,9 @@ public class DroneMedicationAPIApplicationTest  extends StageTest {
     private final String GET_USER_RESPONSE3 = "UserAccount with phone number 6504321800 not found.";
 
     private final String INVALID_RESPONSE = "Invalid response, Please enter a valid response.";
-    private final String INVALID_DRONE_PARAM = "The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.";
-    private final String INVALID_MED_PARAM = "The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.";
-    private final String INVALID_USER_PARAM = "The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.";
+    private final String INVALID_DRONE_PARAM = "The parameters you entered are not valid drone parameters, please enter a valid drone parameter.";
+    private final String INVALID_MED_PARAM = "The parameters you entered are not valid medication parameters, please enter a valid medication parameter.";
+    private final String INVALID_USER_PARAM = "The parameters you entered are not valid userAccounts parameters, please enter a valid userAccounts parameter.";
 
 
 
@@ -142,242 +142,242 @@ public class DroneMedicationAPIApplicationTest  extends StageTest {
         //Select drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().equals(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user input \"1\" into your main menu, your program should it display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user input \"1\" into your main menu, your program should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("7");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"7\" into your program, this is an invalid input your respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"7\" into your program, this is an invalid input your response should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Select View Drones
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_VIEW_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by another 1\" into your program, it should display \"View Drones\" menu which includes the following output: \n" + DRONE_VIEW_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by another 1\" into your program, should display \"View Drones\" menu which includes the following output: \n" + DRONE_VIEW_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("abcd");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"abcd\" into your program, this is an invalid input your program should respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"abcd\" into your program, this is an invalid input your program should respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by another 1 and then 1\" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by another 1 and then 1\" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("andfnf");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"andfnf\" into your program, this is an invalid input your respond should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"andfnf\" into your program, this is an invalid input the response should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Create Drone menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed and then 2\" into your program, response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed and then 2\" into your program, the response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create drone with valid data
         output = pr.execute(DRONE_INFO1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu and enters a valid information example: \n" + DRONE_INFO1 + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in drone create menu and enters a valid information example: \n" + DRONE_INFO1 + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Drone menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating drone to create more into your program, response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating a drone to create more into your program, the response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create drone with valid data
         output = pr.execute(DRONE_INFO4);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE4.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu and enters a valid information example: \n" + DRONE_INFO4 + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE4 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone create menu and enters a valid information example: \n" + DRONE_INFO4 + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE4 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Drone menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating drone to create more into your program, response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating a drone to create more into your program, the response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create drone with valid data
         output = pr.execute(DRONE_INFO5);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE5.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu and enters a valid information example: \n" + DRONE_INFO5 + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE5 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone create menu and enters a valid information example: \n" + DRONE_INFO5 + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE5 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Drone menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating drone to create more into your program, response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating drone to create more into your program, the response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create drone with valid data
         output = pr.execute(DRONE_INFO6);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE6.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu and enters a valid information example: \n" + DRONE_INFO6 + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE5 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone create menu and enters a valid information example: \n" + DRONE_INFO6 + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE5 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Drone menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating drone to create more into your program, response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating a drone to create more into your program, the response should contain the following output: \n" + DRONE_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
 
         //create drone with invalid data incomplete data
         output = pr.execute(DRONE_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_DRONE_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu enters a invalid drone information example: " + DRONE_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone create menu enters a invalid drone information example: " + DRONE_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //create drone with invalid data incomplete data
         output = pr.execute(DRONE_INFO3);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_DRONE_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone create menu enters a invalid drone information example: " + DRONE_INFO3 + " into your program, response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in drone create menu enters a invalid drone information example: " + DRONE_INFO3 + " into your program, the response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Update Drone menu
         output = pr.execute("3");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 3\" into your program, response should contain \"Drone update menu\" with the following output starting with: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 3\" into your program, response should contain \"Drone update menu\" with the following output starting with: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update drone with valid data
         output = pr.execute(DRONE_INFO1_UPDATE);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE1_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone update menu and enters a valid information example: \n" + DRONE_INFO1_UPDATE + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone update menu and enters a valid information example: \n" + DRONE_INFO1_UPDATE + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more drones, response should contain the following output: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more drones, the response should contain the following output: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update drone with invalid id
         output = pr.execute(DRONE_INFO2_UPDATE_INVALID_ID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_RESPONSE2_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone update menu and enters a invalid drone id information example: \n" + DRONE_INFO2_UPDATE_INVALID_ID + "\ninto your program, response should contain the following output: \n" + DRONE_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone update menu and enters a invalid drone id information example: \n" + DRONE_INFO2_UPDATE_INVALID_ID + "\ninto your program, the response should contain the following output: \n" + DRONE_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more drones, response should contain the following output: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more drones, the response should contain the following output: \n" + DRONE_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update drone with invalid data incomplete data
         output = pr.execute(DRONE_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_DRONE_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone update menu enters a invalid drone information example: " + DRONE_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a drone update menu enters a invalid drone information example: " + DRONE_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_DRONE_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete Drone menu
         output = pr.execute("4");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 4\" into your program, response should contain \"Delete drone menu\" with the following output starting with: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 4\" into your program, response should contain \"Delete drone menu\" with the following output starting with: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete drone with valid id
         output = pr.execute(DELETE_DRONE_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_DRONE_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone delete menu and enters a valid drone id information example: \n" + DELETE_DRONE_ID1 + "\ninto your program, response should contain the following output: \n" + DELETE_DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in drone delete menu and enters a valid drone id information example: \n" + DELETE_DRONE_ID1 + "\ninto your program, the response should contain the following output: \n" + DELETE_DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more drones, response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more drones, the response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete drone with valid id
         output = pr.execute(DELETE_DRONE_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_DRONE_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user in delete drone menu and enters a valid drone id information example: \n" + DELETE_DRONE_ID2 + "\ninto your program, response should contain the following output: \n" + DELETE_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user in delete drone menu and enters a valid drone id information example: \n" + DELETE_DRONE_ID2 + "\ninto your program, the response should contain the following output: \n" + DELETE_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more drones, response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more drones, the response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete drone with valid id
         output = pr.execute(DELETE_DRONE_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_DRONE_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in drone delete menu and enters a invalid drone id information example: \n" + DELETE_DRONE_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + DELETE_DRONE_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in drone delete menu and enters a invalid drone ID information example: \n" + DELETE_DRONE_ID3_INVALID + "\ninto your program, the response should contain the following output: \n" + DELETE_DRONE_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get Drone menu
         output = pr.execute("5");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 5\" into your program, response should contain \"Get drone menu\" with the following output starting with: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 5\" into your program, response should contain \"Get drone menu\" with the following output starting with: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get drone with valid id
         output = pr.execute(GET_DRONE_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID1 + "\ninto your program, response should contain the following output: \n" + GET_DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a get drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID1 + "\ninto your program, the response should contain the following output: \n" + GET_DRONE_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more drones, response should contain the following output: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more drones, the response should contain the following output: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get drone with valid id
         output = pr.execute(GET_DRONE_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID2 + "\ninto your program, response should contain the following output: \n" + GET_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID2 + "\ninto your program, the response should contain the following output: \n" + GET_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more drones menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more drones, response should contain the following output: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more drones, the response should contain the following output: \n" + GET_DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get drone with valid id
         output = pr.execute(GET_DRONE_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_DRONE_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + GET_DRONE_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get a drone menu and enters a valid drone id information example: \n" + GET_DRONE_ID3_INVALID + "\ninto your program, the response should contain the following output: \n" + GET_DRONE_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to drones menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DRONE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Drones Menu\" with the following output: \n" + DRONE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to main menu
         output = pr.execute("6");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MAIN_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
         }
 
 
@@ -392,242 +392,242 @@ public class DroneMedicationAPIApplicationTest  extends StageTest {
         //Select medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().equals(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user input \"2\" into your main menu, your program should it display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user input \"2\" into your main menu, your program should it display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("7");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"7\" into your program, this is an invalid input your respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"7\" into your program, this is an invalid input your response should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Select View Medication
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATIONS_VIEW_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2 followed by another 1\" into your program, it should display \"View Medications\" menu which includes the following output: \n" + MEDICATIONS_VIEW_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2 followed by another 1\" into your program, it should display \"View Medications\" menu which includes the following output: \n" + MEDICATIONS_VIEW_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("abcd");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"abcd\" into your program, this is an invalid input your program should respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"abcd\" into your program, this is an invalid input your program should response should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to medication menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2 followed by another 1 and then 1\" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2 followed by another 1 and then 1\" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("andfnf");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"andfnf\" into your program, this is an invalid input your respond should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"andfnf\" into your program, this is an invalid input your response should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Create Medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2 followed by another 2\" into your program, response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2 followed by another 2\" into your program, the response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create medication with valid data
         output = pr.execute(MEDICATION_INFO1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in  create medication menu and enters a valid information example: \n" + MEDICATION_INFO1 + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu and enters a valid information example: \n" + MEDICATION_INFO1 + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating medication to create more into your program, response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating medication to create more into your program, the response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create medication with valid data
         output = pr.execute(MEDICATION_INFO4);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE4.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication create menu and enters a valid information example: \n" + MEDICATION_INFO4 + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE4 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu and enters a valid information example: \n" + MEDICATION_INFO4 + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE4 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more Medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating medication to create more into your program, response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating medication to create more into your program, the response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create medication with valid data
         output = pr.execute(MEDICATION_INFO5);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE5.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication create menu and enters a valid information example: \n" + MEDICATION_INFO5 + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE5 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu and enters a valid information example: \n" + MEDICATION_INFO5 + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE5 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating medication to create more into your program, response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating medication to create more into your program, the response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create medication with valid data
         output = pr.execute(MEDICATION_INFO6);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE6.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication create menu and enters a valid information example: \n" + MEDICATION_INFO6 + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE6 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu and enters a valid information example: \n" + MEDICATION_INFO6 + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE6 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating medication to create more into your program, response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating medication to create more into your program,the response should contain the following output: \n" + MEDICATION_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
 
         //create medication with invalid data incomplete data
         output = pr.execute(MEDICATION_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_MED_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication create menu enters a invalid medication information example: " + MEDICATION_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu enters a invalid medication information example: " + MEDICATION_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //create medication with invalid data incomplete data
         output = pr.execute(MEDICATION_INFO3);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_MED_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication create menu enters a invalid medication information example: " + MEDICATION_INFO3 + " into your program, response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication create menu enters a invalid medication information example: " + MEDICATION_INFO3 + " into your program, response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to medication menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Update medication menu
         output = pr.execute("3");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 3\" into your program, response should contain \"Medication update menu\" with the following output starting with: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 3\" into your program, the response should contain \"Medication update menu\" with the following output starting with: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update medication with valid data
         output = pr.execute(MEDICATION_INFO1_UPDATE);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE1_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication update menu and enters a valid information example: \n" + MEDICATION_INFO1_UPDATE + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication update menu and enters a valid information example: \n" + MEDICATION_INFO1_UPDATE + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more medication, response should contain the following output: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more medication, the response should contain the following output: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update medication with invalid id
         output = pr.execute(MEDICATION_UPDATE_INVALID_ID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_RESPONSE2_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication update menu and enters a invalid medication id information example: \n" + MEDICATION_UPDATE_INVALID_ID + "\ninto your program, response should contain the following output: \n" + MEDICATION_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication update menu and enters a invalid medication id information example: \n" + MEDICATION_UPDATE_INVALID_ID + "\ninto your program, the response should contain the following output: \n" + MEDICATION_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more medication, response should contain the following output: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more medication, the response should contain the following output: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update medication with invalid data incomplete data
         output = pr.execute(MEDICATION_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_MED_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication update menu enters a invalid medication information example: " + MEDICATION_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in medication update menu enters a invalid medication information example: " + MEDICATION_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_MED_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to medication menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete medication menu
         output = pr.execute("4");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 4\" into your program, response should contain \"Delete medication menu\" with the following output starting with: \n" + MEDICATION_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 4\" into your program, the response should contain \"Delete medication menu\" with the following output starting with: \n" + MEDICATION_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete medication with valid id
         output = pr.execute(DELETE_MEDICATION_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_MEDICATION_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication delete menu and enters a valid medication id information example: \n" + DELETE_MEDICATION_ID1 + "\ninto your program, response should contain the following output: \n" + DELETE_MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication delete menu and enters a valid medication id information example: \n" + DELETE_MEDICATION_ID1 + "\ninto your program, the response should contain the following output: \n" + DELETE_MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more medication, response should contain the following output: \n" + MEDICATION_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more medication, the response should contain the following output: \n" + MEDICATION_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete medication with valid id
         output = pr.execute(DELETE_MEDICATION_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_MEDICATION_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user in delete medication menu and enters a valid medication id information example: \n" + DELETE_MEDICATION_ID2 + "\ninto your program, response should contain the following output: \n" + DELETE_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user in a medication delete menu and enters a valid medication id information example: \n" + DELETE_MEDICATION_ID2 + "\ninto your program, the response should contain the following output: \n" + DELETE_DRONE_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more medications, response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more medications, response should contain the following output: \n" + DRONE_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete medication with valid id
         output = pr.execute(DELETE_MEDICATION_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_MEDICATION_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in medication delete menu and enters a invalid medication id information example: \n" + DELETE_MEDICATION_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + DELETE_MEDICATION_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a medication delete menu and enters a invalid medication id information example: \n" + DELETE_MEDICATION_ID3_INVALID + "\ninto your program, the response should contain the following output: \n" + DELETE_MEDICATION_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to medications menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get medication menu
         output = pr.execute("5");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 5\" into your program, response should contain \"Get medication menu\" with the following output starting with: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 5\" into your program, response should contain \"Get medication menu\" with the following output starting with: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get medication with valid id
         output = pr.execute(GET_MEDICATION_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get medication menu and enters a valid medication id information example: \n" + GET_MEDICATION_ID1 + "\ninto your program, response should contain the following output: \n" + GET_MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a get medication menu and enters a valid medication id information example: \n" + GET_MEDICATION_ID1 + "\ninto your program, the response should contain the following output: \n" + GET_MEDICATION_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more medications menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more medication, response should contain the following output: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more medication, response should contain the following output: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get medication with valid id
         output = pr.execute(GET_MEDICATION_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get medication menu and enters a valid medication id information example: \n" + GET_MEDICATION_ID2 + "\ninto your program, response should contain the following output: \n" + GET_MEDICATION_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get medication menu and enters a valid medication id information example: \n" + GET_MEDICATION_ID2 + "\ninto your program, the response should contain the following output: \n" + GET_MEDICATION_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more medication menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more medications, response should contain the following output: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more medications, the response should contain the following output: \n" + GET_MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get medication with valid id
         output = pr.execute(GET_MEDICATION_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_MEDICATION_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get medication menu and enters a invalid medication id information example: \n" + GET_MEDICATION_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + GET_MEDICATION_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get medication menu and enters a invalid medication id information example: \n" + GET_MEDICATION_ID3_INVALID + "\ninto your program,the response should contain the following output: \n" + GET_MEDICATION_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to medication menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MEDICATION_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"Medication Menu\" with the following output: \n" + MEDICATION_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to main menu
         output = pr.execute("6");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MAIN_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
         }
 
 
@@ -642,242 +642,242 @@ public class DroneMedicationAPIApplicationTest  extends StageTest {
         //Select User menu
         output = pr.execute("3");
         if (!output.isEmpty() && !output.toLowerCase().trim().equals(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user input \"3\" into your main menu, your program should it display \"User Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user input \"3\" into your main menu, your program should it display \"User Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("15");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"15\" into your program, this is an invalid input your respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"15\" into your program, this is an invalid input your response should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Select View User
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_VIEW_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"3 followed by another 1\" into your program, it should display \"View UserAccounts\" menu which includes the following output: \n" + USER_VIEW_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"3 followed by another 1\" into your program, it should display \"View UserAccounts\" menu which includes the following output: \n" + USER_VIEW_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("abcdkjasdffasfasjkn");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"abcdkjasdffasfasjkn\" into your program, this is an invalid input your program should respond should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"abcdkjasdffasfasjkn\" into your program, this is an invalid input your program should response should contain the following output: \n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to user menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"3 followed by another 1 and then 1\" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"3 followed by another 1 and then 1\" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Invalid response
         output = pr.execute("analsgaslkdfnf");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_RESPONSE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"analsgaslkdfnf\" into your program, this is an invalid input your respond should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"analsgaslkdfnf\" into your program, this is an invalid input your response should contain the following output:\n" + INVALID_RESPONSE + "\n\nYour output is \n\n" + output);
         }
 
         //Create User menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"3 followed by another 2\" into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"3 followed by another 2\" into your program, the response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create user with valid data
         output = pr.execute(USER_INFO1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in create UserAccounts menu and enters a valid information example: \n" + USER_INFO1 + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu and enters a valid information example: \n" + USER_INFO1 + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more User menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create user with valid data
         output = pr.execute(USER_INFO4);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE4.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts create menu and enters a valid information example: \n" + USER_INFO4 + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE4 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu and enters a valid information example: \n" + USER_INFO4 + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE4 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create user with valid data
         output = pr.execute(USER_INFO5);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE5.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts create menu and enters a valid information example: \n" + USER_INFO5 + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE5 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu and enters a valid information example: \n" + USER_INFO5 + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE5 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating a UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating a UserAccounts to create more into your program, the response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //create user with valid data
         output = pr.execute(USER_INFO6);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE6.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts create menu and enters a valid information example: \n" + USER_INFO6 + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE6 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu and enters a valid information example: \n" + USER_INFO6 + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE6 + "\n\nYour output is \n\n" + output);
         }
 
         //Create more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_CREATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("User inputs \"2\" after creating UserAccounts to create more into your program, response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" after creating UserAccounts to create more into your program,the response should contain the following output: \n" + USER_CREATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
 
         //create user with invalid data incomplete data
         output = pr.execute(USER_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_USER_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts create menu enters a invalid UserAccounts information example: " + USER_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_USER_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu enters a invalid UserAccounts information example: " + USER_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_USER_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //create user with valid data complete data
         output = pr.execute(USER_INFO3);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts create menu enters a valid UserAccounts information example: " + USER_INFO3 + " into your program, response should contain the following output: \n" + USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts create menu enters a valid UserAccounts information example: " + USER_INFO3 + " into your program, the response should contain the following output: \n" + USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to user menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Update user menu
         output = pr.execute("3");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 3\" into your program, response should contain \"UserAccounts update menu\" with the following output starting with: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 3\" into your program, the response should contain \"UserAccounts update menu\" with the following output starting with: \n" + MEDICATION_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update user with valid data
         output = pr.execute(USER_INFO1_UPDATE);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE1_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts update menu and enters a valid information example: \n" + USER_INFO1_UPDATE + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in UserAccounts update menu and enters a valid information example: \n" + USER_INFO1_UPDATE + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE1_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more UserAccounts, response should contain the following output: \n" + USER_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more UserAccounts, the response should contain the following output: \n" + USER_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update user with invalid id
         output = pr.execute(USER_UPDATE_INVALID_ID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_RESPONSE2_UPDATE.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts update menu and enters a invalid drone id information example: \n" + USER_UPDATE_INVALID_ID + "\ninto your program, response should contain the following output: \n" + USER_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts update menu and enters a invalid drone id information example: \n" + USER_UPDATE_INVALID_ID + "\ninto your program, the response should contain the following output: \n" + USER_RESPONSE2_UPDATE + "\n\nYour output is \n\n" + output);
         }
 
         //Update more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_UPDATE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to update more UserAccounts, response should contain the following output: \n" + USER_UPDATE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to update more UserAccounts, response should contain the following output: \n" + USER_UPDATE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //update user with invalid data incomplete data
         output = pr.execute(USER_INFO2_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(INVALID_USER_PARAM.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts update menu and enters an invalid UserAccounts information example: " + USER_INFO2_INVALID + " into your program, response should contain the following output: \n" + INVALID_USER_PARAM + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts update menu and enters an invalid UserAccounts information example: " + USER_INFO2_INVALID + " into your program, the response should contain the following output: \n" + INVALID_USER_PARAM + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to user menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete user menu
         output = pr.execute("4");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 4\" into your program, response should contain \"Delete UserAccounts menu\" with the following output starting with: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 4\" into your program, response should contain \"Delete UserAccounts menu\" with the following output starting with: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete user with valid id
         output = pr.execute(DELETE_USER_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_USER_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts delete menu and enters a valid UserAccounts id information example: \n" + DELETE_USER_ID1 + "\ninto your program, response should contain the following output: \n" + DELETE_USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in UserAccounts delete menu and enters a valid UserAccounts id information example: \n" + DELETE_USER_ID1 + "\ninto your program, the response should contain the following output: \n" + DELETE_USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more UserAccounts, response should contain the following output: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more UserAccounts, the response should contain the following output: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete user with valid id
         output = pr.execute(DELETE_USER_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_USER_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user in delete UserAccounts menu and enters a valid UserAccounts id information example: \n" + DELETE_USER_ID2 + "\ninto your program, response should contain the following output: \n" + DELETE_USER_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user in a delete UserAccounts menu and enters a valid UserAccounts id information example: \n" + DELETE_USER_ID2 + "\ninto your program, the response should contain the following output: \n" + DELETE_USER_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Delete more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_DELETE_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more UserAccounts, response should contain the following output: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more UserAccounts, the response should contain the following output: \n" + USER_DELETE_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Delete user with valid id
         output = pr.execute(DELETE_USER_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(DELETE_USER_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in UserAccounts delete menu and enters a invalid UserAccounts id information example: \n" + DELETE_USER_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + DELETE_USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a UserAccounts delete menu and enters a invalid UserAccounts id information example: \n" + DELETE_USER_ID3_INVALID + "\ninto your program, the response should contain the following output: \n" + DELETE_USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to user menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get user menu
         output = pr.execute("5");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 followed by 5\" into your program, response should contain \"Get UserAccounts menu\" with the following output starting with: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 followed by 5\" into your program, the response should contain \"Get UserAccounts menu\" with the following output starting with: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get user with valid id
         output = pr.execute(GET_USER_ID1);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_RESPONSE1.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get UserAccounts menu and enters a valid UserAccounts id information example: \n" + GET_USER_ID1 + "\ninto your program, response should contain the following output: \n" + GET_USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in a get UserAccounts menu and enters a valid UserAccounts id information example: \n" + GET_USER_ID1 + "\ninto your program, the response should contain the following output: \n" + GET_USER_RESPONSE1 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more UserAccounts, response should contain the following output: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more UserAccounts, the response should contain the following output: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get user with valid id
         output = pr.execute(GET_USER_ID2);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_RESPONSE2.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get UserAccounts menu and enters a valid UserAccounts id information example: \n" + GET_USER_ID2 + "\ninto your program, response should contain the following output: \n" + GET_USER_RESPONSE2 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get UserAccounts menu and enters a valid UserAccounts id information example: \n" + GET_USER_ID2 + "\ninto your program, the response should contain the following output: \n" + GET_USER_RESPONSE2 + "\n\nYour output is \n\n" + output);
         }
 
         //Get more user menu
         output = pr.execute("2");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"2\" into your program to delete more UserAccounts, response should contain the following output: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"2\" into your program to delete more UserAccounts, the response should contain the following output: \n" + GET_USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Get user with valid id
         output = pr.execute(GET_USER_ID3_INVALID);
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(GET_USER_RESPONSE3.toLowerCase().trim())) {
-            return CheckResult.wrong("When user is in get UserAccounts menu and enters a invalid UserAccounts id information example: \n" + GET_USER_ID3_INVALID + "\ninto your program, response should contain the following output: \n" + GET_USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user is in get UserAccounts menu and enters a invalid UserAccounts id information example: \n" + GET_USER_ID3_INVALID + "\ninto your program, the response should contain the following output: \n" + GET_USER_RESPONSE3 + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to user menu
         output = pr.execute("1");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(USER_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"1 \" into your program, it should display \"UserAccounts Menu\" with the following output: \n" + USER_MENU + "\n\nYour output is \n\n" + output);
         }
 
         //Go back to main menu
         output = pr.execute("6");
         if (!output.isEmpty() && !output.toLowerCase().trim().contains(MAIN_MENU.toLowerCase().trim())) {
-            return CheckResult.wrong("When user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
+            return CheckResult.wrong("When the user inputs \"6 \" into your program, it should display \"Main Menu\" with the following output: \n" + MAIN_MENU + "\n\nYour output is \n\n" + output);
         }
 
 

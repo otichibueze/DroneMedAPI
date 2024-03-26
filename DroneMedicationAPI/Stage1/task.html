@@ -14,7 +14,7 @@
 
 <h2>Objectives</h2>
 
-<p>In this stage our goal is to establish the fundamental features of the web service. This involves setting up the core structure of the Spring Boot project and generating entity classes to store essential data related to Drone, Medication, and UserAccount.&nbsp;</p>
+<p>In this stage, our goal is to establish the fundamental features of the web service. This involves setting up the core structure of the Spring Boot project and generating entity classes to store essential data related to Drone, Medication, and UserAccount.&nbsp;</p>
 
 <p>We&#39;ll leverage Spring Data JPA for seamless data management. For each data model (Drone, Medication, and UserAccount), we&#39;ll establish a dedicated repository using Spring Data JPA to ensure efficient interaction with your preferred database.</p>
 
@@ -47,7 +47,7 @@
 
 }</code></pre>
 
-<p>In designing medication model ensure that each medication in your system has an associated weight value is crucial for efficient drone loading. This weight value serves as a key parameter, providing essential information about the mass of each medication. When loading medications onto a drone, understanding their individual weights becomes vital for ensuring a well-balanced and optimized loading process that aligns with the operational capabilities of the drones in use.</p>
+<p>In designing a medication model ensuring that each medication in your system has an associated weight value is crucial for efficient drone loading. This weight value serves as a key parameter, providing essential information about the mass of each medication. When loading medications onto a drone, understanding their individual weights becomes vital for ensuring a well-balanced and optimized loading process that aligns with the operational capabilities of the drones in use.</p>
 
 <p>Example medication data</p>
 
@@ -68,7 +68,7 @@
 
 <p>Example user account data.</p>
 
-<p>Since each user is assigned a unique phone number, this phone number will be used to identify each user and guide the drone in delivering medication to the user. When managing sample user account data, it is recommended to include a &quot;account&quot; field with an enumerated data type. This field acts as a mechanism for categorizing users, and defining their roles. For example, a user&#39;s account field could be set to &quot;ADMIN,&quot; &quot;CUSTOMER,&quot; or &quot;GUEST,&quot; which will determine their access level to certain functions within the system.</p>
+<p>Since each user is assigned a unique phone number, this phone number will be used to identify each user and guide the drone in delivering medication to the user. When managing sample user account data, it is recommended to include an &quot;account&quot; field with an enumerated data type. This field acts as a mechanism for categorizing users, and defining their roles. For example, a user&#39;s account field could be set to &quot;ADMIN,&quot; &quot;CUSTOMER,&quot; or &quot;GUEST&quot; which will determine their access level to certain functions within the system.</p>
 
 <pre>
 <code>{
@@ -100,7 +100,7 @@
 3. UserAccounts
 4. Exit</code></pre>
 
-<p>If the user <strong>inputs 1</strong> the program will load information&nbsp;about drone&#39;s operations like below:</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;the program will load information about the drone&#39;s operations like below:</p>
 
 <pre>
 <code>1. View Drones
@@ -121,19 +121,19 @@ Drones list
 3. Drone serialnumber: S004 maxWeight: 400 currentWeight: 0 batteryCapacity: 20000 State: IDLE Model: HEAVYWEIGHT Coordinate: 4.815600°N 7.049800°E
 4. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 10000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600N 7.049800E</code></pre>
 
-<p>if the database is empty will display information below:</p>
+<p>if the database is empty will display the information below:</p>
 
 <pre>
 <code>View drones
 1. Back
 The drone list is empty.</code></pre>
 
-<p>Any other input from user that is not 1 in the menu above is not valid input and program should display below:</p>
+<p>Any other input from the user that is not 1 in the menu above is not valid input and the program should display below:</p>
 
 <pre>
 <code>Invalid response, Please enter a valid response</code></pre>
 
-<p>If the user <strong>inputs 1</strong> which is the only valid input allowed from the menu above, the program will load previous drone menu like below:</p>
+<p>If the user <strong>inputs 1</strong> which is the only valid input allowed from the menu above, the program will load the previous drone menu like the below:</p>
 
 <pre>
 <code>1. View Drones
@@ -151,12 +151,12 @@ The drone list is empty.</code></pre>
 Enter new drone information....
 Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates</code></pre>
 
-<p>The user can <strong>input 1</strong> to go the previous menu or input new drone information separated by &quot;,&quot; like below:</p>
+<p>The user can <strong>input 1</strong> to go to the previous menu or input new drone information separated by &quot;,&quot; like below:</p>
 
 <pre>
 <code>S005, 100, 0, 10000, IDLE, LIGHTWEIGHT, 48.8159_7.0498</code></pre>
 
-<p>The program should output below to indicate that drone was created successfully:</p>
+<p>The program should output below to indicate that the drone was created successfully:</p>
 
 <pre>
 <code>Create Drones
@@ -164,12 +164,12 @@ Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone M
 2. Create more Drones
 Drone with serial number S001 created successfully.</code></pre>
 
-<p>If user enters invalid drone parameter for creating drone the program should display information below:</p>
+<p>If the user enters an invalid drone parameter for creating a drone the program should display the information below:</p>
 
 <pre>
-<code>The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter</code></pre>
+<code>The parameters you entered are not valid drone parameters, please enter a valid drone parameter.</code></pre>
 
-<p>The allowed input from the menu above is <strong>1</strong> to return to previous menu or <strong>2</strong> to create more drones any other input is invalid. User can <strong>input 1</strong> to go to previous menu or <strong>input 2</strong> to create more drones like below:</p>
+<p>The allowed input from the menu above is <strong>1</strong> to return to previous the menu or <strong>2</strong> to create more drones any other input is invalid. Users can <strong>input 1</strong> to go to the previous menu or <strong>input 2</strong> to create more drones like below:</p>
 
 <pre>
 <code>Create drones
@@ -177,7 +177,7 @@ Drone with serial number S001 created successfully.</code></pre>
 Enter new drone information....
 Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates</code></pre>
 
-<p>User can <strong>input 1</strong> to go back to preview menu like below:</p>
+<p>Users can <strong>input 1</strong> to go back to the preview menu like below:</p>
 
 <pre>
 <code>
@@ -188,7 +188,7 @@ Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone M
 5. Get Drone
 6. Back</code></pre>
 
-<p>If user&nbsp;<strong>input 3</strong> to update a drone with an existing drone ID, the system will then display a list of all available drones. User can <strong>input 1</strong> to return to previous menu or simply select the desired drone from the list to proceed with the update like below:</p>
+<p>If the user&nbsp;<strong>inputs 3</strong> to update a drone with an existing drone ID, the system will then display a list of all available drones. Users can <strong>input 1</strong> to return to the previous menu or simply select the desired drone from the list to proceed with the update like below:</p>
 
 <pre>
 <code>Update drones
@@ -201,12 +201,12 @@ Drones list
 Enter drone ID to update....
 Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone Model, GPS Coordinates</code></pre>
 
-<p>The user inputs valid drone information for update like below:</p>
+<p>The user inputs valid drone information for updates like the below:</p>
 
 <pre>
 <code>S002, 250, 150, 12000, IDLE, MIDDLEWEIGHT, 4.815600°N 7.049800°E</code></pre>
 
-<p>The program will respond with information showing status of the operation, then user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to update more drones any other input is invalid from menu below, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation, and then the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to update more drones any other input invalid from the menu below, for successful operation information like below:</p>
 
 <pre>
 <code>Updated Drone
@@ -214,7 +214,7 @@ Serial Number, Max Weight, CurrentWeight, Battery Capacity, Drone State, Drone M
 2. Update more Drones
 Drone with serial number S001 updated successfully.</code></pre>
 
-<p>For unsuccessful operation, example when the id entered does not exist information like below:</p>
+<p>For unsuccessful operations, for example, when the ID entered does not exist information like the below:</p>
 
 <pre>
 <code>Updated Drone
@@ -222,12 +222,12 @@ Drone with serial number S001 updated successfully.</code></pre>
 2. Update more Drones
 Drone with serial number S011 not found.</code></pre>
 
-<p>&nbsp;When user enters invalid drone parameter for update the program should display information like below:</p>
+<p>&nbsp;When a user enters an invalid drone parameter for update the program should display information like the below:</p>
 
 <pre>
 <code>The parameters you entered is not a valid drone parameter, Please enter a valid drone parameter.</code></pre>
 
-<p>If user&nbsp;<strong>input 1</strong> to return to previous menu like below:</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;to return to the previous menu like below:</p>
 
 <pre>
 <code>1. View Drones
@@ -237,7 +237,7 @@ Drone with serial number S011 not found.</code></pre>
 5. Get Drone
 6. Back</code></pre>
 
-<p>If user <strong>input 4</strong> to delete a drone with an existing drone id, the system will then display a list of all available drones. Simply select the desired drone id from the list to proceed with the delete like below:</p>
+<p>If the user&nbsp;<strong>inputs 4</strong>&nbsp;to delete a drone with an existing drone ID, the system will then display a list of all available drones. Simply select the desired drone ID from the list to proceed with the delete like below:</p>
 
 <pre>
 <code>Delete drones
@@ -249,12 +249,12 @@ Drones list
 4. Drone serialnumber: S001 maxWeight: 100 currentWeight: 0 batteryCapacity: 10000 State: IDLE Model: LIGHTWEIGHT Coordinate: 4.815600N 7.049800E
 Enter drone ID to Delete....</code></pre>
 
-<p>User inputs drone id like below:</p>
+<p>The user inputs a drone ID like below:</p>
 
 <pre>
 <code>S001</code></pre>
 
-<p>The program will respond with information showing status of the operation the user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to delete more drones any other input is invalid from below menu is invalid, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to delete more drones any other input is invalid from the below menu is invalid, for successful operation information like below:</p>
 
 <pre>
 <code>Delete Drones
@@ -262,7 +262,7 @@ Enter drone ID to Delete....</code></pre>
 2. Delete more Drones
 Drone with serial number S001 deleted Successfully.</code></pre>
 
-<p>If the drone id was not found the program should display information like below:</p>
+<p>If the drone ID was not found the program should display information like the below:</p>
 
 <pre>
 <code>Delete Drones
@@ -270,7 +270,7 @@ Drone with serial number S001 deleted Successfully.</code></pre>
 2. Delete more Drones
 Drone with serial S011 not found.</code></pre>
 
-<p>User can <strong>input 1</strong> to return to previous menu or <strong>input&nbsp;2</strong> to delete more drones, if user<strong> inputs 1</strong> to return to preview menu like below:</p>
+<p>The user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to delete more drones, if the user<strong>&nbsp;inputs 1</strong>&nbsp;to return to the preview menu like below:</p>
 
 <pre>
 <code>1. View Drones
@@ -280,19 +280,19 @@ Drone with serial S011 not found.</code></pre>
 5. Get Drone
 6. Back</code></pre>
 
-<p>If user <strong>input 5</strong> to get a drone with an existing drone id, the program will display information like below:</p>
+<p>If the user&nbsp;<strong>inputs 5</strong>&nbsp;to get a drone with an existing drone ID, the program will display information like the below:</p>
 
 <pre>
 <code>Get drones
 1. Back
 Enter drone the ID that you want to retrieve</code></pre>
 
-<p>The user can <strong>input 1</strong> to go the previous menu or input drone id information to get like below:</p>
+<p>The user can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or input drone ID information to get like below:</p>
 
 <pre>
 <code>S002</code></pre>
 
-<p>The program will display the drone information and user can <strong>input 1</strong> to return to previous menu or <strong>input 2</strong> to get more drones by id, any other input is invalid from below menu below:</p>
+<p>The program will display the drone information and the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to get more drones by ID, any other input is invalid from below menu below:</p>
 
 <pre>
 <code>Get Drone
@@ -300,7 +300,7 @@ Enter drone the ID that you want to retrieve</code></pre>
 2. Get more Drones
 Drone serialnumber: 0002 maxWeight: 250 currentWeight: 150 batteryCapacity: 12000 State: IDLE Model: MIDDLEWEIGHT Coordinate: 4.815600°N7.049800°E</code></pre>
 
-<p>If the drone id was not found the program should display information like below:</p>
+<p>If the drone ID was not found the program should display information like the below:</p>
 
 <pre>
 <code>Get Drone
@@ -308,7 +308,7 @@ Drone serialnumber: 0002 maxWeight: 250 currentWeight: 150 batteryCapacity: 1200
 2. Get more Drones
 Drone with serial number S019 not found.</code></pre>
 
-<p>The user can <strong>input 1</strong> to return to previous menu,&nbsp;</p>
+<p>The user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu.</p>
 
 <pre>
 <code>1. View Drones
@@ -318,7 +318,7 @@ Drone with serial number S019 not found.</code></pre>
 5. Get Drone
 6. Back</code></pre>
 
-<p>Any input from user that is not valid input based on selected menu screen, the program should display below:</p>
+<p>Any input from the user that is not valid input based on the selected menu screen, the program should display below:</p>
 
 <pre>
 <code>Invalid response, Please enter a valid response.</code></pre>
@@ -332,7 +332,7 @@ Drone with serial number S019 not found.</code></pre>
 3. UserAccounts
 4. Exit</code></pre>
 
-<p>From the main menu If the user <strong>inputs 2</strong>&nbsp;the program will load information&nbsp;about medications operations like below:</p>
+<p>From the main menu If the user&nbsp;<strong>inputs 2</strong>&nbsp;the program will load information about medication operations like the below:</p>
 
 <pre>
 <code>1. View Medications
@@ -342,7 +342,7 @@ Drone with serial number S019 not found.</code></pre>
 5. Get Medication
 6. Back</code></pre>
 
-<p>if the user <strong>inputs 1</strong> the program will load information about medications saved on the database like below:</p>
+<p>if the user&nbsp;<strong>inputs 1</strong>&nbsp;the program will load information about medications saved on the database like below:</p>
 
 <pre>
 <code>View medications
@@ -355,19 +355,19 @@ Medications list
 5. Medication code: 0378_1800 name: levothyroxine Weight: 45 imageURL: https://th.bing.com/th/id/R.7fbd35f211e5d8d1d26a917886324ee2?rik=0V5LafFrz83tFQ&amp;pid=ImgRaw&amp;r=0
 6. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&amp;pid=ImgDetMain</code></pre>
 
-<p>if the database is empty will display information below:</p>
+<p>if the database is empty will display the information below:</p>
 
 <pre>
 <code>View medications
 1. Back
 The medication list is empty.</code></pre>
 
-<p>Any other input from user that is not 1 in the menu above is not valid input and program should display below:</p>
+<p>Any other input from the user that is not 1 in the menu above is not valid input and the program should display below:</p>
 
 <pre>
 <code>Invalid response, Please enter a valid response</code></pre>
 
-<p>If the user <strong>inputs 1</strong> which is the only valid input allowed from the menu above, the program will load previous medication menu like below:</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;which is the only valid input allowed from the menu above, the program will load the previous medication menu like the below:</p>
 
 <pre>
 <code>1. View Medications
@@ -385,12 +385,12 @@ The medication list is empty.</code></pre>
 Enter new medication information....
 medication code, name, weight, imageURL</code></pre>
 
-<p>The user can <strong>input 1</strong> to go the previous menu or input new medication information separated by &quot;,&quot; like below:</p>
+<p>The user can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or input new medication information separated by &quot;,&quot; like below:</p>
 
 <pre>
-<code>0363_0007 , omeprazole ,25, https://www.drugs.com/images/pills/fio/GMK03970.JPG</code></pre>
+<code>0363_0007 ,omeprazole ,25, https://www.drugs.com/images/pills/fio/GMK03970.JPG</code></pre>
 
-<p>The program should output below to indicate that medication was created successfully:</p>
+<p>The program should output below to indicate that the medication was created successfully:</p>
 
 <pre>
 <code>Create medications
@@ -398,12 +398,12 @@ medication code, name, weight, imageURL</code></pre>
 2. Create more medications
 Medication 0363_0007 created successfully.</code></pre>
 
-<p>If user inputs invalid medication parameter for creating medication the program should display information below:</p>
+<p>If the user inputs an invalid medication parameter for creating medication the program should display the information below:</p>
 
 <pre>
-<code>The parameters you entered is not a valid medication parameter., Please enter a valid medication parameter</code></pre>
+<code>The parameters you entered are not valid medication parameters, please enter a valid medication parameter.</code></pre>
 
-<p>The allowed input from the menu above is <strong>1</strong> to return to previous menu or <strong>2</strong> to create more medications. User can <strong>input 1</strong> to go to previous menu or <strong>input 2</strong> to create more medications like below:</p>
+<p>The allowed input from the menu above is&nbsp;<strong>1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>2</strong>&nbsp;to create more medications. Users can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to create more medications like the below:</p>
 
 <pre>
 <code>Create medications
@@ -411,7 +411,7 @@ Medication 0363_0007 created successfully.</code></pre>
 Enter new medication information....
 medication code, name, weight, imageURL</code></pre>
 
-<p>If user&nbsp;<strong>input 1</strong> to go back to preview menu like below:</p>
+<p>If the user&nbsp;<strong>input 1</strong>&nbsp;to go back to the preview menu like below:</p>
 
 <pre>
 <code>1. View Medications
@@ -421,7 +421,7 @@ medication code, name, weight, imageURL</code></pre>
 5. Get Medication
 6. Back</code></pre>
 
-<p>If user&nbsp;<strong>input 3</strong> to update a medication with an existing medication code, the system will then display a list of all available medications. user can <strong>input 1</strong> to return to previous menu or simply select the desired medication from the list to proceed with the update like below:</p>
+<p>If the user&nbsp;<strong>inputs 3</strong>&nbsp;to update a medication with an existing medication code, the system will then display a list of all available medications. user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or simply select the desired medication from the list to proceed with the update like below:</p>
 
 <pre>
 <code>Update medications
@@ -436,12 +436,12 @@ Medications list
 Enter medication ID to update....
 medication code, name, weight, imageURL</code></pre>
 
-<p>The user inputs valid medication information for update like below:</p>
+<p>The user inputs valid medication information for updates like the below:</p>
 
 <pre>
 <code>0363_0007 , omeprazole ,45, https://www.drugs.com/images/pills/fio/GMK03970.JPG</code></pre>
 
-<p>The program will respond with information showing status of the operation, then user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to update more medications, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation, then the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to update more medications, for successful operation information like below:</p>
 
 <pre>
 <code>Updated medications
@@ -449,7 +449,7 @@ medication code, name, weight, imageURL</code></pre>
 2. Update more medications
 Medication with code 0363_0007 updated successfully.</code></pre>
 
-<p>For unsuccessful operation, example when the id entered does not exist information like below:</p>
+<p>For unsuccessful operations, example when the ID entered does not exist information like the below:</p>
 
 <pre>
 <code>Updated medications
@@ -457,12 +457,12 @@ Medication with code 0363_0007 updated successfully.</code></pre>
 2. Update more medications
 Medication with code 0363_0099 not found.</code></pre>
 
-<p>&nbsp;When user enters invalid medication parameter for update the program should display information like below:</p>
+<p>When a user enters an invalid medication parameter for update the program should display information like the below:</p>
 
 <pre>
-<code>The parameters you entered is not a valid medication parameter, Please enter a valid medication parameter.</code></pre>
+<code>The parameters you entered are not valid medication parameters, please enter a valid medication parameter.</code></pre>
 
-<p>If user&nbsp;&nbsp;<strong>input 1</strong> to return to previous menu.</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;to return to the previous menu.</p>
 
 <pre>
 <code>1. View Medications
@@ -472,7 +472,7 @@ Medication with code 0363_0099 not found.</code></pre>
 5. Get Medication
 6. Back</code></pre>
 
-<p>User can <strong>input 4</strong> to delete a medication with an existing medication id, the system will then display a list of all available medications. Simply select the desired medication id from the list to proceed with the delete like below:</p>
+<p>Users can&nbsp;<strong>input 4</strong>&nbsp;to delete a medication with an existing medication id, the system will then display a list of all available medications. Simply select the desired medication ID from the list to proceed with the delete like below:</p>
 
 <pre>
 <code>Delete medications
@@ -486,12 +486,12 @@ Medications list
 6. Medication code: 0093_5056 name: atorvastatin Weight: 55 imageURL: https://th.bing.com/th/id/OIP.UweW6J3LBoimlOFacJE1cAHaFj?rs=1&amp;pid=ImgDetMain
 Enter medication ID to Delete...</code></pre>
 
-<p>User inputs medication id like below:</p>
+<p>The user inputs the medication ID like below:</p>
 
 <pre>
 <code>0363_0007</code></pre>
 
-<p>The program will respond with information showing status of the operation the user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to delete more medications, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to delete more medications, for successful operation information like the below:</p>
 
 <pre>
 <code>Delete medications
@@ -499,7 +499,7 @@ Enter medication ID to Delete...</code></pre>
 2. Delete more medications
 Medication with code 0363_0007 deleted Successfully.</code></pre>
 
-<p>If the medication id was not found the program should display information like below:</p>
+<p>If the medication ID was not found the program should display information like the below:</p>
 
 <pre>
 <code>Delete medications
@@ -507,7 +507,7 @@ Medication with code 0363_0007 deleted Successfully.</code></pre>
 2. Delete more medications
 Medication with code 0363_0099 not found.</code></pre>
 
-<p>User can <strong>input 1</strong> to return to previous menu or <strong>input&nbsp;2</strong> to delete more medication like below, any other input is invalid from above menu.</p>
+<p>Users can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to delete more medication like below, any other input is invalid from the above menu.</p>
 
 <pre>
 <code>1. View Medications
@@ -517,19 +517,19 @@ Medication with code 0363_0099 not found.</code></pre>
 5. Get Medication
 6. Back</code></pre>
 
-<p>User can <strong>input 5</strong> to get a drone with an existing medication id, the program will display information like below:</p>
+<p>Users can&nbsp;<strong>input 5</strong>&nbsp;to get a drone with an existing medication ID, the program will display information like the below:</p>
 
 <pre>
 <code>Get Medications
 1. Back
 Enter the medication ID that you want to retrieve.</code></pre>
 
-<p>If user&nbsp;<strong>input 1</strong> to go the previous menu or input medication id information to get like below:</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;to go to the previous menu or inputs medication ID information to get like below:</p>
 
 <pre>
 <code>XYGIY_01</code></pre>
 
-<p>The program will display the medication information and user can <strong>input 1</strong> to return to previous menu or <strong>input 2</strong> to get more medication by id, any other input is invalid from above menu:</p>
+<p>The program will display the medication information and the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to get more medication by ID, any other input is invalid from the above menu:</p>
 
 <pre>
 <code>Get medications
@@ -537,7 +537,7 @@ Enter the medication ID that you want to retrieve.</code></pre>
 2. Get more medications
 Medication code: XYGIY_01 name: Paracetamol Weight: 30 imageURL: https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;pid=1.7</code></pre>
 
-<p>If the medication id was not found the program should display information like below:</p>
+<p>If the medication ID was not found the program should display information like the below:</p>
 
 <pre>
 <code>Get medications
@@ -545,7 +545,7 @@ Medication code: XYGIY_01 name: Paracetamol Weight: 30 imageURL: https://th.bing
 2. Get more medications
 Medication with ID XYGIY_99 not found</code></pre>
 
-<p>Any input from user that is not valid input based on selected menu screen, the program should display below:</p>
+<p>Any input from the user that is not valid input based on the selected menu screen, the program should display below:</p>
 
 <pre>
 <code>Invalid response, Please enter a valid response.</code></pre>
@@ -559,7 +559,7 @@ Medication with ID XYGIY_99 not found</code></pre>
 3. UserAccounts
 4. Exit</code></pre>
 
-<p>From the main menu If the user <strong>inputs 3</strong>&nbsp;the program will load information&nbsp;about user accounts operations like below:&nbsp;</p>
+<p>From the main menu If the user&nbsp;<strong>inputs 3</strong>&nbsp;the program will load information about user account operations like the below:&nbsp;</p>
 
 <pre>
 <code>1. View UserAccounts
@@ -569,7 +569,7 @@ Medication with ID XYGIY_99 not found</code></pre>
 5. Get UserAccount
 6. Back</code></pre>
 
-<p>if the user <strong>inputs 1</strong> the program will load information about user account saved on the database like below:</p>
+<p>if the user&nbsp;<strong>inputs 1</strong>&nbsp;the program will load information about the user account saved on the database like below:</p>
 
 <pre>
 <code>View UserAccounts
@@ -578,21 +578,21 @@ UserAccounts list
 1. UserAccount name:  Emily Davis phoneNumber:  4157890123 address: 789 Cedar Street Sacramento California(CA) 95814 account: ADMIN
 2. UserAccount name:  John Smith phoneNumber:  5109876543 address:  456 Pine Avenue Los Angeles California(CA) 90001 account: CUSTOMER
 3. UserAccount name:  Olivia White phoneNumber:  6504321876 address:  202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name:  Michael Martinez phoneNumber:  9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: GUEST</code></pre>
+4. UserAccount name:  Michael Martinez phoneNumber:  9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: CUSTOMER</code></pre>
 
-<p>if the database is empty will display information below:&nbsp;</p>
+<p>if the database is empty will display the information below:&nbsp;</p>
 
 <pre>
 <code>View UserAccounts
 1. Back
 The UserAccounts list is empty.</code></pre>
 
-<p>&nbsp;Any other input from user that is not <strong>1</strong> in the menu above is not valid input and program should display below:</p>
+<p>&nbsp;Any other input from the user that is not&nbsp;<strong>1</strong>&nbsp;in the menu above is not valid input and the program should display below:</p>
 
 <pre>
 <code>Invalid response, Please enter a valid response</code></pre>
 
-<p>If the user <strong>inputs 1</strong> which is the only valid input allowed from the menu above, the program will load previous user account menu like below:</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;which is the only valid input allowed from the menu above, the program will load the previous user account menu like the below:</p>
 
 <pre>
 <code>1. View UserAccounts
@@ -602,7 +602,7 @@ The UserAccounts list is empty.</code></pre>
 5. Get UserAccount
 6. Back</code></pre>
 
-<p>if the user <strong>inputs 2</strong> the program will load information about creating user account on the database like below:</p>
+<p>if the user&nbsp;<strong>inputs 2</strong>&nbsp;the program will load information about creating a user account on the database like the below:</p>
 
 <pre>
 <code>Create UserAccount
@@ -610,12 +610,12 @@ The UserAccounts list is empty.</code></pre>
 Enter new UserAccount information....
 User accountType, name, phoneNumber, address, gps coordinates</code></pre>
 
-<p>The user can <strong>input 1</strong> to go the previous menu or input new medication information separated by &quot;,&quot; like below:</p>
+<p>The user can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or input new medication information separated by &quot;,&quot; like below:</p>
 
 <pre>
 <code>ADMIN, Emily Davis,4157890123,789 Cedar Street Sacramento California(CA) 95814,34.05223 -118.24368</code></pre>
 
-<p>The program should output below to indicate that user account was created successfully:&nbsp;</p>
+<p>The program should output below to indicate that the user account was created successfully:&nbsp;</p>
 
 <pre>
 <code>Create userAccounts
@@ -623,12 +623,12 @@ User accountType, name, phoneNumber, address, gps coordinates</code></pre>
 2. Create more userAccounts
 User with phone number 4157890123 created successfully.</code></pre>
 
-<p>&nbsp;If user enters invalid user account parameter for creating user account the program should display information below:</p>
+<p>&nbsp;If the user enters an invalid user account parameter for creating a user account the program should display the information below:</p>
 
 <pre>
-<code>The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.</code></pre>
+<code>The parameters you entered are not valid userAccounts parameters, please enter a valid userAccounts parameter.</code></pre>
 
-<p>The allowed input from the menu above is <strong>1</strong> to return to previous menu or <strong>2</strong> to create more user account any other input is invalid from above menu. User can <strong>input 1</strong> to go to previous menu or <strong>input 2</strong> to create more user account like below:</p>
+<p>The allowed input from the menu above is&nbsp;<strong>1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>2</strong>&nbsp;to create more user accounts any other input is invalid from the above menu. Users can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to create more user accounts like the below:</p>
 
 <pre>
 <code>Create UserAccount
@@ -636,7 +636,7 @@ User with phone number 4157890123 created successfully.</code></pre>
 Enter new UserAccount information....
 User accountType, name, phoneNumber, address, gps coordinates</code></pre>
 
-<p>User can <strong>input 1</strong> to go back to preview menu like below:&nbsp;</p>
+<p>Users can&nbsp;<strong>input 1</strong>&nbsp;to go back to the preview menu like below:&nbsp;</p>
 
 <pre>
 <code>1. View UserAccounts
@@ -646,7 +646,7 @@ User accountType, name, phoneNumber, address, gps coordinates</code></pre>
 5. Get UserAccount
 6. Back</code></pre>
 
-<p>If user&nbsp;<strong>input 3</strong> to update a user account with an existing user account phone number, the system will then display a list of all available user accounts. User can <strong>input 1</strong> to return to previous menu or simply select the desired user account from the list to proceed with the update like below:&nbsp;</p>
+<p>If the user&nbsp;<strong>inputs 3</strong>&nbsp;to update a user account with an existing user account phone number, the system will then display a list of all available user accounts. Users can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or simply select the desired user account from the list to proceed with the update like below:&nbsp;</p>
 
 <pre>
 <code>Update UserAccount
@@ -655,22 +655,22 @@ UserAccounts list
 1. UserAccount name:  Emily Davis phoneNumber:  4157890123 address: 789 Cedar Street Sacramento California(CA) 95814 account: ADMIN
 2. UserAccount name:  John Smith phoneNumber:  5109876543 address:  456 Pine Avenue Los Angeles California(CA) 90001 account: CUSTOMER
 3. UserAccount name:  Olivia White phoneNumber:  6504321876 address:  202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name:  Michael Martinez phoneNumber:  9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+4. UserAccount name:  Michael Martinez phoneNumber:  9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: CUSTOMER
 Enter UserAccount ID to update....
 User accountType, name, phoneNumber, address, gps coordinates</code></pre>
 
-<p>&nbsp;The user inputs valid user account information for update like below:</p>
+<p>The user inputs valid user account information for updates like below:</p>
 
 <pre>
 <code>ADMIN, Emily Davis, 4157890123,789 Cedar Street Sacramento California(CA) 99909, 34.05223 -118.24368</code></pre>
 
-<p>&nbsp;The program will respond with information showing status of the operation, then user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to update more user account any other input is invalid from below menu, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation, and then the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to update more user accounts any other input is invalid from the below menu, for successful operation will display information like the below:</p>
 
 <pre>
 <code>Updated userAccounts
 1. Back
 2. Update more userAccounts
-User with phone number  4157890123 updated successfully.</code></pre>
+User with phone number 4157890123 updated successfully.</code></pre>
 
 <p>For unsuccessful operation, example when the id entered does not exist information like below:&nbsp;</p>
 
@@ -680,12 +680,12 @@ User with phone number  4157890123 updated successfully.</code></pre>
 2. Update more userAccounts
 User with phone number  4157899123 not found.</code></pre>
 
-<p>&nbsp;When user enters invalid user account parameter for update the program should display information like below:&nbsp;</p>
+<p>&nbsp;When a user enters an invalid user account parameter for an update the program should display information like the below:&nbsp;</p>
 
 <pre>
-<code>The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.</code></pre>
+<code>The parameters you entered are not valid userAccounts parameters, please enter a valid userAccounts parameter.</code></pre>
 
-<p>&nbsp;User can <strong>input 1</strong> to return to previous menu.</p>
+<p>Users can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu.</p>
 
 <pre>
 <code>1. View UserAccounts
@@ -695,24 +695,24 @@ User with phone number  4157899123 not found.</code></pre>
 5. Get UserAccount
 6. Back</code></pre>
 
-<p>&nbsp;User can <strong>input 4</strong> to delete a user account with an existing user account id, the system will then display a list of all available user account. Simply select the desired user account id from the list to proceed with the delete like below:</p>
+<p>Users can&nbsp;<strong>input 4</strong>&nbsp;to delete a user account with an existing user account id, the system will then display a list of all available user accounts. Simply select the desired user account ID from the list to proceed with the delete like below:</p>
 
 <pre>
 <code>Delete UserAccount
 1. Back
 UserAccounts list
-1. UserAccount name:  Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Sacramento California(CA) 99909 account: ADMIN
-2. UserAccount name:  John Smith phoneNumber: 5109876543 address:  456 Pine Avenue Los Angeles California(CA) 90001 account: CUSTOMER
-3. UserAccount name:  Olivia White phoneNumber: 6504321876 address:  202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
-4. UserAccount name:  Michael Martinez phoneNumber: 9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: GUEST
+1. UserAccount name: Emily Davis phoneNumber: 4157890123 address: 789 Cedar Street Sacramento California(CA) 99909 account: ADMIN
+2. UserAccount name: John Smith phoneNumber: 5109876543 address:  456 Pine Avenue Los Angeles California(CA) 90001 account: CUSTOMER
+3. UserAccount name: Olivia White phoneNumber: 6504321876 address:  202 Birch Street San Jose California(CA) 95110 account: CUSTOMER
+4. UserAccount name: Michael Martinez phoneNumber: 9163456789 address:  101 Walnut Avenue San Diego California(CA) 92101 account: CUSTOMER
 Enter UserAccount ID to Delete...</code></pre>
 
-<p>User inputs medication id like below:</p>
+<p>The user inputs the medication ID like below:</p>
 
 <pre>
 <code>4157890123</code></pre>
 
-<p>The program will respond with information showing status of the operation the user can <strong>input 1</strong> to return to the previous menu or <strong>input 2</strong> to delete more user account any other input is invalid from below menu, for successful operation information like below:</p>
+<p>The program will respond with information showing the status of the operation the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to delete more user accounts any other input is invalid from the below menu, for successful operation information like below:</p>
 
 <pre>
 <code>Delete userAccounts
@@ -720,7 +720,7 @@ Enter UserAccount ID to Delete...</code></pre>
 2. Delete more userAccounts
 User with phone number 4157890123 deleted Successfully.</code></pre>
 
-<p>If the user account id was not found the program should display information like below:&nbsp;</p>
+<p>If the user account ID was not found the program should display information like the below:&nbsp;</p>
 
 <pre>
 <code>Delete userAccounts
@@ -728,7 +728,7 @@ User with phone number 4157890123 deleted Successfully.</code></pre>
 2. Delete more userAccounts
 User with phone number 4157890100 not found.</code></pre>
 
-<p>If user <strong>input 1</strong> to return to previous menu or <strong>input&nbsp;2</strong> to delete more user account like below.&nbsp;</p>
+<p>If the user&nbsp;<strong>inputs 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>inputs 2</strong>&nbsp;to delete more user accounts like below.&nbsp;</p>
 
 <pre>
 <code>1. View UserAccounts
@@ -738,19 +738,19 @@ User with phone number 4157890100 not found.</code></pre>
 5. Get UserAccount
 6. Back</code></pre>
 
-<p>If user&nbsp;<strong>input 5</strong> to get a user account with an existing user account id, the program will display information like below:&nbsp;</p>
+<p>If the user&nbsp;<strong>inputs 5</strong>&nbsp;to get a user account with an existing user account ID, the program will display information like the below:&nbsp;</p>
 
 <pre>
 <code>Get UserAccount
 1. Back
 Enter the UserAccount ID that you want to retrieve.</code></pre>
 
-<p>&nbsp;The user can <strong>input 1</strong> to go the previous menu or input user account id information to get like below:</p>
+<p>&nbsp;The user can&nbsp;<strong>input 1</strong>&nbsp;to go to the previous menu or input user account ID information to get like below:</p>
 
 <pre>
 <code>9163456789</code></pre>
 
-<p>The program will display the user account information and user can <strong>input 1</strong> to return to previous menu or <strong>input 2</strong> to get more user account by id:&nbsp;</p>
+<p>The program will display the user account information and the user can&nbsp;<strong>input 1</strong>&nbsp;to return to the previous menu or&nbsp;<strong>input 2</strong>&nbsp;to get more user accounts by ID:&nbsp;</p>
 
 <pre>
 <code>Get userAccounts
@@ -758,7 +758,7 @@ Enter the UserAccount ID that you want to retrieve.</code></pre>
 2. Get more userAccounts
 UserAccount name: Michael Martinez phoneNumber: 9163456789 address: 101 Walnut Avenue San Diego California(CA) 92101 account: GUEST</code></pre>
 
-<p>If the user account id was not found the program should display information like below:&nbsp;</p>
+<p>If the user account ID was not found the program should display information like the below:&nbsp;</p>
 
 <pre>
 <code>Get userAccounts

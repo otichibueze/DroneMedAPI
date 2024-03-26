@@ -54,7 +54,7 @@ public class ScheduledTask {
             // First execution
             updateDrone(Mode.DELIVERING,batConsumption, drone);
             //System.out.println("Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " with a battery level of " + drone.getBatteryCapacity() + " amps is on a medication delivery.");
-            String logInfo1 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " with a battery level of " + drone.getBatteryCapacity() + " amps is on a medication delivery.";
+            String logInfo1 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " with a battery level of " + drone.getBatteryCapacity() + " amps is on medication delivery.";
 
             try {
                 writeToFile(logInfo1);
@@ -68,7 +68,7 @@ public class ScheduledTask {
                 updateDrone(Mode.RETURNING,batConsumption, drone);
                 //System.out.println("Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " delivery complete! battery level " + drone.getBatteryCapacity() + "amps, drone returning to base.");
 
-                String logInfo2 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " delivery complete! battery level " + drone.getBatteryCapacity() + "amps, drone returning to base.";
+                String logInfo2 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " delivery is complete! battery level " + drone.getBatteryCapacity() + "amps, drone returning to base.";
 
                 try {
                     writeToFile(logInfo2);
@@ -82,7 +82,7 @@ public class ScheduledTask {
                     updateDrone(Mode.IDLE,batConsumption, drone);
                     //System.out.println("Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " has arrived base, battery level " + drone.getBatteryCapacity());
 
-                    String logInfo3 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " has arrived base, battery level " + drone.getBatteryCapacity();
+                    String logInfo3 = "Timestamp " + Timestamp.from(Instant.now()) + " Drone " + drone.getSerialNumber() + " has arrived at the base, battery level " + drone.getBatteryCapacity();
 
                     try {
                         writeToFile(logInfo3);

@@ -37,13 +37,13 @@ public class DroneServiceImpl implements DroneService {
 
         //checkDroneValues(drone);
         if(drone == null || drone.getSerialNumber() == null ||  drone.getMaxWeight() == 0 || drone.getBatteryCapacity() == 0
-        || drone.getModel() == null || drone.getState() == null || drone.getCurrentCoordinate() == null) {
-            return "The parameter you entered contains null or invalid parameter, Please enter a valid drone parameter.";
+                || drone.getModel() == null || drone.getState() == null || drone.getCurrentCoordinate() == null) {
+            return "The parameter you entered contains a null or invalid parameter, Please enter a valid drone parameter.";
 
         }
 
         droneRepository.save(drone);
-        return "Drone with serial number " + drone.getSerialNumber() + " created successfully.";
+        return "The drone with serial number " + drone.getSerialNumber() + " was created successfully.";
     }
 
     /**
@@ -76,10 +76,10 @@ public class DroneServiceImpl implements DroneService {
             Drone existingDrone = droneRepository.findById(drone.getSerialNumber()).get();
             droneRepository.save(drone);
 
-            return "Drone with serial number " + drone.getSerialNumber() + " updated successfully.";
+            return "The drone with serial number " + drone.getSerialNumber() + " was updated successfully.";
         }
         else {
-            return ("Drone with serial number " + drone.getSerialNumber() +  " not found.");
+            return ("The drone with serial number " + drone.getSerialNumber() +  " was not found.");
         }
     }
 
@@ -94,9 +94,9 @@ public class DroneServiceImpl implements DroneService {
         if(droneRepository.existsById(drone_serial_number))
         {
             droneRepository.deleteById(drone_serial_number);
-            return "Drone with serial number " + drone_serial_number + " deleted Successfully.";
+            return "The drone with serial number " + drone_serial_number + " was deleted Successfully.";
         } else {
-            return ("Drone with serial number " + drone_serial_number + " not found.");
+            return ("The drone with serial number " + drone_serial_number + " was not found.");
         }
     }
 

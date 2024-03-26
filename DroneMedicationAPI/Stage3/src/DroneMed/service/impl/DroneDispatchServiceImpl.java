@@ -59,14 +59,14 @@ public class DroneDispatchServiceImpl implements DroneDispatchService {
 
         if(droneDispatch.getDrone() == null) return "Drone dispatch information is missing a drone! It should include details about the actual drone being dispatched.";
         if(droneDispatch.getMedications() == null) return "Drone dispatch information is missing medication details! It should include details about the actual medications being dispatched.";
-        if(droneDispatch.getUser() == null) return "Drone dispatch information is missing user account details! It should include requesting user account information";
+        if(droneDispatch.getUser() == null) return "Drone dispatch information is missing user account details! It should include requesting user account information.";
 
         int weight = checkWeight(droneDispatch.getDrone(), droneDispatch.getMedications());
 
         if(weight == -1) return "Drone selected cannot carry medications, You may reduce the number of medications or choose another drone with a larger capacity.";
 
         int batteryConsumption = droneDispatch.getEstimatedTime().toSecondOfDay()  * 10 * 2;
-        if(droneDispatch.getDrone().getBatteryCapacity() < batteryConsumption) return "Drone selected does not have enough battery charge to delivery medication.";
+        if(droneDispatch.getDrone().getBatteryCapacity() < batteryConsumption) return "Drone selected does not have enough battery charge to deliver medication.";
 
 
        String response = medicationListAvailable(droneDispatch);
@@ -75,10 +75,10 @@ public class DroneDispatchServiceImpl implements DroneDispatchService {
 
         //confirm user exists in database
         Optional<UserAccount> user = userService.getUser(droneDispatch.getUser().getPhoneNumber());
-        if(!user.isPresent()) return "User with phone number " + droneDispatch.getUser().getPhoneNumber() + " not found.";
+        if(!user.isPresent()) return "The user with phone number " + droneDispatch.getUser().getPhoneNumber() + " was not found.";
 
         Optional<Drone> optDrone = droneService.getDrone(droneDispatch.getDrone().getSerialNumber());
-        if(!optDrone.isPresent()) return "Drone with serial number " + droneDispatch.getDrone().getSerialNumber() +  " not found.";
+        if(!optDrone.isPresent()) return "The drone with serial number " + droneDispatch.getDrone().getSerialNumber() +  " was not found.";
 
         //Save drone dispatch
         droneDispatch.setTimestamp(Timestamp.from(Instant.now()));
@@ -159,7 +159,7 @@ public class DroneDispatchServiceImpl implements DroneDispatchService {
 
             }
             else {
-                return "medication with code " + m.getCode() + " not found.";
+                return "The medication with code " + m.getCode() + " was not found.";
             }
         }
 

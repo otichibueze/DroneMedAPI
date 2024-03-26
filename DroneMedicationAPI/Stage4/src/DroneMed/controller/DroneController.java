@@ -99,7 +99,7 @@ public class DroneController {
         if(drone.isPresent()) {
             return ResponseHandler.responseBuilder("Drone fetched successfully.", HttpStatus.OK, drone);
         }
-        else return ResponseHandler.responseBuilder("Drone with serial number " + serialNumber + " not found.", HttpStatus.NOT_FOUND);
+        else return ResponseHandler.responseBuilder("The drone with serial number " + serialNumber + " was not found.", HttpStatus.NOT_FOUND);
     }
 
     /**
@@ -111,7 +111,7 @@ public class DroneController {
     public ResponseEntity<?> getAllDrones() {
         List<Drone> drones = droneService.getAllDrones();
        if(drones.size() > 0) return ResponseHandler.responseBuilder("All drones fetched successfully.", HttpStatus.OK, drones);
-       else return ResponseHandler.responseBuilder("Drone list empty.", HttpStatus.OK);
+       else return ResponseHandler.responseBuilder("The drone list is empty.", HttpStatus.OK);
     }
 
     /**
@@ -123,7 +123,7 @@ public class DroneController {
     @GetMapping("/get_drones_by_state/{state}")
     public ResponseEntity<?> getDronesByState(@PathVariable Drone.State state) {
         List<Optional<Drone>> drones = droneService.findDroneByState(state);
-        if(drones.size() == 0) return ResponseHandler.responseBuilder("Drones list by state " + state + " empty.", HttpStatus.OK);
+        if(drones.size() == 0) return ResponseHandler.responseBuilder("The drones list by state " + state + " is empty.", HttpStatus.OK);
 
         return ResponseHandler.responseBuilder("Drones fetched by state.", HttpStatus.OK, drones);
     }
@@ -137,7 +137,7 @@ public class DroneController {
     @GetMapping("/get_drones_by_model/{model}")
     public ResponseEntity<?> getDronesByModel(@PathVariable Drone.Model model) {
         List<Optional<Drone>> drones = droneService.findDronesByModel(model);
-        if(drones.size() == 0) return ResponseHandler.responseBuilder("Drones list by model " + model + " empty.", HttpStatus.OK);
+        if(drones.size() == 0) return ResponseHandler.responseBuilder("The drones list by model " + model + " is empty.", HttpStatus.OK);
 
         return ResponseHandler.responseBuilder("Drones fetched by model.", HttpStatus.OK, drones);
     }
@@ -151,7 +151,7 @@ public class DroneController {
     @GetMapping("/get_drones_by_charge/{percentage}")
     public ResponseEntity<?> getDronesByCharge(@PathVariable int percentage) {
         List<Optional<Drone>> drones = droneService.findDronesByBatteryCapacityAfter(percentage);
-        if(drones.size() == 0) return ResponseHandler.responseBuilder("Drones list by percentage " + percentage + " empty.", HttpStatus.OK);
+        if(drones.size() == 0) return ResponseHandler.responseBuilder("The drones list by percentage " + percentage + " is empty.", HttpStatus.OK);
 
         return ResponseHandler.responseBuilder("Drones fetched by charge.", HttpStatus.OK, drones);
     }

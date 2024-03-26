@@ -99,7 +99,7 @@ public class DroneController {
         if(drone.isPresent()) {
             return ResponseHandler.responseBuilder("Drone fetched successfully.", HttpStatus.OK, drone);
         }
-        else return ResponseHandler.responseBuilder("Drone with serial number " + serialNumber + " not found.", HttpStatus.NOT_FOUND);
+        else return ResponseHandler.responseBuilder("The drone with serial number " + serialNumber + " was not found.", HttpStatus.NOT_FOUND);
     }
 
     /**
@@ -111,7 +111,7 @@ public class DroneController {
     public ResponseEntity<?> getAllDrones() {
         List<Drone> drones = droneService.getAllDrones();
        if(drones.size() > 0) return ResponseHandler.responseBuilder("All drones fetched successfully.", HttpStatus.OK, drones);
-       else return ResponseHandler.responseBuilder("Drone list empty.", HttpStatus.OK);
+       else return ResponseHandler.responseBuilder("The drone list is empty.", HttpStatus.OK);
     }
 
 

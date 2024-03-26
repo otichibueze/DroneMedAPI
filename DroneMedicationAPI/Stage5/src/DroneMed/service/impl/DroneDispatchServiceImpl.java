@@ -81,10 +81,10 @@ public class DroneDispatchServiceImpl implements DroneDispatchService {
 
         //confirm user exists in database
         Optional<UserAccount> user = userService.getUser(droneDispatch.getUser().getPhoneNumber());
-        if(!user.isPresent()) return "User with phone number " + droneDispatch.getUser().getPhoneNumber() + " not found.";
+        if(!user.isPresent()) return "The user with phone number " + droneDispatch.getUser().getPhoneNumber() + " was not found.";
 
         Optional<Drone> optDrone = droneService.getDrone(droneDispatch.getDrone().getSerialNumber());
-        if(!optDrone.isPresent()) return "Drone with serial number " + droneDispatch.getDrone().getSerialNumber() +  " not found.";
+        if(!optDrone.isPresent()) return "The drone with serial number " + droneDispatch.getDrone().getSerialNumber() +  " was not found.";
 
         //Save drone dispatch
         droneDispatch.setTimestamp(Timestamp.from(Instant.now()));
@@ -169,7 +169,7 @@ public class DroneDispatchServiceImpl implements DroneDispatchService {
 
             }
             else {
-                return "medication with code " + m.getCode() + " not found.";
+                return "The medication with code " + m.getCode() + " was not found.";
             }
         }
 

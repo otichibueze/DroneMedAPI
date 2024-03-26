@@ -1,0 +1,28 @@
+2024-03-26 01:19:50.108  INFO 21380 --- [Test worker] DroneMed.DroneMedicationAPIApplication   : Starting DroneMedicationAPIApplication using Java 17.0.8.1 on DESKTOP-S3OS6DJ with PID 21380 (started by user in C:\Users\user\Desktop\HyperSkill\DroneMedAPI\DroneMedicationAPI\Stage4)
+2024-03-26 01:19:50.112  INFO 21380 --- [Test worker] DroneMed.DroneMedicationAPIApplication   : No active profile set, falling back to default profiles: default
+2024-03-26 01:19:51.375  INFO 21380 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-26 01:19:51.468  INFO 21380 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 4 JPA repository interfaces.
+2024-03-26 01:19:52.223  INFO 21380 --- [Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2024-03-26 01:19:52.238  INFO 21380 --- [Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-26 01:19:52.238  INFO 21380 --- [Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-26 01:19:52.354  INFO 21380 --- [Test worker] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2024-03-26 01:19:52.354  INFO 21380 --- [Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2024-03-26 01:19:52.547  INFO 21380 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-26 01:19:52.871  INFO 21380 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-26 01:19:52.883  INFO 21380 --- [Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../droneAPI_db'
+2024-03-26 01:19:53.135  INFO 21380 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-26 01:19:53.216  INFO 21380 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-26 01:19:53.410  INFO 21380 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-26 01:19:53.595  INFO 21380 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-03-26 01:19:54.373  INFO 21380 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-26 01:19:54.383  INFO 21380 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 01:19:55.113  WARN 21380 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-26 01:19:55.759  INFO 21380 --- [Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-26 01:19:55.824  INFO 21380 --- [Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path '/api'
+2024-03-26 01:19:55.851  INFO 21380 --- [Test worker] DroneMed.DroneMedicationAPIApplication   : Started DroneMedicationAPIApplication in 6.223 seconds (JVM running for 7.422)
+2024-03-26 01:19:56.212  INFO 21380 --- [http-nio-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-26 01:19:56.212  INFO 21380 --- [http-nio-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-26 01:19:56.214  INFO 21380 --- [http-nio-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-26 01:21:09.020  INFO 21380 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-26 01:21:09.027  INFO 21380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-26 01:21:09.031  INFO 21380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

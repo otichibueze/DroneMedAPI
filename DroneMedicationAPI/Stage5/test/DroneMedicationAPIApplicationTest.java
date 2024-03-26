@@ -35,20 +35,20 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     //Drone create
     private  final Drone drone1 = new Drone("S001", 100, 0, 10000, Drone.State.IDLE, Drone.Model.LIGHTWEIGHT, coordinatesString);
     private  final String drone1Correct = drone1.toJson();
-    String msgDrone1 = "Drone with serial number S001 created successfully.";
+    String msgDrone1 = "The drone with serial number S001 was created successfully.";
 
     private  final Drone drone2 = new Drone("S002", 200, 0, 15000, Drone.State.IDLE, Drone.Model.MIDDLEWEIGHT, coordinatesString);
     private  final String drone2Correct = drone2.toJson();
-    String msgDrone2 = "Drone with serial number S002 created successfully.";
+    String msgDrone2 = "The drone with serial number S002 was created successfully.";
 
     //Drone update
     private  final Drone droneUpdate1 = new Drone("S001", 100, 80, 10000, Drone.State.DELIVERING, Drone.Model.LIGHTWEIGHT, coordinatesString);
     private  final String droneUpdate1Correct = droneUpdate1.toJson();
-    String msgDroneUpdate1 = "Drone with serial number S001 updated successfully.";
+    String msgDroneUpdate1 = "The drone with serial number S001 was updated successfully.";
 
     //Drone Delete
     private final String droneDeleteID1 = "S001";
-    private final String msgDeleteDrone1 = "Drone with serial number S001 deleted Successfully.";
+    private final String msgDeleteDrone1 = "The drone with serial number S001 was deleted Successfully.";
 
     //Drone Get
     private final String droneGetID1 = "S001";
@@ -73,42 +73,42 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     //Medication
     private  final Medication medication1 = new Medication("M001", "Paracetamol", 30, "https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7");
     private  final String medication1Correct = medication1.toJson();
-    String msgMedication1 = "Medication with code M001 created successfully.";
+    String msgMedication1 = "The medication with code M001 was created successfully.";
 
     private  final Medication medication2 = new Medication("M002", "Paracetamol", 38, "https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7");
     private  final String medication2Correct = medication2.toJson();
-    String msgMedication2 = "Medication with code M002 created successfully.";
+    String msgMedication2 = "The medication with code M002 was created successfully.";
     private  final Medication medication3 = new Medication("M003","Amoxicillin", 65, "https://th.bing.com/th/id/R.86be7f194443ce59c5e21c0e78302e50?rik=5XJ7UyNSYyE6Yw&pid=ImgRaw&r=0");
     private  final String medication3Correct = medication3.toJson();
-    String msgMedication3 = "Medication with code M003 created successfully.";
+    String msgMedication3 = "The medication with code M003 was created successfully.";
     private  final Medication medication4 = new Medication("M004", "Ibuprofen", 48, "https://th.bing.com/th/id/OIP.Nzkzq0Ic2me02XDdxi2DxQHaE8?rs=1&pid=ImgDetMain");
     private  final String medication4Correct = medication4.toJson();
-    String msgMedication4 = "Medication with code M004 created successfully.";
+    String msgMedication4 = "The medication with code M004 was created successfully.";
     private  final Medication medication5 = new Medication("M005", "Metformin", 80,"https://th.bing.com/th/id/OIP.t1kStl77O7UxOQq0KhCa8AHaD5?rs=1&pid=ImgDetMain");
     private  final String medication5Correct = medication5.toJson();
-    String msgMedication5 = "Medication with code M005 created successfully.";
+    String msgMedication5 = "The medication with code M005 was created successfully.";
 
     //Medication update
     private  final Medication medicationUpdate1 = new  Medication("M002", "Paracetamol", 78, "https://www.drugs.com/images/pills/fio/GMK03970.JPG");
     private  final String medicationUpdate1Correct = medicationUpdate1.toJson();
-    String msgMedicationUpdate1 = "Medication with code M002 updated successfully.";
+    String msgMedicationUpdate1 = "The medication with code M002 was updated successfully.";
 
     private  final Medication medicationUpdate2 = new Medication("M019", "Atorvastatin", 25, "https://www.drugs.com/images/pills/fio/GMK03970.JPG");
     private  final String medicationUpdate2Invalid = medicationUpdate2.toJson();
-    String msgMedicationUpdate2 = "Medication with code M019 not found.";
+    String msgMedicationUpdate2 = "The medication with code M019 was not found.";
 
     //Medication Delete
     private final String medicationDeleteID1 = "M001";
-    private final String msgDeleteMedication1 = "Medication with code M001 deleted Successfully.";
+    private final String msgDeleteMedication1 = "The medication with code M001 was deleted Successfully.";
     private final String medicationDeleteID2Invalid = "M021";
-    private final String msgDeleteMedication2 = "Medication with code M021 not found.";
+    private final String msgDeleteMedication2 = "The medication with code M021 was not found.";
 
     //Medication Get
     private final String medicationGetID1 = "M002";
     private final String msgGetMedication = "Medication fetched successfully.";
     private final Medication medicationGet1 = medicationUpdate1;
     private final String medicationGetID2Invalid = "M041";
-    private final String msgGetMedicationGetID2 = "Medication with code M041 not found.";
+    private final String msgGetMedicationGetID2 = "The medication with code M041 was not found.";
 
     private final String msgGetAllMedication = "All medications fetched successfully.";
 
@@ -125,21 +125,21 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     //User create
     private  final UserAccount user1 = new UserAccount(UserAccount.Account.CUSTOMER, "Michael Martinez", "9163456789", "101 Walnut Avenue, San Diego, California(CA), 92101", "32.71574, -117.16109");
     private  final String user1Correct = user1.toJson();
-    String msgUser1 = "User with phone number 9163456789 created successfully.";
+    String msgUser1 = "The user with phone number 9163456789 was created successfully.";
 
     private  final UserAccount user2 = new UserAccount (UserAccount.Account.CUSTOMER, "Daniel Taylor", "3238765432", "303 Elm Avenue, Oakland, California(CA), 94601", "37.80493, -122.27080");
     private  final String user2Correct = user2.toJson();
-    String msgUser2 = "User with phone number 3238765432 created successfully.";
+    String msgUser2 = "The user with phone number 3238765432 was created successfully.";
 
 
     //User update
     private  final UserAccount userUpdate1 = new UserAccount(UserAccount.Account.GUEST, "Michael Martinez", "9163456789", "202 Birch Street, San Jose, California(CA), 95110", "37.33821, -121.88633");
     private  final String userUpdate1Correct = userUpdate1.toJson();
-    String msgUserUpdate1 = "User with phone number 9163456789 updated successfully.";
+    String msgUserUpdate1 = "The user with phone number 9163456789 was updated successfully.";
 
     private  final UserAccount userUpdate2 = new UserAccount (UserAccount.Account.ADMIN, "Daniel Taylor", "3238765492", "303 Elm Avenue, Oakland, California(CA), 94601", "37.80493, -122.27080");
     private  final String userUpdate2Invalid = userUpdate2.toJson();
-    String msgUserUpdate2 = "User with phone number 3238765492 not found.";
+    String msgUserUpdate2 = "The user with phone number 3238765492 was not found.";
 
     //User Get
     private final String userGetID1 = "9163456789";
@@ -149,15 +149,15 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
 
     private final UserAccount userGetUpdate1 = userUpdate1;
     private final String userGetID2Invalid = "9199456799";
-    private final String msgGetUserGetID2 = "User with phone number 9199456799 not found.";
+    private final String msgGetUserGetID2 = "The user with phone number 9199456799 was not found.";
 
     private final String msgGetAllUser = "All users fetched successfully.";
 
     //User Delete
     private final String userDeleteID1 = "3238765432";
-    private final String msgDeleteUser1 = "User with phone number 3238765432 not found.";
+    private final String msgDeleteUser1 = "The user with phone number 3238765432 was not found.";
     private final String userDeleteID2Invalid = "7149876555";
-    private final String msgDeleteUser2 = "User with phone number 7149876555 not found.";
+    private final String msgDeleteUser2 = "The user with phone number 7149876555 was not found.";
 
     //User APi
     private final String createUser = "/api/users/create_user";
@@ -177,7 +177,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     private  String droneDispatch2Correct;
 
     private final String msgDispatchCorrect = "Drone dispatched successfully.";
-    private final String msgGetDroneDispatch = "Drone Dispatched fetched successfully.";
+    private final String msgGetDroneDispatch = "The drone Dispatched fetched successfully.";
     private final String msgGetAllDroneDispatch = "All Drone Dispatched fetched successfully.";
 
     //Registration
@@ -186,7 +186,7 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
     private final AppUser appUserCustomer = new AppUser("customer","password2","ROLE_USER");
     private final String appUserCustomerJson = appUserCustomer.toJson();
 
-    private final String msgAppUserSuccess = "New user successfully registered successfully.";
+    private final String msgAppUserSuccess = "The user registration was successful.";
 
 
     //Drone Dispatch API
@@ -718,9 +718,9 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
             () -> testUpdateApi(updateDrone,droneUpdate1Correct, msgDroneUpdate1,okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
             () -> testGetApi(getDrone,droneGetID1, msgGetDrone,okSuccessCode, droneGet1, true , true,appUserAdmin.username(),appUserAdmin.password(), true),
             () -> testDeleteApi(deleteDrone,droneDeleteID1, msgDeleteDrone1,okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
-            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"Drones list by state DELIVERING empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
-            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"Drones list by model MIDDLEWEIGHT empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
-            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"Drones list by percentage 15000 empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
+            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"The drones list by state DELIVERING is empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
+            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"The drones list by model MIDDLEWEIGHT is empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
+            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"The drones list by percentage 15000 is empty.",okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
 
             //Authorized Admin check user
             () -> testCreateApi(createUser,user1Correct, msgUser1,okSuccessCode, true,appUserAdmin.username(),appUserAdmin.password(), true),
@@ -765,9 +765,9 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
             () -> testUpdateApi(updateDrone,droneUpdate1Correct, msgDroneUpdate1,okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
             () -> testGetApi(getDrone,droneGetID1, msgGetDrone,okSuccessCode, droneGet1, true , true,appUserCustomer.username(),appUserCustomer.password(), false),
             () -> testDeleteApi(deleteDrone,droneDeleteID1, msgDeleteDrone1,okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
-            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"Drones list by state DELIVERING empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
-            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"Drones list by model MIDDLEWEIGHT empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
-            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"Drones list by percentage 15000 empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
+            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"The drones list by state DELIVERING is empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
+            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"The drones list by model MIDDLEWEIGHT is empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
+            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"The drones list by percentage 15000 is empty.",okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
 
             //non authorized customer check user
             () -> testCreateApi(createUser,user1Correct, msgUser1,okSuccessCode, true,appUserCustomer.username(),appUserCustomer.password(), false),
@@ -804,9 +804,9 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
             () -> testUpdateApi(updateDrone,droneUpdate1Correct, msgDroneUpdate1,okSuccessCode, false,"","", true),
             () -> testGetApi(getDrone,droneGetID1, msgGetDrone,okSuccessCode, droneGet1, true , false,"","", true),
             () -> testDeleteApi(deleteDrone,droneDeleteID1, msgDeleteDrone1,okSuccessCode, false,"","", true),
-            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"Drones list by state DELIVERING empty.",okSuccessCode, false,"","", true),
-            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"Drones list by model MIDDLEWEIGHT empty.",okSuccessCode, false,"","", true),
-            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"Drones list by percentage 15000 empty.",okSuccessCode, false,"","", true),
+            () -> testDroneSearchApi(getDroneByState,"DELIVERING",StateSearch,"The drones list by state DELIVERING is empty.",okSuccessCode, false,"","", true),
+            () -> testDroneSearchApi(getDroneByModel,"MIDDLEWEIGHT",ModelSearch,"The drones list by model MIDDLEWEIGHT is empty.",okSuccessCode, false,"","", true),
+            () -> testDroneSearchApi(getDroneByCharge,"15000",ChargeSearch,"The drones list by percentage 15000 is empty.",okSuccessCode, false,"","", true),
 
             //Non-authenticated
             () -> testCreateApi(createUser,user1Correct, msgUser1,okSuccessCode, false,"","", true),

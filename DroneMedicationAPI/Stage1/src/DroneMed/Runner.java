@@ -23,10 +23,10 @@ public class Runner implements CommandLineRunner {
 
     private final UserService userService;
 
-    private final String INVALID_RESPONSE = "Invalid response, Please enter a valid response.";
-    private final String INVALID_DRONE_PARAM = "The parameter you entered is not a valid drone parameter, Please enter a valid drone parameter.";
-    private final String INVALID_MED_PARAM = "The parameter you entered is not a valid medication parameter, Please enter a valid medication parameter.";
-    private final String INVALID_USER_PARAM = "The parameter you entered is not a valid userAccounts parameter, Please enter a valid userAccounts parameter.";
+    private final String INVALID_RESPONSE = "Invalid response, please enter a valid response.";
+    private final String INVALID_DRONE_PARAM = "The parameters you entered are not valid drone parameters, please enter a valid drone parameter.";
+    private final String INVALID_MED_PARAM = "The parameters you entered are not valid medication parameters, please enter a valid medication parameter.";
+    private final String INVALID_USER_PARAM = "The parameters you entered are not valid userAccounts parameters, please enter a valid userAccounts parameter.";
 
     public Runner(DroneService droneService, MedicationService medicationService, UserService userService) {
         this.droneService = droneService;

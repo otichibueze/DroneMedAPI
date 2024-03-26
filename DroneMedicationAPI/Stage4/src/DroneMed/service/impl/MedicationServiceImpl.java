@@ -50,12 +50,12 @@ public class MedicationServiceImpl implements MedicationService  {
         //checkMedicationValues(medication);
         if(medication == null || medication.getCode() == null || medication.getName() == null || medication.getWeight() == 0
                 || medication.getImageURL() == null ) {
-            return "The parameter you entered contains null or invalid parameter, Please enter a valid medication parameter.";
+            return "The parameter you entered contains a null or invalid parameter, Please enter a valid medication parameter.";
 
         }
 
         medicationRepository.save(medication);
-        return "Medication with code " + medication.getCode() + " created successfully.";
+        return "The medication with code " + medication.getCode() + " was created successfully.";
     }
 
     /**
@@ -93,10 +93,10 @@ public class MedicationServiceImpl implements MedicationService  {
 
             medicationRepository.save(medication);
 
-            return "Medication with code " + medication.getCode() + " updated successfully.";
+            return "The medication with code " + medication.getCode() + " was updated successfully.";
         }
         else {
-            return ("Medication with code " + medication.getCode() + " not found.");
+            return ("The medication with code " + medication.getCode() + " was not found.");
         }
     }
 
@@ -111,10 +111,10 @@ public class MedicationServiceImpl implements MedicationService  {
         if(medicationRepository.existsById(code))
         {
             medicationRepository.deleteById(code);
-            return "Medication with code " + code  + " deleted Successfully.";
+            return "The medication with code " + code  + " was deleted Successfully.";
         }
         else {
-            return "Medication with code " + code + " not found.";
+            return "The medication with code " + code + " was not found.";
         }
     }
 

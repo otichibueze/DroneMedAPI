@@ -41,14 +41,14 @@ public class UserServiceImpl implements UserService {
         //checkMedicationValues(medication);
         if(user == null || user.getPhoneNumber() == null || user.getName() == null || user.getAccount() == null
                 || user.getAddress() == null || user.getGpsCoordinate() == null ) {
-            return "The parameter you entered contains null or invalid parameter, Please enter a valid user account parameter.";
+            return "The parameter you entered contains a null or invalid parameter, Please enter a valid user account parameter.";
 
         }
 
 
         userRepository.save(user);
 
-        return "User with phone number " + user.getPhoneNumber() + " created successfully." ;
+        return "The user with phone number " + user.getPhoneNumber() + " was created successfully." ;
     }
 
     /**
@@ -81,10 +81,10 @@ public class UserServiceImpl implements UserService {
            UserAccount existingUser = userRepository.findById(user.getPhoneNumber()).get();
            userRepository.save(user);
 
-            return "User with phone number " + user.getPhoneNumber() + " updated successfully.";
+            return "The user with phone number " + user.getPhoneNumber() + " was updated successfully.";
         }
         else {
-            return ("User with phone number " + user.getPhoneNumber() +  " not found.");
+            return ("The user with phone number " + user.getPhoneNumber() +  " was not found.");
         }
     }
 
@@ -99,9 +99,9 @@ public class UserServiceImpl implements UserService {
 
         if(userRepository.existsById(phoneNumber)) {
             userRepository.deleteById(phoneNumber);
-            return  "User with phone number " + phoneNumber + " deleted Successfully.";
+            return  "The user with phone number " + phoneNumber + " was deleted Successfully.";
         } else {
-            return ("User with phone number " + phoneNumber + " not found.");
+            return ("The user with phone number " + phoneNumber + " was not found.");
         }
     }
 

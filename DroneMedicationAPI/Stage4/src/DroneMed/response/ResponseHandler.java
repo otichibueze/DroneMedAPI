@@ -2,7 +2,6 @@ package DroneMed.response;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import java.util.Map;
 
 /**

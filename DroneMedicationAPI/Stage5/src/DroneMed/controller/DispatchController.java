@@ -57,10 +57,10 @@ public class DispatchController {
     public ResponseEntity<?> getDispatch(@PathVariable Long DispatchId) {
         Optional<DroneDispatchDTO> droneDispatch = droneDispatchService.getDispatch(DispatchId);
         if(droneDispatch.isPresent()) {
-            return ResponseHandler.responseBuilder("Drone Dispatched fetched successfully.", HttpStatus.OK, droneDispatch);
+            return ResponseHandler.responseBuilder("The drone Dispatched fetched successfully.", HttpStatus.OK, droneDispatch);
         }
         else {
-             return ResponseHandler.responseBuilder("Drone Dispatched with id " + DispatchId + " not found.", HttpStatus.NOT_FOUND);
+             return ResponseHandler.responseBuilder("The drone Dispatched with id " + DispatchId + " was not found.", HttpStatus.NOT_FOUND);
         }
     }
 
@@ -73,7 +73,7 @@ public class DispatchController {
     public ResponseEntity<?> getAllDispatch() {
         List<DroneDispatchDTO> droneDispatch = droneDispatchService.getAllDispatch();
         if(droneDispatch.size() > 0) return ResponseHandler.responseBuilder("All Drone Dispatched fetched successfully.", HttpStatus.OK, droneDispatch);
-        else return ResponseHandler.responseBuilder("Drone dispatch list empty.", HttpStatus.OK);
+        else return ResponseHandler.responseBuilder("The drone dispatch list is empty.", HttpStatus.OK);
     }
 
     /**
@@ -86,7 +86,7 @@ public class DispatchController {
     public ResponseEntity<?> getDronesByState(@PathVariable boolean state) {
         List<DroneDispatchDTO> droneDispatch = droneDispatchService.getDispatchByState(state);
         if(droneDispatch.size() > 0) return ResponseHandler.responseBuilder("Drones Dispatched by state fetched.", HttpStatus.OK, droneDispatch);
-        else return ResponseHandler.responseBuilder("Drone dispatch list by state " +  state + "  empty.", HttpStatus.OK);
+        else return ResponseHandler.responseBuilder("The drone dispatch list by state " +  state + " is empty.", HttpStatus.OK);
     }
 
 }

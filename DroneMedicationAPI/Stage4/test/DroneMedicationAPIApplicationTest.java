@@ -9,6 +9,8 @@ import org.hyperskill.hstest.dynamic.input.DynamicTesting;
 import org.hyperskill.hstest.mocks.web.response.HttpResponse;
 import org.hyperskill.hstest.stage.SpringTest;
 import org.hyperskill.hstest.testcase.CheckResult;
+import org.hyperskill.hstest.testcase.TestCase;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Timestamp;
@@ -33,32 +35,32 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
   private  final Drone drone1 = new Drone("S001", 100, 0, 10000, Drone.State.IDLE, Drone.Model.LIGHTWEIGHT, coordinatesString);
   private  final String drone1Correct = drone1.toJson();
 
-  String msgDrone1 = "Drone with serial number S001 created successfully.";
+  String msgDrone1 = "The drone with serial number S001 was created successfully.";
   private  final Drone drone2 = new Drone("S002", 200, 0, 15000, Drone.State.IDLE, Drone.Model.MIDDLEWEIGHT, coordinatesString);
   private  final String drone2Correct = drone2.toJson();
-  String msgDrone2 = "Drone with serial number S002 created successfully.";
+  String msgDrone2 = "The drone with serial number S002 was created successfully.";
 
   //Medication
   private  final Medication medication1 = new Medication("M001", "Paracetamol", 30, "https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7");
   private  final String medication1Correct = medication1.toJson();
-  String msgMedication1 = "Medication with code M001 created successfully.";
+  String msgMedication1 = "The medication with code M001 was created successfully.";
 
   private  final Medication medication2 = new Medication("M002", "Paracetamol", 38, "https://th.bing.com/th/id/OIP.CjEDMQk7TEODMKh4MZFfGgD6D6?w=166&h=180&c=7&r=0&o=5&pid=1.7");
   private  final String medication2Correct = medication2.toJson();
-  String msgMedication2 = "Medication with code M002 created successfully.";
+  String msgMedication2 = "The medication with code M002 was created successfully.";
   private  final Medication medication3 = new Medication("M006","Amoxicillin", 65, "https://th.bing.com/th/id/R.86be7f194443ce59c5e21c0e78302e50?rik=5XJ7UyNSYyE6Yw&pid=ImgRaw&r=0");
   private  final String medication3Correct = medication3.toJson();
-  String msgMedication3 = "Medication with code M006 created successfully.";
+  String msgMedication3 = "The medication with code M006 was created successfully.";
   private  final Medication medication4 = new Medication("M004", "Ibuprofen", 48, "https://th.bing.com/th/id/OIP.Nzkzq0Ic2me02XDdxi2DxQHaE8?rs=1&pid=ImgDetMain");
   private  final String medication4Correct = medication4.toJson();
-  String msgMedication4 = "Medication with code M004 created successfully.";
+  String msgMedication4 = "The medication with code M004 was created successfully.";
   private  final Medication medication5 = new Medication("M005", "Metformin", 80,"https://th.bing.com/th/id/OIP.t1kStl77O7UxOQq0KhCa8AHaD5?rs=1&pid=ImgDetMain");
   private  final String medication5Correct = medication5.toJson();
-  String msgMedication5 = "Medication with code M005 created successfully.";
+  String msgMedication5 = "The medication with code M005 was created successfully.";
 
   private  final Medication medication6 = new Medication("M006","Amoxicillin", 65, "https://th.bing.com/th/id/R.86be7f194443ce59c5e21c0e78302e50?rik=5XJ7UyNSYyE6Yw&pid=ImgRaw&r=0");
   private  final String medication6Correct = medication6.toJson();
-  String msgMedication6 = "Medication with code M006 created successfully.";
+  String msgMedication6 = "The medication with code M006 was created successfully.";
 
   //MedicationList
   private ArrayList<Medication> medicationsA;
@@ -68,11 +70,11 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
   //User create
   private  final UserAccount user1 = new UserAccount(UserAccount.Account.GUEST, "Michael Martinez", "9163456789", "101 Walnut Avenue, San Diego, California(CA), 92101", "32.71574, -117.16109");
   private  final String user1Correct = user1.toJson();
-  String msgUser1 = "User with phone number 9163456789 created successfully.";
+  String msgUser1 = "The user with phone number 9163456789 was created successfully.";
 
   private  final UserAccount user2 = new UserAccount (UserAccount.Account.ADMIN, "Daniel Taylor", "3238765432", "303 Elm Avenue, Oakland, California(CA), 94601", "37.80493, -122.27080");
   private  final String user2Correct = user2.toJson();
-  String msgUser2 = "User with phone number 3238765432 created successfully.";
+  String msgUser2 = "The user with phone number 3238765432 was created successfully.";
 
   //dispatch drone
   private  DroneDispatch droneDispatch1;
@@ -82,15 +84,15 @@ public class DroneMedicationAPIApplicationTest extends SpringTest {
 
   private final String msgDispatchCorrect = "Drone dispatched successfully.";
 
-  private final String msgDD1log1 = "Drone S001 with a battery level of 10000 amps is on a medication delivery.";
+  private final String msgDD1log1 = "Drone S001 with a battery level of 10000 amps is on medication delivery.";
 
-  private final String msgDD1log2 = "Drone S001 delivery complete! battery level 9850amps, drone returning to base.";
+  private final String msgDD1log2 = "Drone S001 delivery is complete! battery level 9850amps, drone returning to base.";
 
-  private final String msgDD1log3 = "Drone S001 has arrived base, battery level 9700";
+  private final String msgDD1log3 = "Drone S001 has arrived at the base, battery level 9700";
 
-  private final String msgDD2log1 = "Drone S002 with a battery level of 15000 amps is on a medication delivery.";
-  private final String msgDD2log2 = "Drone S002 delivery complete! battery level 14800amps, drone returning to base.";
-  private final String msgDD2log3 = "Drone S002 has arrived base, battery level 14600";
+  private final String msgDD2log1 = "Drone S002 with a battery level of 15000 amps is on medication delivery.";
+  private final String msgDD2log2 = "Drone S002 delivery is complete! battery level 14800amps, drone returning to base.";
+  private final String msgDD2log3 = "Drone S002 has arrived at the base, battery level 14600";
 
 
   //Create API

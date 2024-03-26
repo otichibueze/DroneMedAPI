@@ -28,7 +28,7 @@ public class RegisterUserController {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         repository.save(user);
-        String response = "New user successfully registered successfully.";
+        String response = "The user registration was successful.";
 
         return ResponseHandler.responseBuilder(response, HttpStatus.OK);
     }

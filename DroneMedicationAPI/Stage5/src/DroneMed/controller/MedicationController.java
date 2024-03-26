@@ -93,7 +93,7 @@ public class MedicationController {
         if(medication.isPresent()) {
             return ResponseHandler.responseBuilder("Medication fetched successfully.", HttpStatus.OK, medication);
         }
-        else return ResponseHandler.responseBuilder("Medication with code " + code + " not found.", HttpStatus.NOT_FOUND);
+        else return ResponseHandler.responseBuilder("The medication with code " + code + " was not found.", HttpStatus.NOT_FOUND);
     }
 
     /**
@@ -107,7 +107,7 @@ public class MedicationController {
         if(medications.size() > 0) {
             return ResponseHandler.responseBuilder("All medications fetched successfully.", HttpStatus.OK, medications);
         }
-        else  return ResponseHandler.responseBuilder("Medication list empty.", HttpStatus.OK);
+        else  return ResponseHandler.responseBuilder("The medication list is empty.", HttpStatus.OK);
     }
 
     /**
@@ -120,7 +120,7 @@ public class MedicationController {
     public ResponseEntity<?> getMedicationByName(@PathVariable String name) {
         List<MedicationDTO> medication = medicationService.getMedicationByName(name);
 
-        if(medication.size() == 0) return ResponseHandler.responseBuilder("Medication list by name " + name + " empty.", HttpStatus.OK);
+        if(medication.size() == 0) return ResponseHandler.responseBuilder("The medication list by name " + name + " is empty.", HttpStatus.OK);
 
         return ResponseHandler.responseBuilder("Medications fetched successfully.", HttpStatus.OK, medication);
     }
